@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="My Projects Portfolio">
-    <meta name="author" content="Your Name">
+    <meta name="author" content="Omkar Deshpande">
     <link rel="stylesheet" href="assets/css/main.css">
     <style>
       .wrapper {
         display: flex;
-        align-items: flex-start;
+        align-items: stretch; /* Ensure all items are aligned consistently */
         justify-content: space-between;
         gap: 3rem;
         padding: 4rem;
@@ -24,13 +24,16 @@
       }
       .photographer {
         flex: 1;
-        margin-top: -2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       .photographer img {
         max-width: 100%;
         height: auto;
         display: block;
         border-radius: 8px;
+        object-fit: cover; /* Ensure consistent aspect ratio */
       }
       .project-section {
         padding: 2rem 0;
@@ -58,6 +61,9 @@
       }
       .project-link a:hover {
         background-color: #555;
+      }
+      .welcome p {
+        min-height: 120px; /* Adjust based on content */
       }
     </style>
   </head>
@@ -87,6 +93,33 @@
         <div class="photographer"><img src="assets/img/covid-analysis.png" alt="COVID-19 Analysis Dashboard"></div>
       </div>
     </section>
+
+    <section id="project3" class="project-section">
+      <div class="wrapper">
+        <div class="welcome">
+          <h1><strong>Project 3</strong>: [Project Name]</h1>
+          <p>[Project description goes here. Add a brief overview of the project, its purpose, and the tools or technologies used.]</p>
+          <div class="project-link">
+            <a href="#" target="_blank">View Project →</a>
+          </div>
+        </div>
+        <div class="photographer"><img src="assets/img/placeholder.jpg" alt="Project 3 Placeholder"></div>
+      </div>
+    </section>
+
+    <section id="project4" class="project-section">
+      <div class="wrapper">
+        <div class="welcome">
+          <h1><strong>Project 4</strong>: [Project Name]</h1>
+          <p>[Project description goes here. Add a brief overview of the project, its purpose, and the tools or technologies used.]</p>
+          <div class="project-link">
+            <a href="#" target="_blank">View Project →</a>
+          </div>
+        </div>
+        <div class="photographer"><img src="assets/img/placeholder.jpg" alt="Project 4 Placeholder"></div>
+      </div>
+    </section>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
