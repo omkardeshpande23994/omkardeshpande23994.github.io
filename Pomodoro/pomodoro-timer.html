@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="pomodoro.css">
+</head>
+<body>
+    <div class="pomodoro-app">
+        <!-- Header -->
+        <header class="header">
+            <h1>Pomodoro Timer</h1>
+        </header>
+
+        <!-- Timer Section -->
+        <div class="timer">
+            <div class="timer-modes">
+                <button class="mode active">Pomodoro</button>
+                <button class="mode">Short Break</button>
+                <button class="mode">Long Break</button>
+            </div>
+            <div class="time-container">
+                <div class="time-display">25:00</div>
+            </div>
+            <button class="start-btn">START</button>
+        </div>
+
+        <!-- Tasks Section -->
+        <div class="tasks">
+            <h2>Tasks</h2>
+            <hr class="task-divider">
+            <div class="task-list">
+                <button class="add-task-btn">+ Add Task</button>
+            </div>
+            <div class="task-input hidden">
+                <input type="text" id="new-task" placeholder="Enter your task">
+                <button class="add-task-confirm-btn">Add</button>
+            </div>
+            <ul class="checklist"></ul>
+        </div>
+    </div>
+
+    <script src="pomodoro.js"></script>
+</body>
+</html>

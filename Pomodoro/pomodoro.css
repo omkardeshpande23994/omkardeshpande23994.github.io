@@ -1,0 +1,171 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c; /* Dark grey */
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Timer Section */
+.timer {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.timer-modes {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.timer-modes .mode {
+    padding: 10px 20px;
+    background-color: #2d2d2d;
+    color: #ffffff;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.timer-modes .mode.active {
+    background-color: #444444; /* Highlight active mode */
+}
+
+.timer-modes .mode:hover {
+    background-color: #555555;
+}
+
+.time-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Translucent white */
+    width: 100%;
+    max-width: 600px; /* Same as button width */
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.time-display {
+    font-size: 4rem; /* Increased font size */
+    font-weight: bold; /* Bold font */
+    color: #ffffff; /* White text */
+}
+
+.start-btn {
+    background-color: #444444;
+    color: #ffffff;
+    padding: 15px 0;
+    width: 100%;
+    max-width: 600px; /* Match translucent box */
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.start-btn:hover {
+    background-color: #555555;
+}
+
+/* Tasks Section */
+.tasks {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.tasks h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.task-divider {
+    width: 80%;
+    margin: 10px auto;
+    border: 1px solid #444444; /* Line below "Tasks" */
+}
+
+.task-list {
+    margin-top: 20px;
+}
+
+.add-task-btn {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    padding: 20px 40px; /* Increased button size */
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.add-task-btn:hover {
+    background-color: #444444;
+}
+
+.task-input {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.task-input input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.add-task-confirm-btn {
+    background-color: #444444;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.add-task-confirm-btn:hover {
+    background-color: #555555;
+}
+
+.hidden {
+    display: none;
+}
+
+.checklist {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+.checklist li {
+    background-color: #2d2d2d;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checklist li input[type="checkbox"] {
+    margin-right: 10px;
+}
