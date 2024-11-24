@@ -1,0 +1,170 @@
+---
+layout: default
+title: Pomodoro Timer
+---
+
+<div class="pomodoro-timer">
+    <div class="container">
+        <!-- Header -->
+        <header class="text-centered">
+            <h1>Pomodoro Timer</h1>
+            <p>Stay focused with timed work sessions and regular breaks.</p>
+        </header>
+
+        <!-- Timer Display -->
+        <div class="timer-wrapper">
+            <div class="circle">
+                <h2 id="timer-display">25:00</h2>
+            </div>
+        </div>
+
+        <!-- Timer Controls -->
+        <div class="timer-buttons">
+            <button id="start-btn" class="btn">Start</button>
+            <button id="pause-btn" class="btn">Pause</button>
+            <button id="reset-btn" class="btn">Reset</button>
+        </div>
+    </div>
+</div>
+
+<!-- Styling -->
+<style>
+    /* Global Page Styling */
+    body {
+        font-family: 'Lato', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f4f4;
+        color: #333;
+    }
+
+    .pomodoro-timer {
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: #444;
+    }
+
+    header p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        color: #666;
+    }
+
+    /* Timer Circle */
+    .timer-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .circle {
+        width: 250px;
+        height: 250px;
+        background: #fff;
+        border: 10px solid #0078D7;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .circle h2 {
+        font-size: 2.5rem;
+        color: #0078D7;
+        margin: 0;
+    }
+
+    /* Timer Buttons */
+    .timer-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .btn {
+        background: #0078D7;
+        color: #fff;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+        background: #005fa3;
+    }
+
+    .btn:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+    }
+</style>
+
+<!-- JavaScript -->
+<script>
+    // Timer Variables
+    let timerDuration = 25 * 60; // 25 minutes
+    let remainingTime = timerDuration;
+    let timerInterval = null;
+
+    // DOM Elements
+    const timerDisplay = document.getElementById("timer-display");
+    const startBtn = document.getElementById("start-btn");
+    const pauseBtn = document.getElementById("pause-btn");
+    const resetBtn = document.getElementById("reset-btn");
+
+    // Helper Function: Format Time
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60).toString().padStart(2, "0");
+        const secs = (seconds % 60).toString().padStart(2, "0");
+        return `${minutes}:${secs}`;
+    }
+
+    // Update Timer Display
+    function updateTimerDisplay() {
+        timerDisplay.textContent = formatTime(remainingTime);
+    }
+
+    // Timer Controls
+    function startTimer() {
+        if (!timerInterval) {
+            timerInterval = setInterval(() => {
+                if (remainingTime > 0) {
+                    remainingTime--;
+                    updateTimerDisplay();
+                } else {
+                    clearInterval(timerInterval);
+                    alert("Time's up! Take a break.");
+                }
+            }, 1000);
+        }
+    }
+
+    function pauseTimer() {
+        clearInterval(timerInterval);
+        timerInterval = null;
+    }
+
+    function resetTimer() {
+        clearInterval(timerInterval);
+        timerInterval = null;
+        remainingTime = timerDuration;
+        updateTimerDisplay();
+    }
+
+    // Event Listeners
+    startBtn.addEventListener("click", startTimer);
+    pauseBtn.addEventListener("click", pauseTimer);
+    resetBtn.addEventListener("click", resetTimer);
+
+    // Initialize Timer Display
+    updateTimerDisplay();
+</script>
