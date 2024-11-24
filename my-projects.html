@@ -5,26 +5,60 @@ title: My Projects
 
 <div class="projects-page section">
     <div class="container">
-        <h1>My Projects</h1>
-        <p>Here are some of the projects I've worked on:</p>
+        <!-- Page Header -->
+        <header class="text-centered">
+            <h1>My Projects</h1>
+            <p>Explore some of the interesting projects I've worked on.</p>
+        </header>
         
-        <!-- Example Project -->
-        <div class="project">
-            <h2>Project 1: Data Dashboard</h2>
-            <p>Description of the project. Include the skills/tools used.</p>
-            <a href="link-to-project-1" target="_blank">View Project</a>
-        </div>
+        <!-- Projects Section -->
+        <div class="units-row units-split wrap">
+            <!-- Project 1: Pomodoro Timer -->
+            <div class="unit-33 project-card">
+                <div class="project-thumbnail">
+                    <img src="img/pomodoro-thumbnail.jpg" alt="Pomodoro Timer" style="width:100%; height:auto; border-radius:10px;">
+                </div>
+                <h3>Pomodoro Timer</h3>
+                <p>A simple productivity tool based on the Pomodoro technique to help manage work sessions effectively.</p>
+                <a href="pomodoro-timer.html" class="btn">View Project</a>
+            </div>
 
-        <div class="project">
-            <h2>Project 2: Analytics Tool</h2>
-            <p>Description of the project. Include the skills/tools used.</p>
-            <a href="link-to-project-2" target="_blank">View Project</a>
-        </div>
-
-        <div class="project">
-            <h2>Project 3: Business Intelligence Report</h2>
-            <p>Description of the project. Include the skills/tools used.</p>
-            <a href="link-to-project-3" target="_blank">View Project</a>
+            <!-- Add more projects here -->
         </div>
     </div>
 </div>
+
+<style>
+    .projects-page {
+        padding: 2rem 0;
+    }
+
+    .project-card {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .project-card h3 {
+        margin: 0.5rem 0;
+        font-weight: bold;
+    }
+
+    .project-card p {
+        font-size: 0.9rem;
+        color: #555;
+        margin-bottom: 1rem;
+    }
+
+    .btn {
+        background-color: #0078D7;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    .btn:hover {
+        background-color: #005FA3;
+    }
+</style>
