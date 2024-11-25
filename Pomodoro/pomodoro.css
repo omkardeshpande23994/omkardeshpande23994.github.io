@@ -1,7 +1,7 @@
 /* General Reset */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #121212;
     color: #ffffff;
 }
@@ -10,18 +10,20 @@ button {
     border: none;
     cursor: pointer;
     font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Header */
 .header {
-    text-align: center;
+    text-align: left;
     padding: 20px;
-    background-color: #1c1c1c; /* Dark grey */
+    background-color: #1c1c1c;
 }
 
 .header h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 0;
+    font-weight: 700;
 }
 
 /* Timer Section */
@@ -42,10 +44,11 @@ button {
     color: #ffffff;
     margin: 0 5px;
     border-radius: 5px;
+    font-weight: 500;
 }
 
 .timer-modes .mode.active {
-    background-color: #444444; /* Highlight active mode */
+    background-color: #444444;
 }
 
 .timer-modes .mode:hover {
@@ -56,88 +59,91 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.1); /* Translucent white */
-    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 340px;
     margin: 20px auto;
     border-radius: 10px;
-    padding: 40px; /* Doubled the padding to increase height */
+    padding: 40px;
 }
 
 .time-display {
-    font-size: 6rem; /* Increased by 1.5 times from 4rem */
-    font-weight: bold; /* Bold font */
-    color: #ffffff; /* White text */
+    font-size: 6rem;
+    font-weight: bold;
+    color: #ffffff;
 }
 
 .start-btn {
     background-color: #444444;
     color: #ffffff;
     padding: 15px 0;
-    width: 380px;
+    width: 420px;
     margin: 20px auto;
     display: block;
     border-radius: 5px;
     font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .start-btn:hover {
-    background-color: #5c636a;
+    background-color: #555555;
 }
 
 /* Tasks Section */
 .tasks {
-    text-align: center;
     margin: 30px auto;
+    max-width: 800px;
+    padding: 0 20px;
+    text-align: left;
 }
 
 .tasks h2 {
     margin: 0;
     font-size: 1.5rem;
     color: #ffffff;
+    font-weight: 600;
 }
 
 .task-divider {
-    width: 80%;
-    margin: 10px auto;
-    border: 1px solid #444444; /* Line below "Tasks" */
+    width: 100%;
+    margin: 10px 0;
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 .task-list {
-    margin-top: 20px;
+    text-align: left;
 }
 
 .add-task-btn {
-    background-color: #2d2d2d;
+    background-color: #444444;
     color: #ffffff;
-    padding: 20px 40px; /* Increased button size */
-    border-radius: 10px;
-    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-weight: 500;
 }
 
 .add-task-btn:hover {
-    background-color: #444444;
+    background-color: #555555;
 }
 
 .task-input {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+    margin: 10px 0;
 }
 
 .task-input input {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #555555;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 5px;
-    width: 300px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .add-task-confirm-btn {
     background-color: #444444;
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 8px 15px;
     border-radius: 5px;
+    font-weight: 500;
 }
 
 .add-task-confirm-btn:hover {
@@ -146,6 +152,23 @@ button {
 
 .hidden {
     display: none;
+}
+
+.checklist {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.checklist li {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.checklist input[type="checkbox"] {
+    margin-right: 10px;
 }
 
 .checklist {
