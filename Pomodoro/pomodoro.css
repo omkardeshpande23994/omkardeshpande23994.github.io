@@ -2,8 +2,8 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #121212; /* Dark background */
-    color: #ffffff; /* White text */
+    background-color: #121212;
+    color: #ffffff;
 }
 
 button {
@@ -57,15 +57,14 @@ button {
     justify-content: center;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.1); /* Translucent white */
-    width: 100%;
-    max-width: 600px; /* Same as button width */
+    width: 300px;
     margin: 20px auto;
     border-radius: 10px;
-    padding: 20px;
+    padding: 40px; /* Doubled the padding to increase height */
 }
 
 .time-display {
-    font-size: 4rem; /* Increased font size */
+    font-size: 6rem; /* Increased by 1.5 times from 4rem */
     font-weight: bold; /* Bold font */
     color: #ffffff; /* White text */
 }
@@ -74,14 +73,15 @@ button {
     background-color: #444444;
     color: #ffffff;
     padding: 15px 0;
-    width: 100%;
-    max-width: 600px; /* Match translucent box */
+    width: 380px;
+    margin: 20px auto;
+    display: block;
     border-radius: 5px;
     font-size: 1.2rem;
 }
 
 .start-btn:hover {
-    background-color: #555555;
+    background-color: #5c636a;
 }
 
 /* Tasks Section */
