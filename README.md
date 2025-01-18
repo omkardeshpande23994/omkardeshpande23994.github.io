@@ -59,7 +59,7 @@ Welcome to the repository for my **Web Resume**—a showcase of my skills, exper
 ### Homepage
 ![Intro Section Screenshot](images/Screenshot1.png)
 
-### Projects
+### Work Experience
 ![Projects Section Screenshot](images/Screenshot2.png)
 
 
