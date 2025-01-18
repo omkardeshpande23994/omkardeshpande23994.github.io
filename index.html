@@ -5,7 +5,51 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+		<link rel="stylesheet" href="css/fontawesome-all.min.css">
+
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			#main article {
+				width: 850px; /* Adjusted width to reduce by 20% */
+				margin: auto;
+				padding-bottom: 20px;
+			}
+			#skills ul {
+				list-style-type: none; /* Remove bullet points */
+				padding: auto;
+				/*line-height: 2*/;
+			}
+			#projects ul li {
+				display: flex;
+				align-items: center;
+				margin-bottom: 1.5em; /* Add spacing between projects */
+			}
+			#projects ul li img {
+				width: 40px;
+				height: 40px;
+				margin-right: 10px;
+				border-radius: 5px; /* Rounded corners */
+			}
+			#projects ul li .button {
+				font-size: 0.8em; /* Make button smaller */
+				margin-left: auto; /* Align button to the right */
+			}
+			.footer-icons ul {
+				list-style: none;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				margin-top: 10px;
+			}
+			.footer-icons ul li {
+				margin: 0 10px;
+			}
+			.footer-icons ul li a {
+				font-size: 1.5em;
+				color: inherit;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -28,8 +72,9 @@
 								<li><a href="#intro">Intro</a></li>
 								<li><a href="#work">Work</a></li>
 								<li><a href="#skills">Skills</a></li>
+								<li><a href="#achievements">Achievements</a></li>
 								<li><a href="#projects">Projects</a></li>
-								<li><a href="#contact">Contact</a></li>
+								<!--<li><a href="#contact">Contact</a></li> -->
 							</ul>
 						</nav>
 					</header>
@@ -65,79 +110,157 @@
 									<li><strong>Dashboard Development:</strong> Delivered 8 production dashboards (5 for MDI, 3 for AMEX) on Tableau and Excel, empowering data-driven decisions, reducing QC hours by 50%, and enhancing client reporting capabilities.</li>
 									<li><strong>Data Infrastructure & AWS Expertise:</strong> Leveraged AWS tools like S3, Athena, and CloudWatch to automate monitoring, manage data flows, and enhance reliability of client deliverables, improving efficiency and stakeholder satisfaction.</li>
 								</ul>
-								<h3 style="font-size: 1.2em;">2020 - 2021 | ZS Associates, India (Client: BMS)</h3>
-								<h4>Business Technology Analyst</h4>
+
+								<h3 style="font-size: 1.2em;">2020 | Freelance Consultant (Client: ZapTech Pvt. Ltd.)</h3>
+								<h4>Consultant</h4>
 								<ul>
-									<li><strong>Tableau Dashboard Development:</strong> Designed a comprehensive Tableau dashboard for BMS's Eliquis brand, providing an intuitive interface that enhanced data visibility and facilitated data-driven decision-making for the client.</li>
-									<li><strong>Data Customization & Client Collaboration:</strong> Conducted detailed data inspections and implemented client-driven customizations, ensuring alignment with client needs and maximizing the dashboard's value.</li>
-									<li><strong>Advanced Data Analysis:</strong> Applied data analysis techniques to review and validate BMS Spend and Sales data, providing actionable insights that helped the client make informed strategic decisions.</li>
+								    <li><strong>Zoho Analytics Dashboard Creation:</strong> Built over 8 dashboards in Zoho Analytics for the Calls Analysis, Sales & Marketing, BSA, and Development teams, streamlining processes previously tracked in Excel.</li>
+								    <li><strong>Business Process Optimization:</strong> Conducted in-depth R&D into business methodologies, driving improvements in process flow for two departments, resulting in increased efficiency.</li>
+								    <li><strong>Sales Team Support:</strong> Provided analytical support to the Sales team, analyzing trends and suggesting new metrics that contributed to informed strategy development.</li>
 								</ul>
+
+								<h3 style="font-size: 1.2em;">2016 - 2019 | Zensar Technologies, India</h3>
+								<h4>Data Analyst</h4>
+								<ul>
+								    <li><strong>Client Relationship & Communication:</strong> Acted as the primary point of contact for APJGC clients at Cisco, fostering strong client relationships to ensure satisfaction and effective collaboration.</li>
+								    <li><strong>Data Analysis & Reporting:</strong> Leveraged SQL, QlikView, IB360, and Tableau for in-depth data analysis, delivering actionable reports that informed client decisions.</li>
+								    <li><strong>Project Management & Customization:</strong> Managed Case Management, Change Requests, and Customization projects, ensuring timely and budget-compliant delivery to high standards.</li>
+								    <li><strong>Insight Development:</strong> Generated proactive insights to improve Install Base (IB) accuracy, helping clients capitalize on growth and optimization opportunities.</li>
+								    <li><strong>Oracle Apps Technical Analysis:</strong> Analyzed Oracle Apps Upgrade Approaches for Toshiba, facilitating smooth upgrades and minimizing downtime.</li>
+								    <li><strong>SQL Development & Issue Resolution:</strong> Developed custom SQL procedures and packages, while resolving technical issues in Oracle Apps, ensuring uninterrupted operations.</li>
+								</ul>
+
 							</article>
 
 						<!-- Skills Section -->
 							<article id="skills">
-								<h2 class="major">Skills</h2>
-								<ul style="line-height: 1.8;">
-									<li><h4>Data Visualization & Reporting</h4>Tableau, Advanced Excel (Pivot Tables, Macros, Charts)</li>
-									<li><h4>Data Management & Quality Control</h4>SQL, AWS Athena, Data Hygiene, Statistical Analysis</li>
-									<li><h4>Programming Languages</h4>Python (NumPy, Pandas)</li>
-									<li><h4>Project Management</h4>JIRA, Kanban, Agile & Scrum</li>
-									<li><h4>Process Automation</h4>Power Query, Excel Macros</li>
-									<li><h4>Documentation & Stakeholder Communication</h4>FRD, BRD, CRD, GAP Analysis, RTM</li>
-									<li><h4>ETL & Database Tools</h4>Talend, Oracle SQL Developer</li>
-									<li><h4>Cloud & Version Control</h4>AWS CloudWatch, Git</li>
-								</ul>
+							    <h2 class="major">Skills</h2>
+							    <div style="margin-bottom: 2em;">
+							        <div style="margin-bottom: 1.5em;">
+							            <h4>Data Visualization & Reporting</h4>
+							            <p>Tableau, Advanced Excel (Pivot Tables, Macros, Charts)</p>
+							        </div>
+							        <div style="margin-bottom: 1.5em;">
+							            <h4>Data Management & Quality Control</h4>
+							            <p>SQL, AWS Athena, Data Hygiene, Statistical Analysis</p>
+							        </div>
+							        <div style="margin-bottom: 1.5em;">
+							            <h4>Programming Languages</h4>
+							            <p>Python (NumPy, Pandas)</p>
+							        </div>
+							        <div style="margin-bottom: 1.5em;">
+							            <h4>Project Management</h4>
+							            <p>JIRA, Kanban, Agile & Scrum</p>
+							        </div>
+							        <div style="margin-bottom: 1.5em;">
+							            <h4>Process Automation</h4>
+							            <p>Power Query, Excel Macros</p>
+							        </div>
+							        <div style="margin-bottom: 1.5em;">
+							            <h4>Documentation & Stakeholder Communication</h4>
+							            <p>FRD, BRD, CRD, GAP Analysis, RTM</p>
+							        </div>
+							        <div style="margin-bottom: 1.5em;">
+							            <h4>ETL & Database Tools</h4>
+							            <p>Talend, Oracle SQL Developer</p>
+							        </div>
+							        <div style="margin-bottom: 1.5em;">
+							            <h4>Cloud & Version Control</h4>
+							            <p>AWS CloudWatch, Git</p>
+							        </div>
+							    </div>
 							</article>
+
+
+							<article id="achievements">
+							    <h2 class="major">Achievements</h2>
+							    <ul>
+							    	<li><strong>2024:</strong> Successfully launched the JIRA Reporting Dashboard at Wells Fargo, enhancing team efficiency tracking.</li>
+							        <li><strong>2021:</strong> Excellence in Process Improvement Award at Data Axle</li>
+							        <li><strong>2019:</strong> Received 30% 'EOLAS' Scholarship from Munster Technological University for MSc in Artificial Intelligence</li>
+							        <li><strong>2018:</strong> Zensar Technologies Annual Excellence Award - Rising Star Category</li>
+							        <li><strong>2017:</strong> Nominated for Zensar Technologies Customer Centricity Award</li>
+							        <li><strong>2016:</strong> Published research paper on 'Vehicular Classification and Analysis' in IJCSIT (Pune University)</li>
+							        <li><strong>2015:</strong> Secured 2nd place in 'Codeless' competition at inter-college level</li>
+							        <li><strong>2014:</strong> Nominated in Top 3 for 'Innovatus 2k14' competition at inter-college level</li>
+							    </ul>
+							</article>
+
 
 						<!-- Projects Section -->
 							<article id="projects">
-								<h2 class="major">Projects</h2>
-								<ul>
-									<li><strong>Pomodoro Timer:</strong> Developed a simple Pomodoro timer webpage to improve productivity.<br/><a href="https://omkardeshpande23994.github.io/Pomodoro/pomodoro-timer.html" class="button small">View Project</a></li>
-									<br/>
-									<li><strong>COVID-19 Visualization:</strong> Created an interactive Tableau visualization analyzing COVID-19 trends.<br/><a href="https://public.tableau.com/app/profile/omkar.deshpande1132/viz/Covid-19Analysis_17321214779240/Summary" class="button small">View Project</a></li>
-									<br/>
-									<li><strong>Adult Census Income Prediction:</strong> Predicted income levels using classification models.<br/><a href="https://github.com/omkardeshpande23994/Adult-Census-Income" class="button small">View Project</a></li>
-									<br/>
-									<li><strong>Placeholder Project:</strong> Placeholder description for an upcoming project.<br/><a href="#" class="button small">View Project</a></li>
-								</ul>
+							    <h2 class="major">Projects</h2>
+							    <ul>
+							        <li style="display: grid; grid-template-columns: 50px auto 150px; align-items: start; margin-bottom: 1.5em; gap: 15px;">
+							            <img src="images/Pomodoro_1.jpeg" alt="Pomodoro Timer" style="margin-top: 5px;" />
+							            <div>
+							                <h4 style="margin: 0; padding-bottom: 5px;">Pomodoro Timer</h4>
+							                <p style="margin: 0;">Developed a simple Pomodoro timer webpage to improve productivity.</p>
+							            </div>
+							            <a href="https://omkardeshpande23994.github.io/Pomodoro/pomodoro-timer.html" class="button small" style="align-self: center;">View Project</a>
+							        </li>
+							        <li style="display: grid; grid-template-columns: 50px auto 150px; align-items: start; margin-bottom: 1.5em; gap: 15px;">
+							            <img src="images/Covid19Analysis.jpeg" alt="COVID-19 Visualization" style="margin-top: 5px;" />
+							            <div>
+							                <h4 style="margin: 0; padding-bottom: 5px;">COVID-19 Visualization</h4>
+							                <p style="margin: 0;">Created an interactive Tableau visualization analyzing COVID-19 trends.</p>
+							            </div>
+							            <a href="https://public.tableau.com/app/profile/omkar.deshpande1132/viz/Covid-19Analysis_17321214779240/Summary" class="button small" style="align-self: center;">View Project</a>
+							        </li>
+							        <li style="display: grid; grid-template-columns: 50px auto 150px; align-items: start; margin-bottom: 1.5em; gap: 15px;">
+							            <img src="images/SensusIncomePrediction.jpeg" alt="Adult Census Income Prediction" style="margin-top: 5px;" />
+							            <div>
+							                <h4 style="margin: 0; padding-bottom: 5px;">Adult Census Income Prediction</h4>
+							                <p style="margin: 0;">Predicted income levels using classification models.</p>
+							            </div>
+							            <a href="https://github.com/omkardeshpande23994/Adult-Census-Income" class="button small" style="align-self: center;">View Project</a>
+							        </li>
+							    </ul>
 							</article>
 
+
+
 						<!-- Contact Section -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-							</article>
+						<!--
+			                <article id="contact">
+			                    <h2 class="major">Contact</h2>
+			                    <form method="post" action="mailto:omkar.deshpande23994@gmail.com">
+			                        <div class="fields">
+			                            <div class="field half">
+			                                <label for="name">Name</label>
+			                                <input type="text" name="name" id="name" required />
+			                            </div>
+			                            <div class="field half">
+			                                <label for="email">Email</label>
+			                                <input type="email" name="email" id="email" required />
+			                            </div>
+			                            <div class="field">
+			                                <label for="message">Message</label>
+			                                <textarea name="message" id="message" rows="4" required></textarea>
+			                            </div>
+			                        </div>
+			                        <ul class="actions">
+			                            <li><input type="submit" value="Send Message" class="primary" /></li>
+			                            <li><input type="reset" value="Reset" /></li>
+			                        </ul>
+			                    </form>
+			                </article>
+						-->
+            
 
 					</div>
 
 				<!-- Footer -->
 					<footer id="footer">
 						<p class="copyright">&copy; Omkar Deshpande. All rights reserved.</p>
-						<ul class="icons" style="text-align: center;">
-							<li><a href="mailto:omkar.deshpande23994@gmail.com"><i class="fa fa-send"></i></a></li>
-							<li><a href="https://linkedin.com/in/omkardeshpande-23994"><i class="fa fa-linkedin"></i></a></li>
-							<li><a href="https://github.com/omkardeshpande23994"><i class="fa fa-github"></i></a></li>
-						</ul>
+						</br>
+						<div class="footer-icons">
+							<ul>
+								<li><a href="mailto:omkar.deshpande23994@gmail.com"><i class="fas fa-paper-plane"></i></a></li>
+								<li><a href="https://linkedin.com/in/omkardeshpande-23994"><i class="fab fa-linkedin"></i></a></li>
+								<li><a href="https://github.com/omkardeshpande23994"><i class="fab fa-github"></i></a></li>
+								</ul>
+							</div>
 					</footer>
 
 			</div>
