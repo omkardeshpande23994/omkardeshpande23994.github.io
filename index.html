@@ -10,46 +10,38 @@
 
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			#main article {
-				width: 850px; /* Adjusted width to reduce by 20% */
-				margin: auto;
-				padding-bottom: 20px;
+			/* Projects Section */
+			#projects ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
 			}
-			#skills ul {
-				list-style-type: none; /* Remove bullet points */
-				padding: auto;
-				/*line-height: 2*/;
+
+			/* Each project “card” */
+			.project-item {
+			border: 1px solid #ccc;
+			padding: 15px;
+			margin-bottom: 20px;
+			border-radius: 5px;
 			}
-			#projects ul li {
-				display: flex;
-				align-items: center;
-				margin-bottom: 1.5em; /* Add spacing between projects */
+
+			/* Project Titles & Text */
+			.project-item h4 {
+			margin-top: 0;
+			margin-bottom: 8px;
 			}
-			#projects ul li img {
-				width: 40px;
-				height: 40px;
-				margin-right: 10px;
-				border-radius: 5px; /* Rounded corners */
+			.project-item p {
+			margin: 0 0 10px 0;
 			}
-			#projects ul li .button {
-				font-size: 0.8em; /* Make button smaller */
-				margin-left: auto; /* Align button to the right */
+
+			/* “View Project” Button */
+			.project-item .button {
+			display: inline-block;
+			margin-top: 5px;
 			}
-			.footer-icons ul {
-				list-style: none;
-				padding: 0;
-				display: flex;
-				justify-content: center;
-				margin-top: 10px;
-			}
-			.footer-icons ul li {
-				margin: 0 10px;
-			}
-			.footer-icons ul li a {
-				font-size: 1.5em;
-				color: inherit;
-			}
+
 		</style>
+		
 	</head>
 	<body class="is-preload">
 
@@ -239,9 +231,17 @@
 							</article>
 						-->
 
-							<article id="projects">
+							<!-- <article id="projects">
 							    <h2 class="major">Projects</h2>
 							    <ul style="padding: 0; list-style: none;">
+									<li class="project-item">
+							            <img src="images/VGA.png" alt="Video Game Analysis" />
+							            <div>
+							                <h4>Video Game Sales Analysis</h4>
+							                <p>Created a Tableau visualization around the evolution and Sales Analysis of Video Games across several decades.</p>
+							                <a href="https://public.tableau.com/app/profile/omkar.deshpande1132/viz/VideoGameSalesAnalysis_17387682360770/VGA" class="button small">View Project</a>
+							            </div>
+							        </li>
 							        <li class="project-item">
 							            <img src="images/Pomodoro_1.jpeg" alt="Pomodoro Timer" />
 							            <div>
@@ -267,73 +267,48 @@
 							            </div>
 							        </li>
 							    </ul>
+							</article> -->
+
+							<article id="projects">
+								<h2 class="major">Projects</h2>
+								<ul style="padding: 0; list-style: none;">
+								  
+								  <li class="project-item">
+									<div>
+									  <h4>Video Game Sales Analysis</h4>
+									  <p>
+										Developed an interactive Tableau dashboard examining historical video game sales trends. 
+										Explored genre popularity, regional performance, and notable sales milestones across multiple decades.
+									  </p>
+									  <a href="https://public.tableau.com/app/profile/omkar.deshpande1132/viz/VideoGameSalesAnalysis_17387682360770/VGA" class="button small">View Project</a>
+									</div>
+								  </li>
+							  
+								  <li class="project-item">
+									<div>
+									  <h4>COVID-19 Visualization</h4>
+									  <p>
+										Built a dynamic Tableau visualization to analyze global COVID-19 data. 
+										Offered real-time updates on case counts, regional comparisons, and key trends to aid data-driven decisions.
+									  </p>
+									  <a href="https://public.tableau.com/app/profile/omkar.deshpande1132/viz/Covid-19Analysis_17321214779240/Summary" class="button small">View Project</a>
+									</div>
+								  </li>
+							  
+								  <li class="project-item">
+									<div>
+									  <h4>Adult Census Income Prediction</h4>
+									  <p>
+										Developed and benchmarked multiple classification models to predict whether an individual’s 
+										income exceeds $50,000. Employed thorough data preprocessing, feature engineering, and hyperparameter tuning.
+									  </p>
+									  <a href="https://github.com/omkardeshpande23994/Adult-Census-Income" class="button small">View Project</a>
+									</div>
+								  </li>
+							  
+								</ul>
 							</article>
-
-							<style>
-							    /* Base styles for the Projects Section */
-							    #projects ul {
-							        display: flex;
-							        flex-direction: column;
-							        gap: 20px;
-							    }
-
-							    .project-item {
-							        display: flex;
-							        gap: 15px;
-							        align-items: center;
-							        border: 1px solid #ccc;
-							        padding: 15px;
-							        border-radius: 5px;
-							    }
-
-							    .project-item img {
-							        width: auto;
-							        height: auto;
-							        border-radius: 5px;
-							    }
-
-							    .project-item div {
-							        flex: 1;
-							    }
-
-							    .project-item h4 {
-							        margin: 0;
-							        padding-bottom: 5px;
-							    }
-
-							    .project-item p {
-							        margin: 0 0 10px 0;
-							    }
-
-							    .project-item .button {
-							        align-self: flex-start;
-							    }
-
-							    /* Mobile-specific styles */
-							    @media (max-width: 768px) {
-							        .project-item {
-							            flex-direction: column;
-							            align-items: flex-start;
-							        }
-
-							        .project-item img {
-							            width: 100%;
-							            height: auto;
-							            margin-bottom: 10px;
-							        }
-
-							        .project-item div {
-							            width: 100%;
-							        }
-
-							        .project-item .button {
-							            width: 100%;
-							            text-align: center;
-							        }
-							    }
-							</style>
-
-
+							  
 
 						<!-- Contact Section -->
 						<!--
