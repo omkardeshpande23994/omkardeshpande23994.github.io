@@ -1140,9 +1140,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
@@ -1656,3 +1659,41 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+/* Footer Icons: Align icons in a row */
+.footer-icons ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* space between icons */
+}
+
+/* Keep icons inline */
+.footer-icons li {
+    display: inline-block;
+}
+
+/* Optional: icon size + hover effect (adjust as needed) */
+.footer-icons i {
+    font-size: 16px;
+    color: #444;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-icons i:hover {
+    color: #fff; /* LinkedIn blue or any color you want */
+    transform: scale(1.2);
+}
+
+@media (max-width: 480px) {
+    .footer-icons ul {
+        gap: 12px; /* reduce space between icons on small screens */
+    }
+
+    .footer-icons i {
+        font-size: 15px; /* slightly smaller icon size on mobile */
+    }
+}
