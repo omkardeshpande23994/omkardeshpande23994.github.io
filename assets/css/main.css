@@ -1661,15 +1661,16 @@ input, select, textarea {
 		}
 
 /* Footer Icons: Align icons in a row */
-.footer-icons ul {
+#footer .footer-icons ul {
     list-style: none;
     padding: 0;
     margin: 1rem 0 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* space between icons */
+    gap: 20px;
 }
+
 
 /* Keep icons inline */
 .footer-icons li {
