@@ -1306,18 +1306,19 @@ input, select, textarea {
 			width: 5.5rem;
 			height: 5.5rem;
 			border: solid 1px #ffffff;
-			border-radius: 50%;
+			border-radius: 100%;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			overflow: hidden; /* Prevents overflow from transparent padding */
+			overflow: hidden;
 			}
 
-			#header .logo-img {
+			#header .logo img {
 			width: 80%;
 			height: 80%;
 			object-fit: contain;
 			}
+
 
 
 
