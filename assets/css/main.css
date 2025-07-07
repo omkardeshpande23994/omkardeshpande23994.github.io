@@ -771,6 +771,18 @@ input, select, textarea {
 			margin-left: 2rem;
 		}
 
+	.compact-list {
+		margin-top: 0.3em;
+		margin-bottom: 0.8em;
+		line-height: 1.4;
+		padding-left: 1.2em;
+		}
+
+	.compact-list li {
+	margin-bottom: 0.3em;
+	}
+
+
 /* Actions */
 
 	ul.actions {
@@ -1293,14 +1305,21 @@ input, select, textarea {
 		#header .logo {
 			width: 5.5rem;
 			height: 5.5rem;
-			line-height: 5.5rem;
 			border: solid 1px #ffffff;
-			border-radius: 100%;
-		}
-
-			#header .logo .icon:before {
-				font-size: 2rem;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden; /* Prevents overflow from transparent padding */
 			}
+
+			#header .logo-img {
+			width: 80%;
+			height: 80%;
+			object-fit: contain;
+			}
+
+
 
 		#header .content {
 			border-style: solid;
