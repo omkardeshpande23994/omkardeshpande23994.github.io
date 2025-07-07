@@ -1699,14 +1699,14 @@ input, select, textarea {
 
 /* Optional: icon size + hover effect (adjust as needed) */
 .footer-icons i {
-    font-size: 16px;
+    font-size: 22px;
     color: #444;
     transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .footer-icons i:hover {
     color: #fff; /* LinkedIn blue or any color you want */
-    transform: scale(1.2);
+    transform: scale(1.5);
 }
 
 @media (max-width: 480px) {
