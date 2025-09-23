@@ -64,6 +64,56 @@
 			margin-top: 5px;
 			}
 
+
+			/* Writing cards — styles*/
+			#writing ul.post-list { list-style: none; padding: 0; margin: 0; }
+
+			#writing .post-item {
+			border: 1px solid #ccc;            /* same as projects */
+			padding: 15px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			display: grid;
+			grid-template-columns: 120px auto 140px;  /* thumb | text | button */
+			gap: 15px;
+			align-items: start;
+			background: #fff0;                 /* keep your theme bg; not translucent */
+			}
+
+			/* Thumbnail (with placeholder if no <img>) */
+			#writing .post-thumb {
+			width: 100%;
+			border-radius: 4px;
+			overflow: hidden;
+			position: relative;
+			background:
+				radial-gradient(120% 100% at 0% 0%, rgba(255,255,255,0.08), transparent 60%),
+				radial-gradient(120% 100% at 100% 0%, rgba(255,255,255,0.06), transparent 60%),
+				linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+			aspect-ratio: 16 / 9;              /* keeps height even without image */
+			}
+			#writing .post-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+			/* Title, excerpt, meta */
+			#writing .post-title { margin: 0 0 6px; font-size: 1.05rem; }
+			#writing .post-excerpt { margin: 0 0 8px; }
+			#writing .post-meta { color: rgba(255,255,255,0.7); font-size: 0.9rem; }
+
+			/* Button column uses your existing .button style */
+			#writing .post-actions { display: flex; align-items: center; justify-content: flex-end; }
+			#writing .post-actions .button { white-space: nowrap; }
+
+			/* Responsive stacking */
+			@media (max-width: 900px) {
+			#writing .post-item { grid-template-columns: 110px auto; }
+			#writing .post-actions { grid-column: 1 / -1; justify-content: flex-start; margin-top: 8px; }
+			}
+			@media (max-width: 520px) {
+			#writing .post-item { grid-template-columns: 80px auto; gap: 12px; }
+			#writing .post-title { font-size: 1rem; }
+			}
+
+
 		</style>
 		
 	</head>
@@ -90,6 +140,7 @@
 								<li><a href="#skills">Skills</a></li>
 								<li><a href="#achievements">Feats</a></li>
 								<li><a href="#projects">Projects</a></li>
+								<li><a href="#writing">Writing</a></li>
 								<!--<li><a href="#contact">Contact</a></li> -->
 							</ul>
 						</nav>
@@ -232,77 +283,6 @@
 
 
 						<!-- Projects Section -->
-						<!--
-							<article id="projects">
-							    <h2 class="major">Projects</h2>
-							    <ul>
-							        <li style="display: grid; grid-template-columns: 50px auto 150px; align-items: start; margin-bottom: 1.5em; gap: 15px;">
-							            <img src="images/Pomodoro_1.jpeg" alt="Pomodoro Timer" style="margin-top: 5px;" />
-							            <div>
-							                <h4 style="margin: 0; padding-bottom: 5px;">Pomodoro Timer</h4>
-							                <p style="margin: 0;">Developed a simple Pomodoro timer webpage to improve productivity.</p>
-							            </div>
-							            <a href="https://omkardeshpande23994.github.io/Pomodoro/pomodoro-timer.html" class="button small" style="align-self: center;">View Project</a>
-							        </li>
-							        <li style="display: grid; grid-template-columns: 50px auto 150px; align-items: start; margin-bottom: 1.5em; gap: 15px;">
-							            <img src="images/Covid19Analysis.jpeg" alt="COVID-19 Visualization" style="margin-top: 5px;" />
-							            <div>
-							                <h4 style="margin: 0; padding-bottom: 5px;">COVID-19 Visualization</h4>
-							                <p style="margin: 0;">Created an interactive Tableau visualization analyzing COVID-19 trends.</p>
-							            </div>
-							            <a href="https://public.tableau.com/app/profile/omkar.deshpande1132/viz/Covid-19Analysis_17321214779240/Summary" class="button small" style="align-self: center;">View Project</a>
-							        </li>
-							        <li style="display: grid; grid-template-columns: 50px auto 150px; align-items: start; margin-bottom: 1.5em; gap: 15px;">
-							            <img src="images/SensusIncomePrediction.jpeg" alt="Adult Census Income Prediction" style="margin-top: 5px;" />
-							            <div>
-							                <h4 style="margin: 0; padding-bottom: 5px;">Adult Census Income Prediction</h4>
-							                <p style="margin: 0;">Predicted income levels using classification models.</p>
-							            </div>
-							            <a href="https://github.com/omkardeshpande23994/Adult-Census-Income" class="button small" style="align-self: center;">View Project</a>
-							        </li>
-							    </ul>
-							</article>
-						-->
-
-							<!-- <article id="projects">
-							    <h2 class="major">Projects</h2>
-							    <ul style="padding: 0; list-style: none;">
-									<li class="project-item">
-							            <img src="images/VGA.png" alt="Video Game Analysis" />
-							            <div>
-							                <h4>Video Game Sales Analysis</h4>
-							                <p>Created a Tableau visualization around the evolution and Sales Analysis of Video Games across several decades.</p>
-							                <a href="https://public.tableau.com/app/profile/omkar.deshpande1132/viz/VideoGameSalesAnalysis_17387682360770/VGA" class="button small">View Project</a>
-							            </div>
-							        </li>
-							        <li class="project-item">
-							            <img src="images/Pomodoro_1.jpeg" alt="Pomodoro Timer" />
-							            <div>
-							                <h4>Pomodoro Timer</h4>
-							                <p>Developed a simple webpage that functions as a Pomodoro timer, helping users improve productivity by timing work and breaks effectively.</p>
-							                <a href="https://omkardeshpande23994.github.io/Pomodoro/pomodoro-timer.html" class="button small">View Project</a>
-							            </div>
-							        </li>
-							        <li class="project-item">
-							            <img src="images/Covid19Analysis.jpeg" alt="COVID-19 Visualization" />
-							            <div>
-							                <h4>COVID-19 Visualization</h4>
-							                <p>Created an interactive Tableau visualization analyzing COVID-19 cases across the globe, highlighting trends and patterns in the data.</p>
-							                <a href="https://public.tableau.com/app/profile/omkar.deshpande1132/viz/Covid-19Analysis_17321214779240/Summary" class="button small">View Project</a>
-							            </div>
-							        </li>
-							        <li class="project-item">
-							            <img src="images/SensusIncomePrediction.jpeg" alt="Adult Census Income Prediction" />
-							            <div>
-							                <h4>Adult Census Income Prediction</h4>
-							                <p>Performed a detailed comparison of classification models to predict whether a person’s income exceeds $50,000 annually. Leveraged preprocessing, hyperparameter tuning, and evaluation techniques to boost accuracy.</p>
-							                <a href="https://github.com/omkardeshpande23994/Adult-Census-Income" class="button small">View Project</a>
-							            </div>
-							        </li>
-							    </ul>
-							</article> -->
-
-
 							<article id="projects">
 							    <h2 class="major">Projects</h2>
 							    <ul style="padding: 0; list-style: none;">
@@ -351,6 +331,67 @@
 							</article>
 
 							  
+						<!-- Writing Section -->
+							<article id="writing">
+								<h2 class="major">Writing</h2>
+								<p style="margin-top:-0.5rem">Short posts and notes on analytics, BI, automation, and career.</p>
+
+								<ul class="post-list">
+									<!-- Post 1 (with placeholder thumb: no <img>) -->
+									<li class="post-item">
+									<div class="post-thumb">
+										<!-- no img -> shows placeholder -->
+									</div>
+									<div>
+										<h4 class="post-title">From dashboards to decisions</h4>
+										<p class="post-excerpt">A simple checklist to move reports from “pretty visuals” to business impact.</p>
+										<div class="post-meta">
+										<time datetime="2025-08-20">Aug 20, 2025</time> • 4 min • Analytics, Automation
+										</div>
+									</div>
+									<div class="post-actions">
+										<a href="#" class="button small">Read post</a>
+									</div>
+									</li>
+
+									<!-- Post 2 (with image) -->
+									<li class="post-item">
+									<div class="post-thumb">
+										<img src="images/blog/demo-2.webp" alt="Tableau storypoints">
+									</div>
+									<div>
+										<h4 class="post-title">Tableau guardrails I actually use</h4>
+										<p class="post-excerpt">Parameters, fixed LODs, and a tiny UX pattern that rescues most dashboards.</p>
+										<div class="post-meta">
+										<time datetime="2025-08-05">Aug 5, 2025</time> • 5 min • Tableau, Analytics
+										</div>
+									</div>
+									<div class="post-actions">
+										<a href="#" class="button small">Read post</a>
+									</div>
+									</li>
+
+									<!-- Post 3 (with placeholder) -->
+									<li class="post-item">
+									<div class="post-thumb">
+										<!-- placeholder again -->
+									</div>
+									<div>
+										<h4 class="post-title">SQL skeletons for messy data</h4>
+										<p class="post-excerpt">Reusable patterns for dedupe, change capture, and latest-record joins.</p>
+										<div class="post-meta">
+										<time datetime="2025-07-18">Jul 18, 2025</time> • 6 min • SQL, Automation
+										</div>
+									</div>
+									<div class="post-actions">
+										<a href="#" class="button small">Read post</a>
+									</div>
+									</li>
+								</ul>
+							</article>
+
+
+
 
 						<!-- Contact Section -->
 						<!--

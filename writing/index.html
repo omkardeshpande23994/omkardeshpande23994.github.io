@@ -1,0 +1,130 @@
+---
+layout: none
+title: Writing
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Writing • Omkar Deshpande</title>
+  <meta name="description" content="Short essays and notes on analytics, BI, and automation." />
+  <link rel="icon" href="../images/favicon.png" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/blog.css" />
+</head>
+<body class="blog-body">
+  <header class="blog-header">
+    <a class="blog-brand" href="../">OD</a>
+    <nav class="blog-nav">
+      <a href="../#work">Work</a>
+      <a href="../#projects">Projects</a>
+      <a href="../#skills">Skills</a>
+      <a class="active" href="./">Writing</a>
+      <a href="../#achievements">Feats</a>
+      <a href="../#intro">About</a>
+    </nav>
+  </header>
+
+  <main class="blog-main">
+    <section class="blog-hero">
+      <h1>Writing</h1>
+      <p>Short, practical posts on analytics, BI, automation, and the craft of data storytelling.</p>
+      <div class="blog-filters" aria-label="Filters">
+        <button class="chip is-active" data-tag="all">All</button>
+        <button class="chip" data-tag="analytics">Analytics</button>
+        <button class="chip" data-tag="tableau">Tableau</button>
+        <button class="chip" data-tag="sql">SQL</button>
+        <button class="chip" data-tag="automation">Automation</button>
+        <button class="chip" data-tag="career">Career</button>
+      </div>
+    </section>
+
+    <section class="blog-grid" id="blog-grid" aria-live="polite">
+      <!-- DUMMY POSTS — replace with generated Markdown later -->
+      <!-- Post Card -->
+      <article class="card" data-tags="analytics,automation" itemscope itemtype="https://schema.org/BlogPosting">
+        <a class="card-media" href="#" aria-label="Read post: From dashboards to decisions">
+          <img src="../images/blog/demo-1.webp" alt="Chart cards" loading="lazy" itemprop="image">
+        </a>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="tag">Analytics</span><span class="tag">Automation</span>
+          </div>
+          <h2 class="card-title" itemprop="headline">From dashboards to decisions</h2>
+          <p class="card-excerpt" itemprop="description">A simple checklist to move reports from “pretty visuals” to business impact.</p>
+          <div class="card-meta">
+            <time datetime="2025-08-20" itemprop="datePublished">Aug 20, 2025</time>
+            <span aria-hidden="true">•</span>
+            <span>4 min</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-tags="tableau,analytics" itemscope itemtype="https://schema.org/BlogPosting">
+        <a class="card-media" href="#">
+          <img src="../images/blog/demo-2.webp" alt="Tableau storypoints" loading="lazy" itemprop="image">
+        </a>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag">Tableau</span><span class="tag">Analytics</span></div>
+          <h2 class="card-title">Tableau guardrails I actually use</h2>
+          <p class="card-excerpt">Parameters, fixed LODs, and a tiny UX pattern that rescues most dashboards.</p>
+          <div class="card-meta"><time datetime="2025-08-05">Aug 5, 2025</time><span>•</span><span>5 min</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-tags="sql,automation" itemscope itemtype="https://schema.org/BlogPosting">
+        <a class="card-media" href="#"><img src="../images/blog/demo-3.webp" alt="SQL notebook" loading="lazy" itemprop="image"></a>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag">SQL</span><span class="tag">Automation</span></div>
+          <h2 class="card-title">SQL skeletons for messy data</h2>
+          <p class="card-excerpt">Reusable patterns for dedupe, change capture, and “latest record” joins.</p>
+          <div class="card-meta"><time datetime="2025-07-18">Jul 18, 2025</time><span>•</span><span>6 min</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-tags="career" itemscope itemtype="https://schema.org/BlogPosting">
+        <a class="card-media" href="#"><img src="../images/blog/demo-4.webp" alt="Career notes" loading="lazy" itemprop="image"></a>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag">Career</span></div>
+          <h2 class="card-title">My analytics career playbook</h2>
+          <p class="card-excerpt">How I think about projects, stakeholders, and “ship value weekly”.</p>
+          <div class="card-meta"><time datetime="2025-07-01">Jul 1, 2025</time><span>•</span><span>3 min</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-tags="analytics" itemscope itemtype="https://schema.org/BlogPosting">
+        <a class="card-media" href="#"><img src="../images/blog/demo-5.webp" alt="Agile board" loading="lazy" itemprop="image"></a>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag">Analytics</span></div>
+          <h2 class="card-title">Agile metrics that matter</h2>
+          <p class="card-excerpt">Throughput and lead time are enough 80% of the time—if you plot them right.</p>
+          <div class="card-meta"><time datetime="2025-06-12">Jun 12, 2025</time><span>•</span><span>4 min</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-tags="automation,sql" itemscope itemtype="https://schema.org/BlogPosting">
+        <a class="card-media" href="#"><img src="../images/blog/demo-6.webp" alt="Automation" loading="lazy" itemprop="image"></a>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag">Automation</span><span class="tag">SQL</span></div>
+          <h2 class="card-title">Automation without breaking audits</h2>
+          <p class="card-excerpt">Logs, idempotency, and small guardrails so future-you says thanks.</p>
+          <div class="card-meta"><time datetime="2025-05-30">May 30, 2025</time><span>•</span><span>5 min</span></div>
+        </div>
+      </article>
+      <!-- /DUMMY POSTS -->
+    </section>
+
+    <div class="blog-actions">
+      <button id="loadMore" class="button">Load more</button>
+    </div>
+  </main>
+
+  <footer class="blog-footer">
+    <p>© Omkar Deshpande • <a href="../">Back to portfolio</a></p>
+  </footer>
+
+  <script src="../assets/js/blog.js"></script>
+</body>
+</html>
