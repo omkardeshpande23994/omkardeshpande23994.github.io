@@ -77,7 +77,7 @@
       if (!scrollable) { hide(); return; }
 
       // 3) Show only after scrolling a bit (and NOT at exact top)
-      var threshold = Math.min(400, Math.max(200, s.h * 0.30)); // 30% of viewport, bounded 200-400
+      var threshold = Math.min(400, Math.max(200, s.h * 0.70)); // 70% of viewport, bounded 200-400
       if (y > threshold) show(); else hide();
     }
 
