@@ -1,0 +1,60 @@
+:root {
+  /* tweak if you want a lighter/darker button */
+  --btt-bg: rgba(255, 255, 255, 0.14);
+  --btt-bg-hover: rgba(255, 255, 255, 0.22);
+  --btt-fg: #ffffff;
+  --btt-shadow: 0 8px 24px rgba(0,0,0,0.28);
+  --btt-shadow-hover: 0 10px 28px rgba(0,0,0,0.34);
+  --btt-focus: 0 0 0 3px rgba(255,255,255,0.35);
+}
+
+#backToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  z-index: 9999;
+  display: none;                /* toggled via JS */
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: var(--btt-bg);
+  color: var(--btt-fg);
+  backdrop-filter: blur(6px);
+  box-shadow: var(--btt-shadow);
+  cursor: pointer;
+  transition: transform .18s ease, background .18s ease, box-shadow .18s ease, opacity .18s ease;
+}
+
+#backToTop svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+  pointer-events: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#backToTop:hover       { background: var(--btt-bg-hover); transform: translateY(-2px); box-shadow: var(--btt-shadow-hover); }
+#backToTop:active      { transform: translateY(0); }
+#backToTop:focus-visible { outline: none; box-shadow: var(--btt-shadow), var(--btt-focus); }
+
+#backToTop.show { display: inline-flex; opacity: 1; }
+#backToTop.hide { opacity: 0; pointer-events: none; }
+
+@media (max-width: 480px) {
+  #backToTop { right: 14px; bottom: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #backToTop { transition: none; }
+}
+
+/* remove the old inline link version if you added it earlier */
+.inline-top-link { display: none !important; }
