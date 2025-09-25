@@ -64,54 +64,49 @@
 			margin-top: 5px;
 			}
 
+			
+			/* Writing Section - Minimalist Grid */
+			/* === Fix left gutter on blog thumbnails === */
+			#writing .blog-grid { padding: 0; margin: 0; }
 
-			/* Writing cards — styles*/
-			#writing ul.post-list { list-style: none; padding: 0; margin: 0; }
-
-			#writing .post-item {
-			border: 1px solid #ccc;            /* same as projects */
-			padding: 15px;
-			margin-bottom: 20px;
-			border-radius: 5px;
-			display: grid;
-			grid-template-columns: 120px auto 140px;  /* thumb | text | button */
-			gap: 15px;
-			align-items: start;
-			background: #fff0;                 /* keep your theme bg; not translucent */
+			#writing .blog-card { 
+			padding: 0 !important;             /* kill any inherited padding */
+			margin: 0; 
+			border-radius: 12px;
+			overflow: hidden;                   /* so the image corners are clipped */
 			}
 
-			/* Thumbnail (with placeholder if no <img>) */
-			#writing .post-thumb {
+			#writing .blog-card > a {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			color: inherit;
+			text-decoration: none;
+			padding: 0 !important;              /* some themes pad anchors */
+			margin: 0;
+			}
+
+			#writing .blog-thumb {
 			width: 100%;
-			border-radius: 4px;
+			aspect-ratio: 16/9;
 			overflow: hidden;
-			position: relative;
-			background:
-				radial-gradient(120% 100% at 0% 0%, rgba(255,255,255,0.08), transparent 80%),
-				radial-gradient(120% 100% at 100% 0%, rgba(255,255,255,0.06), transparent 80%),
-				linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
-			aspect-ratio: 1 / 1.2;              /* keeps height even without image */
+			background: rgba(255,255,255,0.06);
+			padding: 0 !important;
+			margin: 0 !important;
+			border: 0;
 			}
-			#writing .post-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-			/* Title, excerpt, meta */
-			#writing .post-title { margin: 0 0 6px; font-size: 1.05rem; }
-			#writing .post-excerpt { margin: 0 0 8px; }
-			#writing .post-meta { color: rgba(255,255,255,0.7); font-size: 0.9rem; }
-
-			/* Button column uses your existing .button style */
-			#writing .post-actions { display: flex; align-items: center; justify-content: flex-end; }
-			#writing .post-actions .button { white-space: nowrap; }
-
-			/* Responsive stacking */
-			@media (max-width: 900px) {
-			#writing .post-item { grid-template-columns: 110px auto; }
-			#writing .post-actions { grid-column: 1 / -1; justify-content: flex-start; margin-top: 8px; }
+			#writing .blog-thumb img {
+			display: block;                     /* removes inline gap */
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			margin: 0;
+			border: 0;
 			}
-			@media (max-width: 520px) {
-			#writing .post-item { grid-template-columns: 80px auto; gap: 12px; }
-			#writing .post-title { font-size: 1rem; }
-			}
+
+			/* Optional: tighten body padding if you want text to align exactly to image edge */
+			#writing .blog-body { padding: 1rem 1.2rem 1.2rem; }
 
 
 		</style>
@@ -336,58 +331,134 @@
 								<h2 class="major">Writing</h2>
 								<p style="margin-top:-0.5rem">Short posts and notes on analytics, BI, automation, and career.</p>
 
-								<ul class="post-list">
-									<!-- Post 1 (with placeholder thumb: no <img>) -->
-									<li class="post-item">
-									<div class="post-thumb">
-										<!-- no img -> shows placeholder -->
-									</div>
-									<div>
-										<h4 class="post-title">From dashboards to decisions</h4>
-										<p class="post-excerpt">A simple checklist to move reports from “pretty visuals” to business impact.</p>
-										<div class="post-meta">
-										<time datetime="2025-08-20">Aug 20, 2025</time> • 4 min • Analytics, Automation
+								<ul class="blog-grid">
+									<li class="blog-card">
+										<a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7371853403582267392" target="_blank" rel="noopener">
+										<div class="blog-thumb"><img src="images/blog/SDLC and Trap of Vibe coding.png" alt=""></div>
+										<div class="blog-body">
+											<h3 class="blog-title">Waterfall, Agile, AI-build… and the trap of “vibe coding”</h3>
+											<div class="blog-meta">
+											<time datetime="2025-09-11">Sep 11, 2025</time>
+											<span> · </span>
+											<span class="blog-link">Open on LinkedIn →</span>
+											</div>
 										</div>
-									</div>
-									<div class="post-actions">
-										<a href="#" class="button small">Read post</a>
-									</div>
+										</a>
 									</li>
 
-									<!-- Post 2 (with image) -->
-									<li class="post-item">
-									<div class="post-thumb">
-										<!--<img src="images/blog/demo-2.webp" alt="Tableau storypoints"> -->
-									</div>
-									<div>
-										<h4 class="post-title">Tableau guardrails I actually use</h4>
-										<p class="post-excerpt">Parameters, fixed LODs, and a tiny UX pattern that rescues most dashboards.</p>
-										<div class="post-meta">
-										<time datetime="2025-08-05">Aug 5, 2025</time> • 5 min • Tableau, Analytics
+									<li class="blog-card">
+										<a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7368926512714113026" target="_blank" rel="noopener">
+										<div class="blog-thumb"><img src="images/blog/GenAI Vs StoryTelling.jpg" alt=""></div>
+										<div class="blog-body">
+											<h3 class="blog-title">GenAI can write the code, but it cant tell the story.</h3>
+											<div class="blog-meta">
+											<time datetime="2025-09-03">Sep 03, 2025</time>
+											<span> · </span>
+											<span class="blog-link">Open on LinkedIn →</span>
+											</div>
 										</div>
-									</div>
-									<div class="post-actions">
-										<a href="#" class="button small">Read post</a>
-									</div>
+										</a>
 									</li>
 
-									<!-- Post 3 (with placeholder) -->
-									<li class="post-item">
-									<div class="post-thumb">
-										<!-- placeholder again -->
-									</div>
-									<div>
-										<h4 class="post-title">SQL skeletons for messy data</h4>
-										<p class="post-excerpt">Reusable patterns for dedupe, change capture, and latest-record joins.</p>
-										<div class="post-meta">
-										<time datetime="2025-07-18">Jul 18, 2025</time> • 6 min • SQL, Automation
+									<li class="blog-card">
+										<a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7361039703191486466" target="_blank" rel="noopener">
+										<div class="blog-thumb"></div>
+										<div class="blog-body">
+											<h3 class="blog-title">Why GPT-4o felt like a friend… and GPT-5 feels like a colleague</h3>
+											<div class="blog-meta">
+											<time datetime="2025-08-12">Aug 12, 2025</time>
+											<span> · </span>
+											<span class="blog-link">Open on LinkedIn →</span>
+											</div>
 										</div>
-									</div>
-									<div class="post-actions">
-										<a href="#" class="button small">Read post</a>
-									</div>
+										</a>
+									</li>
+
+									<li class="blog-card">
+										<a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7350539448893194240" target="_blank" rel="noopener">
+										<div class="blog-thumb"><img src="images/blog/BI Workflow.png" alt=""></div>
+										<div class="blog-body">
+											<h3 class="blog-title">What does it really take to turn raw data into actionable business decisions?</h3>
+											<div class="blog-meta">
+											<time datetime="2025-07-14">Jul 14, 2025</time>
+											<span> · </span>
+											<span class="blog-link">Open on LinkedIn →</span>
+											</div>
+										</div>
+										</a>
+									</li>
+
+									<li class="blog-card">
+										<a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7343218824659267584" target="_blank" rel="noopener">
+										<div class="blog-thumb"><img src="images/blog/LP_Behind the Dashboard.png" alt=""></div>
+										<div class="blog-body">
+											<h3 class="blog-title">Behind the Dashboard: Lessons from Building Feedback & JIRA Reporting Systems</h3>
+											<div class="blog-meta">
+											<time datetime="2025-06-24">Jun 24, 2025</time>
+											<span> · </span>
+											<span class="blog-link">Open on LinkedIn →</span>
+											</div>
+										</div>
+										</a>
+									</li>
+
+									<li class="blog-card">
+										<a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7325839209087287296" target="_blank" rel="noopener">
+										<div class="blog-thumb"><img src="images/blog/AI Risks.png" alt=""></div>
+										<div class="blog-body">
+											<h3 class="blog-title">AI in 2025: The Hidden Risks Were Not Talking About Enough</h3>
+											<div class="blog-meta">
+											<time datetime="2025-05-07">May 07, 2025</time>
+											<span> · </span>
+											<span class="blog-link">Open on LinkedIn →</span>
+											</div>
+										</div>
+										</a>
+									</li>
+
+									<li class="blog-card">
+										<a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7297592004811591680" target="_blank" rel="noopener">
+										<div class="blog-thumb"></div>
+										<div class="blog-body">
+											<h3 class="blog-title">The Great Data Visualization Debate: Tableau vs. Power BI</h3>
+											<div class="blog-meta">
+											<time datetime="2025-02-18">Feb 18, 2025</time>
+											<span> · </span>
+											<span class="blog-link">Open on LinkedIn →</span>
+											</div>
+										</div>
+										</a>
+									</li>
+
+									<li class="blog-card">
+										<a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7287058223268859908" target="_blank" rel="noopener">
+										<div class="blog-thumb"></div>
+										<div class="blog-body">
+											<h3 class="blog-title">AI Agents: Shaping the Future of Work</h3>
+											<div class="blog-meta">
+											<time datetime="2025-01-20">Jan 20, 2025</time>
+											<span> · </span>
+											<span class="blog-link">Open on LinkedIn →</span>
+											</div>
+										</div>
+										</a>
+									</li>
+
+									<li class="blog-card">
+										<a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7259082511278821376" target="_blank" rel="noopener">
+										<div class="blog-thumb"></div>
+										<div class="blog-body">
+											<h3 class="blog-title">How Data Analytics Transforms Business Decisions: Insights from My Journey</h3>
+											<div class="blog-meta">
+											<time datetime="2024-11-04">Nov 04, 2024</time>
+											<span> · </span>
+											<span class="blog-link">Open on LinkedIn →</span>
+											</div>
+										</div>
+										</a>
 									</li>
 								</ul>
+
 							</article>
 
 
