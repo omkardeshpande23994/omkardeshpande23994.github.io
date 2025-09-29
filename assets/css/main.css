@@ -1,11 +1,7 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
-/*
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -109,196 +105,160 @@ input, select, textarea {
 			transition: none !important;
 		}
 
+
 /* Type */
 
-	html {
-		font-size: 16pt;
+	/* Google Fonts: keep Source Sans only for legacy toggle */
+	@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
+
+	/* ==============================
+	TYPOGRAPHY VARIABLES (Manrope)
+	- Central control for sizes/weights
+	- Live test via: setFont('--fs-body','1rem')
+	- Rollback: <html data-typography="legacy">
+	============================== */
+	:root {
+	/* Families */
+	--font-body: 'Manrope', ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+				Roboto, "Helvetica Neue", Arial, "Noto Sans";
+	--font-head: 'Manrope', ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+				Roboto, "Helvetica Neue", Arial, "Noto Sans";
+
+	/* Base sizes (dark, minimalist scale) */
+	--fs-body: 0.95rem;  /* ~15px */
+	--fs-h1:   2.20rem;
+	--fs-h2:   1.60rem;
+	--fs-h3:   1.20rem;
+	--fs-h4:   1.08rem;  /* > body */
+	--fs-h5:   1.02rem;  /* ≥ body */
+	--fs-h6:   0.95rem;  /* = body (optional) */
+
+	/* Weights (Manrope supports 200..800) */
+	--fw-body: 400;
+	--fw-h1:   200;
+	--fw-h2:   600;
+	--fw-h3:   500;
+	--fw-h4:   500;
+	--fw-h5:   600;
+	--fw-h6:   500;
+
+	/* Character Spacing */
+	--track-h1: 1.1em;   /* character spacing for H1 */
+	--track-h2: 0.015em;  /* H2 */
+	--track-h3: 0.01em;   /* H3 */
+
+	/* line-height (see next section) */
+	--lh-body: 1.65;
+	--lh-head: 1.30;
+	--lh-h1: var(--lh-head);
+	--lh-h2: var(--lh-head);
+	--lh-h3: var(--lh-head);
 	}
 
-		@media screen and (max-width: 1680px) {
+	/* Apply per-level spacing + line-height */
+	h1 { font-size: var(--fs-h1); font-weight: var(--fw-h1); letter-spacing: var(--track-h1); line-height: var(--lh-h1); }
+	h2 { font-size: var(--fs-h2); font-weight: var(--fw-h2); letter-spacing: var(--track-h2); line-height: var(--lh-h2); }
+	h3 { font-size: var(--fs-h3); font-weight: var(--fw-h3); letter-spacing: var(--track-h3); line-height: var(--lh-h3); }
 
-			html {
-				font-size: 12pt;
-			}
+	/* keep h4–h6 as before */
+	h4 { font-size: var(--fs-h4); font-weight: var(--fw-h4); }
+	h5 { font-size: var(--fs-h5); font-weight: var(--fw-h5); }
+	h6 { font-size: var(--fs-h6); font-weight: var(--fw-h6); }
 
-		}
 
-		@media screen and (max-width: 736px) {
+	/* Legacy rollback (kept for easy revert) */
+	html[data-typography="legacy"] {
+	--font-body: "Source Sans Pro", sans-serif;
+	--font-head: "Source Sans Pro", sans-serif;
+	}
 
-			html {
-				font-size: 11pt;
-			}
+	/* Root scaling from the original theme (kept) */
+	html { font-size: 16pt; }
+	@media screen and (max-width: 1680px) { html { font-size: 12pt; } }
+	@media screen and (max-width: 736px)  { html { font-size: 11pt; } }
+	@media screen and (max-width: 360px)  { html { font-size: 10pt; } }
 
-		}
-
-		@media screen and (max-width: 360px) {
-
-			html {
-				font-size: 10pt;
-			}
-
-		}
-
+	/* Body + form elements */
 	body, input, select, textarea {
-		color: #ffffff;
-		font-family: "Source Sans Pro", sans-serif;
-		font-weight: 300;
-		font-size: 1rem;
-		line-height: 1.65;
+	color: #ffffff;
+	font-family: var(--font-body);
+	font-weight: var(--fw-body);
+	font-size: var(--fs-body);
+	line-height: var(--lh-body);
 	}
 
+	/* Ensure copy + lists share the same base size */
+	p, ul, ol, li { 
+	font-size: var(--fs-body);
+	line-height: var(--lh-body);
+	}
+
+	/* Links */
 	a {
-		-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
-		text-decoration: none;
-		color: inherit;
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+	border-bottom: dotted 1px rgba(255,255,255,0.5);
+	text-decoration: none;
+	color: inherit;
 	}
+	a:hover { border-bottom-color: transparent; }
 
-		a:hover {
-			border-bottom-color: transparent;
-		}
+	/* Emphasis */
+	strong, b { color: #ffffff; font-weight: 600; }
+	em, i     { font-style: italic; }
 
-	strong, b {
-		color: #ffffff;
-		font-weight: 600;
-	}
-
-	em, i {
-		font-style: italic;
-	}
-
-	p {
-		margin: 0 0 2rem 0;
-	}
-
+	/* Headings (all levels driven by variables) */
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
-		font-weight: 600;
-		line-height: 1.5;
-		margin: 0 0 1rem 0;
-		text-transform: uppercase;
-		letter-spacing: 0.2rem;
+	color: #ffffff;
+	font-family: var(--font-head);
+	line-height: var(--lh-head);
+	margin: 0 0 1rem 0;
+	text-transform: none;
+	letter-spacing: normal;
 	}
 
-		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-			color: inherit;
-			text-decoration: none;
-		}
+	h1 { font-size: var(--fs-h1); font-weight: var(--fw-h1); }
+	h2 { font-size: var(--fs-h2); font-weight: var(--fw-h2); }
+	h3 { font-size: var(--fs-h3); font-weight: var(--fw-h3); }
+	h4 { font-size: var(--fs-h4); font-weight: var(--fw-h4); }
+	h5 { font-size: var(--fs-h5); font-weight: var(--fw-h5); }
+	h6 { font-size: var(--fs-h6); font-weight: var(--fw-h6); }
 
-		h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
-			border-bottom: solid 1px #ffffff;
-			width: -moz-max-content;
-			width: -webkit-max-content;
-			width: -ms-max-content;
-			width: max-content;
-			padding-bottom: 0.5rem;
-			margin: 0 0 2rem 0;
-		}
+	h2 { border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 0.35rem; }
 
-	h1 {
-		font-size: 2.25rem;
-		line-height: 1.3;
-		letter-spacing: 0.5rem;
+	/* Legacy heading look (uppercase + tracking) */
+	html[data-typography="legacy"] h1,
+	html[data-typography="legacy"] h2,
+	html[data-typography="legacy"] h3,
+	html[data-typography="legacy"] h4,
+	html[data-typography="legacy"] h5,
+	html[data-typography="legacy"] h6 {
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	line-height: 1.5;
 	}
 
-	h2 {
-		font-size: 1.5rem;
-		line-height: 1.4;
-		letter-spacing: 0.5rem;
+	/* Responsive heading scaling via variables */
+	@media (max-width: 980px) {
+	:root {
+		--fs-h1: 2.05rem;
+		--fs-h2: 1.50rem;
+		--fs-h3: 1.15rem;
+		--fs-h4: 1.02rem;
+		--fs-h5: 0.98rem;
+	}
+	}
+	@media (max-width: 480px) {
+	:root {
+		--fs-h1: 1.90rem;
+		--fs-h2: 1.35rem;
+		--fs-h3: 1.10rem;
+		--fs-h4: 1.00rem;
+		--fs-h5: 0.96rem;
+	}
 	}
 
-	h3 {
-		font-size: 1rem;
-	}
 
-	h4 {
-		font-size: 0.8rem;
-	}
 
-	h5 {
-		font-size: 0.7rem;
-	}
-
-	h6 {
-		font-size: 0.6rem;
-	}
-
-	@media screen and (max-width: 736px) {
-
-		h1 {
-			font-size: 1.75rem;
-			line-height: 1.4;
-		}
-
-		h2 {
-			font-size: 1.25em;
-			line-height: 1.5;
-		}
-
-	}
-
-	sub {
-		font-size: 0.8rem;
-		position: relative;
-		top: 0.5rem;
-	}
-
-	sup {
-		font-size: 0.8rem;
-		position: relative;
-		top: -0.5rem;
-	}
-
-	blockquote {
-		border-left: solid 4px #ffffff;
-		font-style: italic;
-		margin: 0 0 2rem 0;
-		padding: 0.5rem 0 0.5rem 2rem;
-	}
-
-	code {
-		background: rgba(255, 255, 255, 0.075);
-		border-radius: 4px;
-		font-family: "Courier New", monospace;
-		font-size: 0.9rem;
-		margin: 0 0.25rem;
-		padding: 0.25rem 0.65rem;
-	}
-
-	pre {
-		-webkit-overflow-scrolling: touch;
-		font-family: "Courier New", monospace;
-		font-size: 0.9rem;
-		margin: 0 0 2rem 0;
-	}
-
-		pre code {
-			display: block;
-			line-height: 1.75;
-			padding: 1rem 1.5rem;
-			overflow-x: auto;
-		}
-
-	hr {
-		border: 0;
-		border-bottom: solid 1px #ffffff;
-		margin: 2.75rem 0;
-	}
-
-	.align-left {
-		text-align: left;
-	}
-
-	.align-center {
-		text-align: center;
-	}
-
-	.align-right {
-		text-align: right;
-	}
 
 /* Form */
 
@@ -1145,14 +1105,14 @@ input, select, textarea {
 		}
 
 		#bg:before {
-			-moz-transition: background-color 2.5s ease-in-out;
-			-webkit-transition: background-color 2.5s ease-in-out;
-			-ms-transition: background-color 2.5s ease-in-out;
-			transition: background-color 2.5s ease-in-out;
-			-moz-transition-delay: 0.75s;
-			-webkit-transition-delay: 0.75s;
-			-ms-transition-delay: 0.75s;
-			transition-delay: 0.75s;
+			-moz-transition: background-color 1.5s ease-in-out;
+			-webkit-transition: background-color 1.5s ease-in-out;
+			-ms-transition: background-color 1.5s ease-in-out;
+			transition: background-color 1.5s ease-in-out;
+			-moz-transition-delay: 0.5s;
+			-webkit-transition-delay: 0.5s;
+			-ms-transition-delay: 0.5s;
+			transition-delay: 0.5s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
 			background-size: auto,
  256px 256px;
@@ -1174,7 +1134,7 @@ input, select, textarea {
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
 			background-image: url("../../images/bg.jpg");
 			background-position: center;
-			background-size: cover;
+			background-size: 100% 100%; 
 			background-repeat: no-repeat;
 			z-index: 1;
 		}
@@ -1568,7 +1528,7 @@ input, select, textarea {
 			position: relative;
 			width: 50rem;
 			max-width: 100%;
-			background-color: rgba(27, 31, 34, 0.85);
+			background-color: rgba(27, 31, 34, 0.5);
 			border-radius: 4px;
 			opacity: 0;
 		}

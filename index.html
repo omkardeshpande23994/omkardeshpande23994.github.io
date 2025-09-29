@@ -1,117 +1,62 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-	    <!-- SEO & Social Meta Tags -->
-	    <meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	    <meta name="description" content="Omkar Deshpande - Senior Data & Analytics Consultant with 8+ years of experience in data visualization, business intelligence, and analytics consulting. Portfolio and career profile.">
-	    <meta name="keywords" content="Omkar Deshpande, Data Analytics Consultant, Business Analyst, Tableau Expert, SQL Specialist, Business Intelligence, Data Visualization, Amsterdam, Netherlands">
-	    <meta name="author" content="Omkar Deshpande">
+		<!-- =======================
+			Meta / SEO / Social
+			======================= -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="description" content="Omkar Deshpande - Senior Data & Analytics Consultant with 8+ years of experience in data visualization, business intelligence, and analytics consulting. Portfolio and career profile.">
+		<meta name="keywords" content="Omkar Deshpande, Data Analytics Consultant, Business Analyst, Tableau Expert, SQL Specialist, Business Intelligence, Data Visualization, Amsterdam, Netherlands">
+		<meta name="author" content="Omkar Deshpande">
+		<title>Omkar Deshpande | Data & Analytics Consultant | Portfolio</title>
 
-	    <title>Omkar Deshpande | Data & Analytics Consultant | Portfolio</title>
+		<!-- Open Graph -->
+		<meta property="og:title" content="Omkar Deshpande | Data & Analytics Consultant">
+		<meta property="og:description" content="Explore my portfolio showcasing dashboards, reporting, and data consulting projects.">
+		<meta property="og:image" content="https://omkardeshpande23994.github.io/images/preview-image.png">
+		<meta property="og:url" content="https://omkardeshpande23994.github.io">
+		<meta property="og:type" content="website">
 
-	    <!-- Open Graph Meta Tags -->
-	    <meta property="og:title" content="Omkar Deshpande | Data & Analytics Consultant">
-	    <meta property="og:description" content="Explore my portfolio showcasing dashboards, reporting, and data consulting projects.">
-	    <meta property="og:image" content="https://omkardeshpande23994.github.io/images/preview-image.png">
-	    <meta property="og:url" content="https://omkardeshpande23994.github.io">
-	    <meta property="og:type" content="website">
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="images/favicon.png">
 
-	    <!-- Favicon -->
-	    <link rel="icon" type="image/png" href="images/favicon.png">
-
-	    <!-- Stylesheets -->
-	    <link rel="stylesheet" href="assets/css/main.css" />
-	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-	    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
-
-		<!-- Back to top button -->
-		<link rel="stylesheet" href="assets/css/main.css">
+		<!-- =======================
+			CSS (core first)
+			======================= -->
+		<link rel="stylesheet" href="assets/css/main.css?v=manrope-1" />
 		<link rel="stylesheet" href="assets/css/backToTop.css?v=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+		<link rel="stylesheet" href="css/fontawesome-all.min.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
+		<!-- =======================
+			Fonts (Manrope only)
+			NOTE: easy rollback = remove this <link> and set data-typography="legacy"
+			======================= -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet"
+				href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap">
 
-	    <!-- Noscript fallback -->
-	    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-
-		<style>
-			/* Projects Section */
-			#projects ul {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-			}
-
-			/* Each project “card” */
-			.project-item {
-			border: 1px solid #ccc;
-			padding: 15px;
-			margin-bottom: 20px;
-			border-radius: 5px;
-			}
-
-			/* Project Titles & Text */
-			.project-item h4 {
-			margin-top: 0;
-			margin-bottom: 8px;
-			}
-			.project-item p {
-			margin: 0 0 10px 0;
-			}
-
-			/* “View Project” Button */
-			.project-item .button {
-			display: inline-block;
-			margin-top: 5px;
-			}
-
-			
-			/* Writing Section - Minimalist Grid */
-			/* === Fix left gutter on blog thumbnails === */
-			#writing .blog-grid { padding: 0; margin: 0; }
-
-			#writing .blog-card { 
-			padding: 0 !important;             /* kill any inherited padding */
-			margin: 0; 
-			border-radius: 12px;
-			overflow: hidden;                   /* so the image corners are clipped */
-			}
-
-			#writing .blog-card > a {
-			display: flex;
-			flex-direction: column;
-			height: 100%;
-			color: inherit;
-			text-decoration: none;
-			padding: 0 !important;              /* some themes pad anchors */
-			margin: 0;
-			}
-
-			#writing .blog-thumb {
-			width: 100%;
-			aspect-ratio: 16/9;
-			overflow: hidden;
-			background: rgba(255,255,255,0.06);
-			padding: 0 !important;
-			margin: 0 !important;
-			border: 0;
-			}
-
-			#writing .blog-thumb img {
-			display: block;                     /* removes inline gap */
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			margin: 0;
-			border: 0;
-			}
-
-			/* Optional: tighten body padding if you want text to align exactly to image edge */
-			#writing .blog-body { padding: 1rem 1.2rem 1.2rem; }
-
-
-		</style>
-		
+		<!-- =======================
+			Font test helpers (optional)
+			- Keep small and production-safe
+			- setFont('--fw-h1', 800) in DevTools console, etc.
+			======================= -->
+		<script>
+			window.setFont = function (varName, value) {
+			document.documentElement.style.setProperty(varName, value);
+			console.log('Set', varName, '→', value);
+			};
+			window.setTypography = function (mode /* 'manrope' | 'legacy' */) {
+			document.documentElement.setAttribute('data-typography', mode);
+			console.log('Typography mode:', mode);
+			};
+		</script>
 	</head>
+
+
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -124,7 +69,7 @@
 						</div>
 						<div class="content">
 							<div class="inner">
-								<h1>Omkar Deshpande</h1>
+								<h1>OMKAR DESHPANDE</h1>
 								<p>Analytics Consultant | Business Analyst | Data Analyst | ML Enthusiast</p>
 							</div>
 						</div>
@@ -146,7 +91,7 @@
 
 						<!-- Intro Section -->
 							<article id="intro">
-								<h2 class="major">Intro</h2>
+								<h2 class="major">INTRODUCTION</h2>
 								<span class="image main"><img src="images/Hello.jpeg" alt="" /></span>
 								<p><strong>Hello and Welcome!</strong></p>
 								<p>I'm Omkar Deshpande  -  a Senior Analytics Consultant with over 8 years of experience turning complex data into clear, actionable insights.</p>
@@ -176,11 +121,9 @@
 
 						<!-- Work Section -->
 							<article id="work">
-								<h2 class="major">Work Experience</h2>
-
-								<h3 style="font-size: 1.2em; margin-bottom: 0.2em;">2024 – Present | Wells Fargo, India</h3>
-								<h4 style="font-size: 1em; font-weight: 400; font-style: italic; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-top: 0; margin-bottom: 0.2em;">Senior Analytics Consultant</h4>
-
+								<h2 class="major">WORK EXPERIENCE</h2>
+								<h3>2024 – Present | Wells Fargo, India</h3>
+								<h4>Senior Analytics Consultant</h4>
 								<ul class="compact-list">
 									<li><strong>End-to-End Ownership – Loudspeaker Dashboards:</strong> Managed and delivered 10+ Tableau dashboards including Loudspeaker Weekly Pulse and Compliments, ensuring timely delivery, zero misses, and high LOB engagement. Took full responsibility for consistent weekly refreshes and communication with stakeholders.</li>
 									<li><strong>Legacy Dashboard Revamp:</strong> Revamped 4+ legacy dashboards (3+ years old), optimizing Teradata SQL queries and enhancing UI/UX. Reduced load time by 40%, improved interactivity, and scaled insights delivery across multiple LOBs.</li>
@@ -193,9 +136,9 @@
 								</ul>
 
 								<br>
-								<h3 style="font-size: 1.2em; margin-bottom: 0.2em;">2021 – 2024 | Data Axle, India</h3>
-								<h4 style="font-size: 1em; font-weight: 400; font-style: italic; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-top: 0; margin-bottom: 0.2em;">Senior Business Systems Analyst</h4>
-								<h5 style="font-size: 1em; font-weight: normal; margin-top: 0; margin-bottom: 0.2em;">Client: American Express</h5>
+								<h3>2021 – 2024 | Data Axle, India</h3>
+								<h4>Senior Business Systems Analyst</h4>
+								<h5>Client: American Express</h5>
 								<ul class="compact-list">
 									<li><strong>Dashboard Development & QC Automation:</strong> Cut quality control time by 50% through development of 3+ dashboards (Excel, Tableau) and automation of discrepancy checks using Power Query and macros for AMEX and international clients.</li>
 									<li><strong>Operational Metrics & Compliance:</strong> Built 5+ QA and ops metrics to enhance data accuracy and compliance visibility across Canadian and global processes.</li>
@@ -205,9 +148,9 @@
 								</ul>
 
 								<br>
-								<h3 style="font-size: 1.2em; margin-bottom: 0.2em;">2020 – 2021 | ZS Associates, India</h3>
-								<h4 style="font-size: 1em; font-weight: 400; font-style: italic; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-top: 0; margin-bottom: 0.2em;">Business Technology Analyst</h4>
-								<h5 style="font-size: 1em; font-weight: normal; margin-top: 0; margin-bottom: 0.2em;">Client: Bristol Myers Squibb – Eliquis</h5>
+								<h3>2020 – 2021 | ZS Associates, India</h3>
+								<h4>Business Technology Analyst</h4>
+								<h5>Client: Bristol Myers Squibb – Eliquis</h5>
 								<ul class="compact-list">
 									<li><strong>Marketing Insights Dashboard:</strong> Designed Tableau dashboards offering real-time visibility into $10M+ marketing spend and sales data for Eliquis, aiding senior leadership in strategic decisions.</li>
 									<li><strong>Compliance-Driven Data Handling:</strong> Analyzed high-volume PII datasets in Excel to reduce healthcare compliance issues by 40%.</li>
@@ -215,9 +158,9 @@
 								</ul>
 
 								<br>
-								<h3 style="font-size: 1.2em; margin-bottom: 0.2em;">2016 – 2019 | Zensar Technologies, India</h3>
-								<h4 style="font-size: 1em; font-weight: 400; font-style: italic; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-top: 0; margin-bottom: 0.2em;">Data Analyst</h4>
-								<h5 style="font-size: 1em; font-weight: normal; margin-top: 0; margin-bottom: 0.2em;">Clients: Cisco & Toshiba</h5>
+								<h3>2016 – 2019 | Zensar Technologies, India</h3>
+								<h4>Data Analyst</h4>
+								<h5>Clients: Cisco & Toshiba</h5>
 								<ul class="compact-list">
 									<li><strong>Client Engagement:</strong> Acted as a dedicated analytics partner for APJGC clients at Cisco, maintaining 95%+ satisfaction with timely and tailored data solutions.</li>
 									<li><strong>Automated Reporting & Tools:</strong> Used SQL, QlikView, and Tableau to create automated reports, cutting down manual effort by 60% and increasing data accessibility.</li>
@@ -229,7 +172,7 @@
 
 						<!-- Skills Section -->
 							<article id="skills">
-								<h2 class="major">Skills</h2>
+								<h2 class="major">SKILLS</h2>
 								<div style="margin-bottom: 2em;">
 									<div style="margin-bottom: 1.5em;">
 										<strong>Data Visualization & Dashboarding</strong>
@@ -261,7 +204,7 @@
 
 						<!-- Achievements Section -->
 							<article id="achievements">
-								<h2 class="major">Achievements</h2>
+								<h2 class="major">ACHIEVEMENTS</h2>
 								<ul>
 									<li><strong>2024:</strong>&nbsp;&nbsp;Launched production-grade JIRA Reporting Dashboard at Wells Fargo; integrated Agile metrics for improved visibility into sprint and team performance.</li>
 									<li><strong>2023:</strong>&nbsp;&nbsp;Delivered high-impact dashboards at Data Axle for AMEX, handling millions of records monthly and automating quality control checks - enhancing SLA compliance across global workflows.</li>
@@ -279,7 +222,7 @@
 
 						<!-- Projects Section -->
 							<article id="projects">
-							    <h2 class="major">Projects</h2>
+							    <h2 class="major">PROJECTS</h2>
 							    <ul style="padding: 0; list-style: none;">
 
 							        <li class="project-item">
@@ -328,7 +271,7 @@
 							  
 						<!-- Writing Section -->
 							<article id="writing">
-								<h2 class="major">Writing</h2>
+								<h2 class="major">WRITING</h2>
 								<p style="margin-top:-0.5rem">Short posts and notes on analytics, BI, automation, and career.</p>
 
 								<ul class="blog-grid">
@@ -460,9 +403,6 @@
 								</ul>
 
 							</article>
-
-
-
 
 						<!-- Contact Section -->
 						<!--
