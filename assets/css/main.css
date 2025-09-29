@@ -108,77 +108,56 @@ input, select, textarea {
 
 /* Type */
 
-	/* Google Fonts: keep Source Sans only for legacy toggle */
-	@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
-
-	/* ==============================
-	TYPOGRAPHY VARIABLES (Manrope)
-	- Central control for sizes/weights
-	- Live test via: setFont('--fs-body','1rem')
-	- Rollback: <html data-typography="legacy">
-	============================== */
+	/* ----------------------------
+	1) One place to edit values
+	---------------------------- */
 	:root {
 	/* Families */
-	--font-body: 'Manrope', ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-				Roboto, "Helvetica Neue", Arial, "Noto Sans";
-	--font-head: 'Manrope', ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-				Roboto, "Helvetica Neue", Arial, "Noto Sans";
+	--font-head: 'Manrope', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans";
+	--font-body: var(--font-head);
 
-	/* Base sizes (dark, minimalist scale) */
-	--fs-body: 0.95rem;  /* ~15px */
-	--fs-h1:   2.20rem;
+	/* Sizes */
+	--fs-body: 0.95rem;   /* ~15px */
+	--fs-h1:   2.25rem;
 	--fs-h2:   1.60rem;
 	--fs-h3:   1.20rem;
-	--fs-h4:   1.08rem;  /* > body */
-	--fs-h5:   1.02rem;  /* ≥ body */
-	--fs-h6:   0.95rem;  /* = body (optional) */
+	--fs-h4:   1.08rem;
+	--fs-h5:   1.02rem;
+	--fs-h6:   0.95rem;
 
-	/* Weights (Manrope supports 200..800) */
+	/* Weights */
 	--fw-body: 400;
-	--fw-h1:   200;
+	--fw-h1:   300;
 	--fw-h2:   600;
 	--fw-h3:   500;
 	--fw-h4:   500;
 	--fw-h5:   600;
 	--fw-h6:   500;
 
-	/* Character Spacing */
-	--track-h1: 1.1em;   /* character spacing for H1 */
-	--track-h2: 0.015em;  /* H2 */
-	--track-h3: 0.01em;   /* H3 */
+	/* Character spacing (keep subtle; 0.01–0.08em usually looks best) */
+	--track-hero: 0.4em;
+	--track-h1:   0.04em;
+	--track-h2:   0.02em;
+	--track-h3:   0.01em;
+	--track-section: 0.03em; /* for h2.major */
 
-	/* line-height (see next section) */
+	/* Line heights */
 	--lh-body: 1.65;
-	--lh-head: 1.30;
-	--lh-h1: var(--lh-head);
-	--lh-h2: var(--lh-head);
-	--lh-h3: var(--lh-head);
+	--lh-hero: 1.15;
+	--lh-h1:   1.28;
+	--lh-h2:   1.28;
+	--lh-h3:   1.28;
 	}
 
-	/* Apply per-level spacing + line-height */
-	h1 { font-size: var(--fs-h1); font-weight: var(--fw-h1); letter-spacing: var(--track-h1); line-height: var(--lh-h1); }
-	h2 { font-size: var(--fs-h2); font-weight: var(--fw-h2); letter-spacing: var(--track-h2); line-height: var(--lh-h2); }
-	h3 { font-size: var(--fs-h3); font-weight: var(--fw-h3); letter-spacing: var(--track-h3); line-height: var(--lh-h3); }
-
-	/* keep h4–h6 as before */
-	h4 { font-size: var(--fs-h4); font-weight: var(--fw-h4); }
-	h5 { font-size: var(--fs-h5); font-weight: var(--fw-h5); }
-	h6 { font-size: var(--fs-h6); font-weight: var(--fw-h6); }
-
-
-	/* Legacy rollback (kept for easy revert) */
-	html[data-typography="legacy"] {
-	--font-body: "Source Sans Pro", sans-serif;
-	--font-head: "Source Sans Pro", sans-serif;
-	}
-
-	/* Root scaling from the original theme (kept) */
+	/* Root scaling (keep template’s responsive base) */
 	html { font-size: 16pt; }
-	@media screen and (max-width: 1680px) { html { font-size: 12pt; } }
-	@media screen and (max-width: 736px)  { html { font-size: 11pt; } }
-	@media screen and (max-width: 360px)  { html { font-size: 10pt; } }
+	@media (max-width: 1680px) { html { font-size: 12pt; } }
+	@media (max-width: 736px)  { html { font-size: 11pt; } }
+	@media (max-width: 360px)  { html { font-size: 10pt; } }
 
-	/* Body + form elements */
+	/* ----------------------------
+	2) Body & basic text
+	---------------------------- */
 	body, input, select, textarea {
 	color: #ffffff;
 	font-family: var(--font-body);
@@ -187,76 +166,74 @@ input, select, textarea {
 	line-height: var(--lh-body);
 	}
 
-	/* Ensure copy + lists share the same base size */
-	p, ul, ol, li { 
+	p, ul, ol, li {
 	font-size: var(--fs-body);
 	line-height: var(--lh-body);
 	}
 
-	/* Links */
 	a {
-	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-	border-bottom: dotted 1px rgba(255,255,255,0.5);
+	transition: color .2s ease-in-out, background-color .2s ease-in-out, border-bottom-color .2s ease-in-out;
+	border-bottom: dotted 1px rgba(255,255,255,.5);
 	text-decoration: none;
 	color: inherit;
 	}
 	a:hover { border-bottom-color: transparent; }
 
-	/* Emphasis */
-	strong, b { color: #ffffff; font-weight: 600; }
+	strong, b { color:#fff; font-weight:600; }
 	em, i     { font-style: italic; }
 
-	/* Headings (all levels driven by variables) */
+	/* ----------------------------
+	3) Headings (single, clean set)
+	---------------------------- */
 	h1, h2, h3, h4, h5, h6 {
 	color: #ffffff;
 	font-family: var(--font-head);
-	line-height: var(--lh-head);
 	margin: 0 0 1rem 0;
-	text-transform: none;
-	letter-spacing: normal;
 	}
 
-	h1 { font-size: var(--fs-h1); font-weight: var(--fw-h1); }
-	h2 { font-size: var(--fs-h2); font-weight: var(--fw-h2); }
-	h3 { font-size: var(--fs-h3); font-weight: var(--fw-h3); }
+	/* Sizes, weights, tracking, line-height per level */
+	h1 { font-size: var(--fs-h1); font-weight: var(--fw-h1); letter-spacing: var(--track-h1); line-height: var(--lh-h1); }
+	h2 { font-size: var(--fs-h2); font-weight: var(--fw-h2); letter-spacing: var(--track-h2); line-height: var(--lh-h2); }
+	h3 { font-size: var(--fs-h3); font-weight: var(--fw-h3); letter-spacing: var(--track-h3); line-height: var(--lh-h3); }
 	h4 { font-size: var(--fs-h4); font-weight: var(--fw-h4); }
 	h5 { font-size: var(--fs-h5); font-weight: var(--fw-h5); }
 	h6 { font-size: var(--fs-h6); font-weight: var(--fw-h6); }
 
+	/* Underline all H2 (remove this if you want only .major underlined) */
 	h2 { border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 0.35rem; }
 
-	/* Legacy heading look (uppercase + tracking) */
-	html[data-typography="legacy"] h1,
-	html[data-typography="legacy"] h2,
-	html[data-typography="legacy"] h3,
-	html[data-typography="legacy"] h4,
-	html[data-typography="legacy"] h5,
-	html[data-typography="legacy"] h6 {
-	text-transform: uppercase;
-	letter-spacing: 0.2rem;
-	line-height: 1.5;
+	/* Section titles (Intro, Work, Achievements, etc.) */
+	h2.major {
+	letter-spacing: var(--track-section);
+	border-bottom: 1px solid rgba(255,255,255,0.9);
+	padding-bottom: 0.5rem;
+	width: max-content;
 	}
 
-	/* Responsive heading scaling via variables */
+	/* Hero title (your name on the landing header) */
+	.hero-title {
+	font-size: var(--fs-hero, 2.40rem);  /* allows optional tweak without touching h1 */
+	font-weight: var(--fw-hero, 200);
+	letter-spacing: var(--track-hero);
+	line-height: var(--lh-hero);
+	border: 0;
+	}
+	#header .content .inner .hero-title { letter-spacing: var(--track-hero); } /* extra specificity */
+
+	/* ----------------------------
+	4) Responsive tweaks (simple)
+	---------------------------- */
 	@media (max-width: 980px) {
 	:root {
-		--fs-h1: 2.05rem;
-		--fs-h2: 1.50rem;
-		--fs-h3: 1.15rem;
-		--fs-h4: 1.02rem;
-		--fs-h5: 0.98rem;
+		--fs-h1: 2.05rem; --fs-h2: 1.45rem; --fs-h3: 1.15rem; --fs-h4: 1.02rem; --fs-h5: 0.98rem;
+		--track-hero: 0.05em;  /* slightly tighter on tablet */
 	}
 	}
 	@media (max-width: 480px) {
 	:root {
-		--fs-h1: 1.90rem;
-		--fs-h2: 1.35rem;
-		--fs-h3: 1.10rem;
-		--fs-h4: 1.00rem;
-		--fs-h5: 0.96rem;
+		--fs-h1: 1.90rem; --fs-h2: 1.30rem; --fs-h3: 1.10rem; --fs-h4: 1.00rem; --fs-h5: 0.96rem;
 	}
 	}
-
 
 
 
@@ -1105,21 +1082,21 @@ input, select, textarea {
 		}
 
 		#bg:before {
-			-moz-transition: background-color 1.5s ease-in-out;
-			-webkit-transition: background-color 1.5s ease-in-out;
-			-ms-transition: background-color 1.5s ease-in-out;
+			-moz-transition: background-color 1.0s ease-in-out;
+			-webkit-transition: background-color 1.0s ease-in-out;
+			-ms-transition: background-color 1.0s ease-in-out;
 			transition: background-color 1.5s ease-in-out;
-			-moz-transition-delay: 0.5s;
-			-webkit-transition-delay: 0.5s;
-			-ms-transition-delay: 0.5s;
-			transition-delay: 0.5s;
-			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto,
- 256px 256px;
-			background-position: center,
- center;
-			background-repeat: no-repeat,
- repeat;
+			-moz-transition-delay: 0.35s;
+			-webkit-transition-delay: 0.35s;
+			-ms-transition-delay: 0.35s;
+			transition-delay: 0.35s;
+			background-image: 
+				/* radial-gradient(ellipse at 50% 40%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.30) 100%), */
+    			linear-gradient(to top, rgba(19,21,25,0.60), rgba(19,21,25,0.60)),
+				url("../../images/overlay.png");
+			background-size: auto, 256px 256px;
+			background-position: center, center;
+			background-repeat: no-repeat, repeat;
 			z-index: 2;
 		}
 
@@ -1137,6 +1114,7 @@ input, select, textarea {
 			background-size: 100% 100%; 
 			background-repeat: no-repeat;
 			z-index: 1;
+			/* filter: brightness(0.9) contrast(1.05); */
 		}
 
 		body.is-article-visible #bg:after {
@@ -1605,6 +1583,208 @@ input, select, textarea {
 
 		}
 
+
+/* === Thin typography for tagline + nav === */
+	/* Tagline under your name */
+	#header .content .inner .tagline {
+	font-weight: 300;            /* Manrope thin look (use 200 for ultra-thin) */
+	letter-spacing: 0.2em;      /* elegant, airy */
+	color: rgba(255,255,255,.88);
+	}
+
+	/* Primary nav labels */
+	#header nav ul li a {
+	font-weight: 200;            /* thinner than body */
+	letter-spacing: 0.14em;      /* keep the crisp, button-like look */
+	color: rgba(255,255,255,.9);
+	}
+
+	#header nav ul li a:hover {
+	background-color: rgba(255,255,255,0.06);
+	color: #fff;
+	}
+
+/* === Work section rhythm tightening === */
+	#work h3 {
+	margin: 0 0 0.25rem 0;   /* was larger; now snug */
+	line-height: 1.25;
+	letter-spacing: 0.01em;
+	font-weight: 600;        /* keeps hierarchy clear */
+	}
+
+	#work h4 {
+	margin: 0.15rem 0 0.35rem 0;
+	line-height: 1.25;
+	font-weight: 400;
+	}
+
+	#work h5 {
+	margin: 0.1rem 0 0.3rem 0;
+	line-height: 1.25;
+	font-weight: 300;
+	}
+
+	/* Bulleted achievements */
+	#work .compact-list {
+	margin-top: 0.5rem;
+	margin-bottom: 0.75rem;
+	line-height: 1.45;       /* tighter than body’s 1.65 */
+	padding-left: 1.1em;
+	}
+
+	#work .compact-list li {
+	margin-bottom: 0.35rem;  /* tighter bullets */
+	}
+
+	/* Lighten the “Client:” line a touch so the main bullets carry the weight */
+	#work h5, #work strong {
+	color: rgba(255,255,255,0.95);
+	}
+
+
+/* ===== Projects (luxury card grid) ===== */
+	#projects ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	gap: 1.1rem;
+	}
+
+	/* 2 columns on large screens */
+	@media (min-width: 980px) {
+	#projects ul {
+		grid-template-columns: 1fr 1fr;
+	}
+	}
+
+	#projects .project-item {
+	border: 1px solid rgba(255,255,255,0.14);
+	background: rgba(255,255,255,0.035);
+	border-radius: 14px;
+	padding: 1.1rem 1.2rem 1.2rem;
+	transition: transform .18s ease, border-color .18s ease, background-color .18s ease;
+	}
+
+	#projects .project-item:hover {
+	transform: translateY(-2px);
+	border-color: rgba(255,255,255,0.22);
+	background: rgba(255,255,255,0.045);
+	}
+
+	/* Title + body rhythm */
+	#projects .project-item strong {
+	display: block;
+	font-size: 1.05rem;
+	letter-spacing: 0.01em;
+	margin-bottom: 0.35rem;
+	}
+
+	#projects .project-item p {
+	margin: 0 0 0.8rem 0;
+	line-height: 1.5;
+	color: rgba(255,255,255,0.88);
+	}
+
+	/* Call-to-action button (keeps your .button markup) */
+	#projects .project-item .button {
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	border: 1px solid rgba(255,255,255,0.75);
+	box-shadow: inset 0 0 0 1px rgba(255,255,255,0.75); /* keep theme look */
+	padding: 0 1rem;
+	height: 2.4rem;
+	line-height: 2.4rem;
+	}
+
+	#projects .project-item .button:hover {
+	background: rgba(255,255,255,0.08);
+	}
+
+	/* Optional divider between rows when you use single column */
+	#projects .hr-thin { margin: 0.8rem 0 0.2rem; }
+
+
+
+/* ===== Writing (responsive blog grid) ===== */
+	#writing .blog-grid {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	gap: 1rem;
+	}
+
+	/* 2 columns on larger screens */
+	@media (min-width: 980px) {
+	#writing .blog-grid { grid-template-columns: 1fr 1fr; }
+	}
+
+	#writing .blog-card {
+	margin: 0;
+	border-radius: 14px;
+	overflow: hidden; /* clip corners of image */
+	background: rgba(255,255,255,0.035);
+	border: 1px solid rgba(255,255,255,0.14);
+	transition: transform .18s ease, border-color .18s ease, background-color .18s ease;
+	}
+
+	#writing .blog-card:hover {
+	transform: translateY(-2px);
+	border-color: rgba(255,255,255,0.22);
+	background: rgba(255,255,255,0.045);
+	}
+
+	#writing .blog-card > a {
+	display: block;
+	color: inherit;
+	text-decoration: none;
+	}
+
+	/* Image wrapper locks aspect ratio so images never spill */
+	#writing .blog-thumb {
+	width: 100%;
+	aspect-ratio: 16/9;
+	background: rgba(255,255,255,0.06);
+	overflow: hidden;
+	}
+
+	#writing .blog-thumb img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover; /* contain busy thumbs nicely */
+	}
+
+	/* Body */
+	#writing .blog-body {
+	padding: 0.9rem 1rem 1rem;
+	}
+
+	#writing .blog-title {
+	font-size: 1.02rem;
+	line-height: 1.25;
+	margin: 0 0 0.35rem 0;
+	}
+
+	/* Meta row */
+	#writing .blog-meta {
+	font-size: 0.9rem;
+	color: rgba(255,255,255,0.75);
+	}
+
+	/* Link chip */
+	#writing .blog-link {
+	border: 1px solid rgba(255,255,255,0.55);
+	border-radius: 999px;
+	padding: 0.1rem 0.5rem;
+	font-size: 0.78rem;
+	letter-spacing: 0.06em;
+	margin-left: 0.4rem;
+	}
+
+
+
 /* Footer */
 
 	#footer {
@@ -1642,41 +1822,62 @@ input, select, textarea {
 			opacity: 0;
 		}
 
+/* Thin divider (solid) */
+	.hr-thin {
+	border: 0;
+	height: 1px;
+	background: rgba(255,255,255,0.16); /* subtle silver */
+	margin: 1rem 0;                     /* adjust spacing as needed */
+	}
+
+/* tighter/looser spacing variants */
+	.hr-thin.tight { margin: 0.5rem 0; }
+	.hr-thin.loose { margin: 1.5rem 0; }
+
+	.hr-fade {
+	border: 0;
+	height: 1px;
+	background: linear-gradient(to right,
+				rgba(255,255,255,0),
+				rgba(255,255,255,0.18),
+				rgba(255,255,255,0));
+	margin: 2rem 0;
+}
 /* Footer Icons: Align icons in a row */
-#footer .footer-icons ul {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
+	#footer .footer-icons ul {
+		list-style: none;
+		padding: 0;
+		margin: 1rem 0 0 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+	}
 
 
-/* Keep icons inline */
-.footer-icons li {
-    display: inline-block;
-}
+	/* Keep icons inline */
+	.footer-icons li {
+		display: inline-block;
+	}
 
-/* Optional: icon size + hover effect (adjust as needed) */
-.footer-icons i {
-    font-size: 22px;
-    color: #444;
-    transition: color 0.3s ease, transform 0.2s ease;
-}
+	/* Optional: icon size + hover effect (adjust as needed) */
+	.footer-icons i {
+		font-size: 22px;
+		color: #444;
+		transition: color 0.3s ease, transform 0.2s ease;
+	}
 
-.footer-icons i:hover {
-    color: #fff; /* LinkedIn blue or any color you want */
-    transform: scale(1.5);
-}
+	.footer-icons i:hover {
+		color: #fff; /* LinkedIn blue or any color you want */
+		transform: scale(1.5);
+	}
 
-@media (max-width: 480px) {
-    .footer-icons ul {
-        gap: 12px; /* reduce space between icons on small screens */
-    }
+	@media (max-width: 480px) {
+		.footer-icons ul {
+			gap: 12px; /* reduce space between icons on small screens */
+		}
 
-    .footer-icons i {
-        font-size: 15px; /* slightly smaller icon size on mobile */
-    }
-}
+		.footer-icons i {
+			font-size: 15px; /* slightly smaller icon size on mobile */
+		}
+	}
