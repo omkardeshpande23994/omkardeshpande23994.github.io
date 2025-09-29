@@ -1642,67 +1642,85 @@ input, select, textarea {
 	}
 
 
-/* ===== Projects (luxury card grid) ===== */
-	#projects ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: grid;
-	gap: 1.1rem;
+/* ===== Projects — Single column, uniform “row-as-link” ===== */
+	:root{
+	--proj-row-minh: 145px;          /* set uniform row height */
+	--proj-padding: 1.0rem 1.0rem;   /* card padding (Y X) */
+	--proj-gap: .6rem;               /* space between title & description */
+	--proj-lines: 3;                 /* clamp description lines for uniformity */
 	}
 
-	/* 2 columns on large screens */
-	@media (min-width: 980px) {
-	#projects ul {
-		grid-template-columns: 1fr 1fr;
-	}
-	}
-
-	#projects .project-item {
-	border: 1px solid rgba(255,255,255,0.14);
-	background: rgba(255,255,255,0.035);
-	border-radius: 14px;
-	padding: 1.1rem 1.2rem 1.2rem;
-	transition: transform .18s ease, border-color .18s ease, background-color .18s ease;
+	#projects-list{
+	list-style:none;
+	margin:0;
+	padding:0;
 	}
 
-	#projects .project-item:hover {
-	transform: translateY(-2px);
-	border-color: rgba(255,255,255,0.22);
-	background: rgba(255,255,255,0.045);
+	.project-row{
+	margin:0 0 0.9rem 0;             /* space between rows */
 	}
 
-	/* Title + body rhythm */
-	#projects .project-item strong {
-	display: block;
-	font-size: 1.05rem;
-	letter-spacing: 0.01em;
-	margin-bottom: 0.35rem;
+	.project-link{
+	display:flex;
+	align-items:stretch;
+	justify-content:space-between;
+	gap:1rem;
+
+	min-height:var(--proj-row-minh);
+	padding:var(--proj-padding);     /* keep left pad at 1.0rem */
+	border:1px solid rgba(255,255,255,.14);
+	background:rgba(255,255,255,.035);
+	border-radius:14px;
+	text-decoration:none;
+	color:inherit;
+
+	transition:transform .18s ease,border-color .18s ease,background-color .18s ease;
 	}
 
-	#projects .project-item p {
-	margin: 0 0 0.8rem 0;
-	line-height: 1.5;
-	color: rgba(255,255,255,0.88);
+	.project-link:hover{
+	transform:translateY(-2px);
+	border-color:rgba(255,255,255,.22);
+	background:rgba(255,255,255,.045);
 	}
 
-	/* Call-to-action button (keeps your .button markup) */
-	#projects .project-item .button {
-	font-weight: 600;
-	letter-spacing: 0.12em;
-	border: 1px solid rgba(255,255,255,0.75);
-	box-shadow: inset 0 0 0 1px rgba(255,255,255,0.75); /* keep theme look */
-	padding: 0 1rem;
-	height: 2.4rem;
-	line-height: 2.4rem;
+	/* Left text block */
+	.project-text{
+	flex:1 1 auto;
+	display:flex;
+	flex-direction:column;
 	}
 
-	#projects .project-item .button:hover {
-	background: rgba(255,255,255,0.08);
+	.project-text > strong{
+	font-size:1.05rem;
+	letter-spacing:.01em;
+	margin:0 0 var(--proj-gap) 0;    /* spacing to description */
 	}
 
-	/* Optional divider between rows when you use single column */
-	#projects .hr-thin { margin: 0.8rem 0 0.2rem; }
+	.project-text > p{
+	margin:0;
+	line-height:1.5;
+	color:rgba(255,255,255,.88);
+
+	/* clamp to ensure equal row height */
+	display:-webkit-box;
+	-webkit-line-clamp:var(--proj-lines);
+	-webkit-box-orient:vertical;
+	overflow:hidden;
+	}
+
+	/* Right chevron (larger version provided below replaces this)
+	.project-cta{ ... }
+	.project-link:hover .project-cta{ ... }
+	*/
+
+	/* Mobile tweak */
+	@media (max-width:480px){
+	:root{ --proj-row-minh: 160px; }
+	}
+
+	:root { --proj-align-left: 1.0rem; }
+	#projects h2.major { margin-left: var(--proj-align-left); }
+
 
 
 
