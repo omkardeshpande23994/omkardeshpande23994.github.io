@@ -1722,84 +1722,86 @@ input, select, textarea {
 	#projects h2.major { margin-left: var(--proj-align-left); }
 
 
-
-
-/* ===== Writing (responsive blog grid) ===== */
-	#writing .blog-grid {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	display: grid;
-	gap: 1rem;
+/* ===== Writing — Media list with one elegant default thumbnail ===== */
+	:root{
+	--post-row-minh: 148px;
+	--post-pad: 1.0rem;
+	--post-gap: 0.65rem;
+	--post-lines: 3;         /* clamp excerpt lines */
+	--thumb-w: 180px;        /* left thumbnail width (desktop) */
+	--thumb-ratio: 56.25%;   /* 16:9 */
+	--post-align-left: 1.0rem; /* align h2 underline with card body */
 	}
 
-	/* 2 columns on larger screens */
-	@media (min-width: 980px) {
-	#writing .blog-grid { grid-template-columns: 1fr 1fr; }
-	}
+	/* Heading alignment */
+	#writing h2.major{ margin-left: var(--post-align-left); }
+	#writing .section-subtle{ margin:.2rem 0 1rem 0; color:rgba(255,255,255,.75); font-size:.95rem; }
 
-	#writing .blog-card {
-	margin: 0;
-	border-radius: 14px;
-	overflow: hidden; /* clip corners of image */
-	background: rgba(255,255,255,0.035);
-	border: 1px solid rgba(255,255,255,0.14);
-	transition: transform .18s ease, border-color .18s ease, background-color .18s ease;
-	}
+	#writing-list{ list-style:none; margin:0; padding:0; }
+	.post-row{ margin:0 0 .9rem 0; }
 
-	#writing .blog-card:hover {
+	.post-link{
+	display:grid;
+	grid-template-columns: var(--thumb-w) 1fr;
+	gap:1rem;
+
+	min-height:var(--post-row-minh);
+	padding:var(--post-pad);
+	border:1px solid rgba(255,255,255,.14);
+	background:rgba(255,255,255,.035);
+	border-radius:14px;
+	color:inherit; text-decoration:none;
+
+	transition: transform .16s ease, border-color .16s ease, background-color .16s ease;
+	}
+	.post-link:hover{
 	transform: translateY(-2px);
-	border-color: rgba(255,255,255,0.22);
-	background: rgba(255,255,255,0.045);
+	border-color: rgba(255,255,255,.22);
+	background: rgba(255,255,255,.045);
 	}
 
-	#writing .blog-card > a {
-	display: block;
-	color: inherit;
-	text-decoration: none;
+	/* Thumbnail (always default unless you add a custom one later) */
+	.post-thumb{
+	border-radius:10px;
+	overflow:hidden;
+	position:relative;
+	}
+	/* keep 16:9 height */
+	.post-thumb::before{
+	content:"";
+	display:block;
+	padding-top: var(--thumb-ratio);
+	}
+	/* Elegant default background */
+	/* .post-thumb.is-default{
+	background:
+		linear-gradient(135deg, rgba(20,22,25,.90), rgba(20,22,25,.65)),
+		radial-gradient(1200px 600px at -10% 110%, rgba(63,224,217,.18), transparent 60%),
+		radial-gradient(1400px 700px at 120% -10%, rgba(192,192,192,.18), transparent 60%);
+	} */
+
+	.post-thumb.is-default{
+	background: #14171a url("../../images/blog/default-cover.png") center / cover no-repeat;
+	}
+	
+
+	/* Text block */
+	.post-body{ display:flex; flex-direction:column; justify-content:center; }
+	.post-title{ margin:0 0 var(--post-gap) 0; font-size:1.05rem; letter-spacing:.01em; }
+	.post-meta{ margin:-0.25rem 0 .35rem 0; font-size:.9rem; color:rgba(255,255,255,.7); }
+	.post-excerpt{
+	margin:0; color:rgba(255,255,255,.88); line-height:1.5;
+	display:-webkit-box; -webkit-line-clamp:var(--post-lines); -webkit-box-orient:vertical; overflow:hidden;
 	}
 
-	/* Image wrapper locks aspect ratio so images never spill */
-	#writing .blog-thumb {
-	width: 100%;
-	aspect-ratio: 16/9;
-	background: rgba(255,255,255,0.06);
-	overflow: hidden;
+	/* Responsive tweaks */
+	@media (max-width: 780px){ :root{ --thumb-w: 150px; } }
+	@media (max-width: 560px){
+	.post-link{ grid-template-columns: 1fr; }
+	.post-thumb{ order:-1; }         /* image on top on mobile */
+	:root{ --post-row-minh: 0; }
 	}
 
-	#writing .blog-thumb img {
-	width: 100%;
-	height: 100%;
-	display: block;
-	object-fit: cover; /* contain busy thumbs nicely */
-	}
-
-	/* Body */
-	#writing .blog-body {
-	padding: 0.9rem 1rem 1rem;
-	}
-
-	#writing .blog-title {
-	font-size: 1.02rem;
-	line-height: 1.25;
-	margin: 0 0 0.35rem 0;
-	}
-
-	/* Meta row */
-	#writing .blog-meta {
-	font-size: 0.9rem;
-	color: rgba(255,255,255,0.75);
-	}
-
-	/* Link chip */
-	#writing .blog-link {
-	border: 1px solid rgba(255,255,255,0.55);
-	border-radius: 999px;
-	padding: 0.1rem 0.5rem;
-	font-size: 0.78rem;
-	letter-spacing: 0.06em;
-	margin-left: 0.4rem;
-	}
 
 
 
