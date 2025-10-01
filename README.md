@@ -5,11 +5,13 @@ Welcome to the repository for my **Web Resume**—a showcase of my skills, exper
 ---
 
 ## 🔗 **Live Demo**
+
 [Check out the live version of my web resume here.](https://omkardeshpande23994.github.io/index.html)  
 
 ---
 
 ## 📝 **Features**
+
 - **Intro Section**: A welcoming introduction highlighting my background and passion for data analytics.
 - **Work Experience**: Detailed accounts of my roles at Wells Fargo, American Express, and more, showcasing impactful contributions.
 - **Skills Section**: A categorized breakdown of my technical expertise in tools like Tableau, SQL, AWS, and Python.
@@ -20,6 +22,7 @@ Welcome to the repository for my **Web Resume**—a showcase of my skills, exper
 ---
 
 ## 💡 **Technologies Used**
+
 - **HTML5**: Structure of the web resume.
 - **CSS3**: Styling and layout, including responsive design for different screen sizes.
 - **Font Awesome**: For icons (e.g., LinkedIn, GitHub, Email).
@@ -29,6 +32,7 @@ Welcome to the repository for my **Web Resume**—a showcase of my skills, exper
 ---
 
 ## 📁 **File Structure**
+
 ```
 /
 ├── assets/
@@ -45,10 +49,15 @@ Welcome to the repository for my **Web Resume**—a showcase of my skills, exper
 ---
 
 ## 🎯 **How to Deploy on GitHub Pages**
+
 1. Push the project to your GitHub repository.
+
 2. Go to the **Settings** tab of the repository.
+
 3. Under the **Pages** section, select the branch (usually `main`) and root folder (`/`) for deployment.
+
 4. Save the settings, and your site will be live at:
+   
    ```
    https://<username>.github.io/<repository-name>/
    ```
@@ -56,16 +65,17 @@ Welcome to the repository for my **Web Resume**—a showcase of my skills, exper
 ---
 
 ## 📷 **Screenshots**
+
 ### Homepage
-![Intro Section Screenshot](images/Screenshot1.png)
+
+![](images\Screen1.png)
 
 ### Work Experience
-![Projects Section Screenshot](images/Screenshot2.png)
 
-
----
+![](images\Screen2.png)
 
 ## ✨ **Future Enhancements**
+
 - Add animations for section transitions.
 - Include a downloadable PDF version of the resume.
 - Integrate a contact form with backend support.
@@ -73,6 +83,7 @@ Welcome to the repository for my **Web Resume**—a showcase of my skills, exper
 ---
 
 ## 📩 **Connect with Me**
+
 - **Email**: [omkar.deshpande23994@gmail.com](mailto:omkar.deshpande23994@gmail.com)
 - **LinkedIn**: [Omkar Deshpande](https://linkedin.com/in/omkardeshpande-23994)
 - **GitHub**: [@omkardeshpande23994](https://github.com/omkardeshpande23994)
@@ -80,6 +91,7 @@ Welcome to the repository for my **Web Resume**—a showcase of my skills, exper
 ---
 
 ## 🛡️ **License**
+
 This project is licensed under the [MIT License](LICENSE).
 
 ---
