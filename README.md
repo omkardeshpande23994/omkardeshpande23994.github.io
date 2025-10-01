@@ -68,11 +68,11 @@ Welcome to the repository for my **Web Resume**—a showcase of my skills, exper
 
 ### Homepage
 
-![](images\Screen1.png)
+![](images/Screen1.png)
 
 ### Work Experience
 
-![](images\Screen2.png)
+![](images/Screen2.png)
 
 ## ✨ **Future Enhancements**
 
