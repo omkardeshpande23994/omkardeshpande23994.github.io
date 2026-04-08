@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \":*)",
+      "WebFetch(domain:21st.dev)",
+      "Bash(python:*)"
+    ]
+  }
+}

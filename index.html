@@ -19,20 +19,20 @@
 		<meta property="og:type" content="website">
 
 		<!-- Favicon -->
-		<link rel="icon" type="image/png" href="images/favicon.png">
+		<link rel="icon" type="image/png" href="images/od-logo.png">
 
 		<!-- =======================
 			CSS (core first)
 			======================= -->
-		<link rel="stylesheet" href="assets/css/main.css?v=manrope-1" />
-		<link rel="stylesheet" href="assets/css/backToTop.css?v=1">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-		<link rel="stylesheet" href="css/fontawesome-all.min.css" />
+		<!-- Preload background image for fast paint -->
+		<link rel="preload" as="image" href="images/bg.jpg">
+
+		<link rel="stylesheet" href="assets/css/main.css?v=4" />
+		<link rel="stylesheet" href="assets/css/backToTop.css?v=2">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 		<!-- =======================
 			Fonts (Manrope only)
-			NOTE: easy rollback = remove this <link> and set data-typography="legacy"
 			======================= -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,13 +49,13 @@
 
 				<!-- Header -->
 					<header id="header">
-						<div class="logo" style="width:5.5rem;height:5.5rem;border:1px solid #fff;border-radius:50%;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-							<img src="images/od-logo.png" alt="OD Logo" style="width:80%;height:80%;object-fit:contain;" />
+						<div class="logo">
+							<img src="images/od-logo.png" alt="OD Logo" />
 						</div>
 						<div class="content">
 							<div class="inner">
 								<h1 class="major hero-title">OMKAR DESHPANDE</h1>
-								<p class="tagline">Analytics Consultant | Business Analyst | Data Analyst | ML Enthusiast</p>
+								<p class="tagline"><span class="tl-word" style="animation-delay:0.1s">IAM Data Analyst</span><span class="tl-sep"> | </span><span class="tl-word" style="animation-delay:0.25s">Analytics Consultant</span><span class="tl-sep"> | </span><span class="tl-word" style="animation-delay:0.40s">BI &amp; Dashboards</span><span class="tl-sep"> | </span><span class="tl-word" style="animation-delay:0.55s">ML Enthusiast</span></p>
 							</div>
 						</div>
 						<nav>
@@ -75,9 +75,9 @@
 					<div id="main">
 
 						<!-- Intro Section -->
-							<article id="intro">
-								<h2 class="major">INTRODUCTION</h2>
-								<span class="image main"><img src="images/Hello.png" alt="" /></span>
+							<article id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
+								<h2 id="intro-title" class="major">INTRODUCTION</h2>
+								<span class="image main"><img src="images/Hello.png" alt="Hello" loading="lazy" /></span>
 								<p><strong>Hello and Welcome!</strong></p>
 								<p>I'm Omkar Deshpande  -  a Senior Analytics Consultant with over 8 years of experience turning complex data into clear, actionable insights.</p>
 
@@ -90,7 +90,7 @@
 								</p>
 
 								<p>
-								Today, I am based in the Netherlands and working in the energy sector, continuing my mission of using data as a driver of clarity, efficiency, and innovation. I’m passionate about simplifying the complex and helping organizations unlock the full potential of their data.
+								Today, I am based in the Netherlands, working at <strong>Alliander</strong> as an IAM Data Analyst in the energy sector &mdash; building Power BI dashboards and data models for Identity &amp; Access Management. I continue my mission of using data as a driver of clarity, efficiency, and innovation.
 								</p>
 
 								<p>
@@ -105,109 +105,225 @@
 
 
 						<!-- Work Section -->
-							<article id="work">
-								<h2 class="major">WORK EXPERIENCE</h2><br>
-								<h3>2024 – Present | Wells Fargo, India</h3>
-								<h4>Senior Analytics Consultant</h4>
-								<ul class="compact-list">
-									<li><strong>End-to-End Ownership – Loudspeaker Dashboards:</strong> Managed and delivered 10+ Tableau dashboards including Loudspeaker Weekly Pulse and Compliments, ensuring timely delivery, zero misses, and high LOB engagement. Took full responsibility for consistent weekly refreshes and communication with stakeholders.</li>
-									<li><strong>Legacy Dashboard Revamp:</strong> Revamped 4+ legacy dashboards (3+ years old), optimizing Teradata SQL queries and enhancing UI/UX. Reduced load time by 40%, improved interactivity, and scaled insights delivery across multiple LOBs.</li>
-									<li><strong>Leadership & JIRA Reporting Dashboards:</strong> Matured the JIRA Reporting dashboard from a proof-of-concept to a production-grade tool tracking Agile metrics like sprint velocity, ticket aging, and team performance. Took complete ownership of the Leadership dashboard, enhanced with Power BI and Python for better interactivity and automation.</li>
-									<li><strong>Reporting Automation & Standardization:</strong> Built reusable Python scripts, Power BI templates, and VBA automations to streamline BAU reporting, reduce manual effort by 60%, and ensure audit-readiness. Automated BAU/SPR dashboards and created scalable documentation templates.</li>
-									<li><strong>Risk Management Integration:</strong> Participated in Wells Fargo Risk Expo 2024 and completed advanced risk, allegations, and security trainings. Collaborated with SMEs (e.g., Jamie and Tim) to document internal risk patterns and implemented reporting improvements aligned with risk mitigation strategies.</li>
-									<li><strong>Domain Knowledge Expansion & SME Collaboration:</strong> Deepened expertise in Loudspeaker through SME engagement, field research insights, and repository creation. Contributed to Intake research and enhanced reporting coverage for underrepresented data segments.</li>
-									<li><strong>BAU Process Improvements & Analyst Training:</strong> Documented end-to-end workflows (BSDs/FSDs/SDHs), trained 2 analysts, and streamlined repetitive tasks using reusable logic - ensuring continuity and onboarding readiness.</li>
-									<li><strong>Tool Proficiency:</strong> Completed training in Advanced Excel, Python for Data Analytics, and Power BI with Advanced DAX - directly applying learning to ongoing project enhancements.</li>
-								</ul>
+							<article id="work" role="dialog" aria-modal="true" aria-labelledby="work-title">
+								<h2 id="work-title" class="major">WORK EXPERIENCE</h2>
 
-								<div class="hr-fade"></div>
-								<h3>2021 – 2024 | Data Axle, India</h3>
-								<h4>Senior Business Systems Analyst</h4>
-								<h5>Client: American Express</h5>
-								<ul class="compact-list">
-									<li><strong>Dashboard Development & QC Automation:</strong> Cut quality control time by 50% through development of 3+ dashboards (Excel, Tableau) and automation of discrepancy checks using Power Query and macros for AMEX and international clients.</li>
-									<li><strong>Operational Metrics & Compliance:</strong> Built 5+ QA and ops metrics to enhance data accuracy and compliance visibility across Canadian and global processes.</li>
-									<li><strong>Tableau & Python Integration:</strong> Automated Tableau refreshes and Salesforce API monitoring using Python, improving availability and minimizing downtime.</li>
-									<li><strong>Client Delivery & SLAs:</strong> Led BAU and monthly processing for A360 and Carrier ID systems, introduced automated alerts and robust issue resolution protocols for SLA adherence.</li>
-									<li><strong>End-User Enablement:</strong> Authored detailed FRDs, trained end users, and improved dashboard adoption across teams, aligning reporting with evolving business needs.</li>
-								</ul>
+								<div class="work-card work-card--current">
+									<div class="work-card-header">
+										<div class="work-card-top">
+											<span class="work-company">Alliander</span>
+											<span class="work-badge work-badge--active">&#x25cf; Current</span>
+										</div>
+										<div class="work-role">IAM Data Analyst</div>
+										<div class="work-meta">
+											<span class="work-period">Oct 2025 &ndash; Present</span>
+											<span class="work-meta-dot">&bull;</span>
+											<span>Full-time</span>
+											<span class="work-meta-dot">&bull;</span>
+											<span>Arnhem, Netherlands &middot; Hybrid</span>
+										</div>
+									</div>
+									<ul class="compact-list">
+										<li><strong>IAM Power BI Dashboards:</strong> Developing Power BI dashboards for the Identity &amp; Access Management team to monitor user access patterns and system permissions across the organization.</li>
+										<li><strong>Data Modelling:</strong> Supporting data modelling efforts to improve the structure and reliability of identity-related datasets.</li>
+										<li><strong>Stakeholder Bridging:</strong> Gathering and translating requirements from business stakeholders into data solutions, bridging the gap between technical teams and product owners.</li>
+									</ul>
+								</div>
 
-								<div class="hr-fade"></div>
-								<h3>2020 – 2021 | ZS Associates, India</h3>
-								<h4>Business Technology Analyst</h4>
-								<h5>Client: Bristol Myers Squibb – Eliquis</h5>
-								<ul class="compact-list">
-									<li><strong>Marketing Insights Dashboard:</strong> Designed Tableau dashboards offering real-time visibility into $10M+ marketing spend and sales data for Eliquis, aiding senior leadership in strategic decisions.</li>
-									<li><strong>Compliance-Driven Data Handling:</strong> Analyzed high-volume PII datasets in Excel to reduce healthcare compliance issues by 40%.</li>
-									<li><strong>QA & Pipeline Optimization:</strong> Led monthly QA audits of raw data pipelines, improving data quality and report accuracy across 3 global regions.</li>
-								</ul>
+								<div class="work-card">
+									<div class="work-card-header">
+										<div class="work-card-top">
+											<span class="work-company">Wells Fargo</span>
+										</div>
+										<div class="work-role">Senior Analytics Consultant</div>
+										<div class="work-meta">
+											<span class="work-period">2024 &ndash; Oct 2025</span>
+											<span class="work-meta-dot">&bull;</span>
+											<span>India</span>
+										</div>
+									</div>
+									<ul class="compact-list">
+										<li><strong>Loudspeaker Dashboards:</strong> Managed and delivered <strong class="stat">10+</strong> Tableau dashboards ensuring timely delivery, zero misses, and high LOB engagement.</li>
+										<li><strong>Legacy Revamp:</strong> Revamped <strong class="stat">4+</strong> legacy dashboards optimizing Teradata SQL. Reduced load time by <strong class="stat">40%</strong> and scaled insights across multiple LOBs.</li>
+										<li><strong>JIRA Reporting:</strong> Matured JIRA Reporting from POC to production-grade, tracking sprint velocity, ticket aging, and team performance.</li>
+										<li><strong>Reporting Automation:</strong> Python scripts, Power BI templates, and VBA automations reducing manual effort by <strong class="stat">60%</strong>.</li>
+										<li><strong>Risk Management:</strong> Participated in Wells Fargo Risk Expo 2024 and implemented reporting improvements aligned with risk mitigation strategies.</li>
+										<li><strong>Analyst Training:</strong> Documented end-to-end workflows and trained <strong class="stat">2</strong> analysts.</li>
+									</ul>
+								</div>
 
-								<div class="hr-fade"></div>
-								<h3>2016 – 2019 | Zensar Technologies, India</h3>
-								<h4>Data Analyst</h4>
-								<h5>Clients: Cisco & Toshiba</h5>
-								<ul class="compact-list">
-									<li><strong>Client Engagement:</strong> Acted as a dedicated analytics partner for APJGC clients at Cisco, maintaining 95%+ satisfaction with timely and tailored data solutions.</li>
-									<li><strong>Automated Reporting & Tools:</strong> Used SQL, QlikView, and Tableau to create automated reports, cutting down manual effort by 60% and increasing data accessibility.</li>
-									<li><strong>Project & Change Management:</strong> Managed 20+ change requests across Oracle and SQL-driven systems, streamlining delivery and accelerating resolution cycles.</li>
-								</ul>
+								<div class="work-card">
+									<div class="work-card-header">
+										<div class="work-card-top">
+											<span class="work-company">Data Axle</span>
+										</div>
+										<div class="work-role">Senior Business Systems Analyst</div>
+										<div class="work-meta">
+											<span class="work-period">2021 &ndash; 2024</span>
+											<span class="work-meta-dot">&bull;</span>
+											<span>India</span>
+											<span class="work-meta-dot">&bull;</span>
+											<span class="work-client">Client: American Express</span>
+										</div>
+									</div>
+									<ul class="compact-list">
+										<li><strong>QC Automation:</strong> Cut quality control time by <strong class="stat">50%</strong> through <strong class="stat">3+</strong> dashboards and Power Query automation.</li>
+										<li><strong>Operational Metrics:</strong> Built <strong class="stat">5+</strong> QA and ops metrics enhancing data accuracy and compliance visibility globally.</li>
+										<li><strong>Tableau &amp; Python:</strong> Automated Tableau refreshes and Salesforce API monitoring using Python.</li>
+										<li><strong>Client Delivery:</strong> Led BAU and monthly processing for A360 and Carrier ID systems with robust SLA adherence protocols.</li>
+									</ul>
+								</div>
+
+								<div class="work-card">
+									<div class="work-card-header">
+										<div class="work-card-top">
+											<span class="work-company">ZS Associates</span>
+										</div>
+										<div class="work-role">Business Technology Analyst</div>
+										<div class="work-meta">
+											<span class="work-period">2020 &ndash; 2021</span>
+											<span class="work-meta-dot">&bull;</span>
+											<span>India</span>
+											<span class="work-meta-dot">&bull;</span>
+											<span class="work-client">Client: Bristol Myers Squibb</span>
+										</div>
+									</div>
+									<ul class="compact-list">
+										<li><strong>Marketing Insights:</strong> Tableau dashboards with real-time visibility into <strong class="stat">$10M+</strong> marketing spend for Eliquis, aiding senior leadership.</li>
+										<li><strong>Compliance:</strong> Analyzed high-volume PII datasets reducing healthcare compliance issues by <strong class="stat">40%</strong>.</li>
+										<li><strong>QA &amp; Pipeline:</strong> Monthly QA audits improving data quality across <strong class="stat">3</strong> global regions.</li>
+									</ul>
+								</div>
+
+								<div class="work-card">
+									<div class="work-card-header">
+										<div class="work-card-top">
+											<span class="work-company">Zensar Technologies</span>
+										</div>
+										<div class="work-role">Data Analyst</div>
+										<div class="work-meta">
+											<span class="work-period">2016 &ndash; 2019</span>
+											<span class="work-meta-dot">&bull;</span>
+											<span>India</span>
+											<span class="work-meta-dot">&bull;</span>
+											<span class="work-client">Clients: Cisco &amp; Toshiba</span>
+										</div>
+									</div>
+									<ul class="compact-list">
+										<li><strong>Client Engagement:</strong> Dedicated analytics partner for Cisco APJGC clients, maintaining <strong class="stat">95%+</strong> satisfaction.</li>
+										<li><strong>Automated Reporting:</strong> SQL, QlikView, and Tableau cutting manual effort by <strong class="stat">60%</strong>.</li>
+										<li><strong>Change Management:</strong> Managed <strong class="stat">20+</strong> change requests across Oracle and SQL-driven systems.</li>
+									</ul>
+								</div>
+
 							</article>
 							
 
 
 						<!-- Skills Section -->
-							<article id="skills">
-								<h2 class="major">SKILLS</h2><br>
-								<div style="margin-bottom: 2em;">
-									<div style="margin-bottom: 1.5em;">
-										<strong>Data Visualization & Dashboarding</strong>
-										<p>Tableau (Server, Desktop), Power BI, Excel (Pivot Tables, Charts, Macros, Power Query)</p>
+							<article id="skills" role="dialog" aria-modal="true" aria-labelledby="skills-title">
+								<h2 id="skills-title" class="major">SKILLS</h2>
+								<div class="skills-grid">
+
+									<div class="skill-category">
+										<h4>Data Visualization &amp; Dashboarding</h4>
+										<div class="skill-tags">
+											<span class="skill-tag">Tableau Server</span>
+											<span class="skill-tag">Tableau Desktop</span>
+											<span class="skill-tag">Power BI</span>
+											<span class="skill-tag">Excel</span>
+											<span class="skill-tag">Pivot Tables</span>
+											<span class="skill-tag">Power Query</span>
+										</div>
 									</div>
-									<div style="margin-bottom: 1.5em;">
-										<strong>Data Analysis & Automation</strong>
-										<p>SQL (Teradata, Oracle), Python for Data Analytics, Excel VBA, Automated ETL pipelines</p>
+
+									<div class="skill-category skill-category--highlight">
+										<h4>Identity &amp; Access Management</h4>
+										<div class="skill-tags">
+											<span class="skill-tag skill-tag--new">IAM Dashboards</span>
+											<span class="skill-tag skill-tag--new">Access Monitoring</span>
+											<span class="skill-tag skill-tag--new">Data Modelling</span>
+											<span class="skill-tag skill-tag--new">Requirements Analysis</span>
+										</div>
 									</div>
-									<div style="margin-bottom: 1.5em;">
-										<strong>Process Optimization & Reporting Automation</strong>
-										<p>Reusable Templates, Audit-Ready Reports, Documentation Standardization (BRD, FRD, SDH)</p>
+
+									<div class="skill-category">
+										<h4>Data Analysis &amp; Automation</h4>
+										<div class="skill-tags">
+											<span class="skill-tag">SQL</span>
+											<span class="skill-tag">Teradata</span>
+											<span class="skill-tag">Oracle</span>
+											<span class="skill-tag">Python</span>
+											<span class="skill-tag">Excel VBA</span>
+											<span class="skill-tag">ETL Pipelines</span>
+										</div>
 									</div>
-									<div style="margin-bottom: 1.5em;">
-										<strong>Project & Agile Management</strong>
-										<p>JIRA, Confluence, Agile, Scrum, Kanban, Sprint Metrics & Reporting</p>
+
+									<div class="skill-category">
+										<h4>Process &amp; Reporting Automation</h4>
+										<div class="skill-tags">
+											<span class="skill-tag">Reusable Templates</span>
+											<span class="skill-tag">Audit-Ready Reports</span>
+											<span class="skill-tag">BRD / FRD</span>
+											<span class="skill-tag">SDH Documentation</span>
+										</div>
 									</div>
-									<div style="margin-bottom: 1.5em;">
-										<strong>Stakeholder Engagement & Communication</strong>
-										<p>Client Delivery, Cross-functional Collaboration, SME Interaction</p>
+
+									<div class="skill-category">
+										<h4>Project &amp; Agile Management</h4>
+										<div class="skill-tags">
+											<span class="skill-tag">JIRA</span>
+											<span class="skill-tag">Confluence</span>
+											<span class="skill-tag">Agile</span>
+											<span class="skill-tag">Scrum</span>
+											<span class="skill-tag">Kanban</span>
+											<span class="skill-tag">Sprint Metrics</span>
+										</div>
 									</div>
-									<div style="margin-bottom: 1.5em;">
-										<strong>Version Control & Development Tools</strong>
-										<p>Git, Oracle SQL Developer, Salesforce API</p>
+
+									<div class="skill-category">
+										<h4>Stakeholder &amp; Communication</h4>
+										<div class="skill-tags">
+											<span class="skill-tag">Client Delivery</span>
+											<span class="skill-tag">Cross-functional</span>
+											<span class="skill-tag">SME Engagement</span>
+										</div>
 									</div>
+
+									<div class="skill-category">
+										<h4>Dev Tools &amp; Version Control</h4>
+										<div class="skill-tags">
+											<span class="skill-tag">Git</span>
+											<span class="skill-tag">Oracle SQL Dev</span>
+											<span class="skill-tag">Salesforce API</span>
+										</div>
+									</div>
+
 								</div>
 							</article>
 
 
 						<!-- Achievements Section -->
-							<article id="achievements">
-								<h2 class="major">ACHIEVEMENTS</h2><br>
-								<ul>
-									<li><strong>2024:</strong>&nbsp;&nbsp;Launched production-grade JIRA Reporting Dashboard at Wells Fargo; integrated Agile metrics for improved visibility into sprint and team performance.</li>
-									<li><strong>2023:</strong>&nbsp;&nbsp;Delivered high-impact dashboards at Data Axle for AMEX, handling millions of records monthly and automating quality control checks - enhancing SLA compliance across global workflows.</li>
-									<li><strong>2021:</strong>&nbsp;&nbsp;Awarded internal recognition at Data Axle for leading automation projects that reduced QC hours by 50% for AMEX and Cox accounts.</li>
-									<li><strong>2019:</strong>&nbsp;&nbsp;Received 30% EOLAS Scholarship from Munster Technological University for MSc in Artificial Intelligence.</li>
-									<li><strong>2018:</strong>&nbsp;&nbsp;Winner of Rising Star Award at Zensar Technologies for exceeding delivery expectations and elevating client experience.</li>
-									<li><strong>2017:</strong>&nbsp;&nbsp;Nominated for Zensar’s Customer Centricity Award for enhancing cross-border collaboration and stakeholder satisfaction.</li>
-									<li><strong>2016:</strong>&nbsp;&nbsp;Published research paper titled "Vehicular Classification and Analysis" in IJCSIT (Pune University).</li>
-									<li><strong>2015:</strong>&nbsp;&nbsp;2nd place winner in "Codeless" competition for innovative non-code based data model design at inter-college tech fest.</li>
-									<li><strong>2014:</strong>&nbsp;&nbsp;Finalist in "Innovatus 2k14" inter-college competition for creative data interpretation techniques.</li>
+							<article id="achievements" role="dialog" aria-modal="true" aria-labelledby="achievements-title">
+								<h2 id="achievements-title" class="major">ACHIEVEMENTS</h2>
+								<ul class="timeline">
+									<li class="timeline-item"><span class="year-badge">2024</span><span class="timeline-text">Launched production-grade JIRA Reporting Dashboard at Wells Fargo; integrated Agile metrics for improved visibility into sprint and team performance.</span></li>
+									<li class="timeline-item"><span class="year-badge">2023</span><span class="timeline-text">Delivered high-impact dashboards at Data Axle for AMEX, handling millions of records monthly and automating quality control checks &mdash; enhancing SLA compliance across global workflows.</span></li>
+									<li class="timeline-item"><span class="year-badge">2021</span><span class="timeline-text">Awarded internal recognition at Data Axle for leading automation projects that reduced QC hours by 50% for AMEX and Cox accounts.</span></li>
+									<li class="timeline-item"><span class="year-badge">2019</span><span class="timeline-text">Received 30% EOLAS Scholarship from Munster Technological University for MSc in Artificial Intelligence.</span></li>
+									<li class="timeline-item"><span class="year-badge">2018</span><span class="timeline-text">Winner of Rising Star Award at Zensar Technologies for exceeding delivery expectations and elevating client experience.</span></li>
+									<li class="timeline-item"><span class="year-badge">2017</span><span class="timeline-text">Nominated for Zensar's Customer Centricity Award for enhancing cross-border collaboration and stakeholder satisfaction.</span></li>
+									<li class="timeline-item"><span class="year-badge">2016</span><span class="timeline-text">Published research paper titled &ldquo;Vehicular Classification and Analysis&rdquo; in IJCSIT (Pune University).</span></li>
+									<li class="timeline-item"><span class="year-badge">2015</span><span class="timeline-text">2nd place in &ldquo;Codeless&rdquo; competition for innovative non-code based data model design at inter-college tech fest.</span></li>
+									<li class="timeline-item"><span class="year-badge">2014</span><span class="timeline-text">Finalist in &ldquo;Innovatus 2k14&rdquo; inter-college competition for creative data interpretation techniques.</span></li>
 								</ul>
 							</article>
 
 
 
 						<!-- Projects Section -->
-							<article id="projects">
-								<h2 class="major">PROJECTS</h2><br>
+							<article id="projects" role="dialog" aria-modal="true" aria-labelledby="projects-title">
+								<h2 id="projects-title" class="major">PROJECTS</h2><br>
 
 								<ul id="projects-list">
 									<li class="project-row">
@@ -216,7 +332,7 @@
 										<strong>Video Game Sales Analysis</strong>
 										<p>Designed an interactive Tableau dashboard to explore historical video game sales trends across decades. Analyzed genre popularity, regional performance, and major sales milestones.</p>
 										</div>
-										<span class="project-cta" aria-hidden="true"> > </span>
+										<span class="project-cta" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M3 8a.5.5 0 0 1 .5-.5h7.793L8.146 4.354a.5.5 0 1 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L11.293 8.5H3.5A.5.5 0 0 1 3 8z"/></svg></span>
 									</a>
 									</li>
 
@@ -226,7 +342,7 @@
 										<strong>COVID-19 Global Data Dashboard</strong>
 										<p>Created a comprehensive Tableau dashboard tracking global COVID-19 data. Delivered real-time updates on case counts, regional trends, and country comparisons to support data-driven insights.</p>
 										</div>
-										<span class="project-cta" aria-hidden="true"> > </span>
+										<span class="project-cta" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M3 8a.5.5 0 0 1 .5-.5h7.793L8.146 4.354a.5.5 0 1 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L11.293 8.5H3.5A.5.5 0 0 1 3 8z"/></svg></span>
 									</a>
 									</li>
 
@@ -236,7 +352,7 @@
 										<strong>Adult Census Income Prediction</strong>
 										<p>Developed and benchmarked classification models to predict whether an individual’s income exceeds $50,000. Applied data cleaning, feature engineering, and hyperparameter tuning to optimize performance.</p>
 										</div>
-										<span class="project-cta" aria-hidden="true"> > </span>
+										<span class="project-cta" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M3 8a.5.5 0 0 1 .5-.5h7.793L8.146 4.354a.5.5 0 1 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L11.293 8.5H3.5A.5.5 0 0 1 3 8z"/></svg></span>
 									</a>
 									</li>
 
@@ -246,7 +362,7 @@
 										<strong>Job Application Pipeline & Tracker (with Local UI)</strong>
 										<p>An end-to-end pipeline that automates my job search workflow—from scraping jobs (Apify, JobSpy) to cleaning, enriching, and scoring them against my résumé using AI. Exports to a styled Excel tracker with a minimal local web UI for runs, logs, and dashboards.</p>
 										</div>
-										<span class="project-cta" aria-hidden="true"> > </span>
+										<span class="project-cta" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M3 8a.5.5 0 0 1 .5-.5h7.793L8.146 4.354a.5.5 0 1 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L11.293 8.5H3.5A.5.5 0 0 1 3 8z"/></svg></span>
 									</a>
 									</li>
 								</ul>
@@ -255,8 +371,8 @@
 
 							  
 						<!-- Writing Section -->
-							<article id="writing">
-								<h2 class="major">WRITING</h2>
+							<article id="writing" role="dialog" aria-modal="true" aria-labelledby="writing-title">
+								<h2 id="writing-title" class="major">WRITING</h2>
 								<p class="section-subtle">&emsp; Short posts and notes on analytics, BI, automation, and career.</p>
 
 								<ul id="writing-list">
@@ -416,9 +532,9 @@
 					        <p class="copyright">&copy; Omkar Deshpande. All rights reserved.</p>
 					        <div class="footer-icons">
 					            <ul class="icon-list">
-					                <li><a href="mailto:omkar.deshpande23994@gmail.com"><i class="fas fa-paper-plane"></i></a></li>
-					                <li><a href="https://linkedin.com/in/omkardeshpande-23994"><i class="fab fa-linkedin"></i></a></li>
-					                <li><a href="https://github.com/omkardeshpande23994"><i class="fab fa-github"></i></a></li>
+					                <li><a href="mailto:omkar.deshpande23994@gmail.com" aria-label="Send email"><i class="fas fa-paper-plane"></i></a></li>
+					                <li><a href="https://linkedin.com/in/omkardeshpande-23994" aria-label="LinkedIn profile" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+					                <li><a href="https://github.com/omkardeshpande23994" aria-label="GitHub profile" target="_blank" rel="noopener"><i class="fab fa-github"></i></a></li>
 					            </ul>
 					        </div>
 					    </div>
@@ -431,11 +547,7 @@
 			<div id="bg"></div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="assets/js/main.js?v=4"></script>
 			<script src="assets/js/backToTop.js?v=3"></script>
 	
 

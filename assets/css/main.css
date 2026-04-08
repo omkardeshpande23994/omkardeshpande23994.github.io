@@ -1,5 +1,4 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
 
 
@@ -147,6 +146,13 @@ input, select, textarea {
 	--lh-h1:   1.28;
 	--lh-h2:   1.28;
 	--lh-h3:   1.28;
+
+	/* Accent & glass tokens (v4) */
+	--accent:       #38bdf8;
+	--accent-dim:   rgba(56, 189, 248, 0.12);
+	--accent-ring:  rgba(56, 189, 248, 0.45);
+	--glass-bg:     rgba(14, 16, 20, 0.72);
+	--glass-border: rgba(255, 255, 255, 0.08);
 	}
 
 	/* Root scaling (keep template’s responsive base) */
@@ -205,7 +211,7 @@ input, select, textarea {
 	/* Section titles (Intro, Work, Achievements, etc.) */
 	h2.major {
 	letter-spacing: var(--track-section);
-	border-bottom: 1px solid rgba(255,255,255,0.9);
+	border-bottom: 2px solid var(--accent-ring);
 	padding-bottom: 0.5rem;
 	width: max-content;
 	}
@@ -1091,8 +1097,8 @@ input, select, textarea {
 			-ms-transition-delay: 0.35s;
 			transition-delay: 0.35s;
 			background-image: 
-				/* radial-gradient(ellipse at 50% 40%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.30) 100%), */
-    			linear-gradient(to top, rgba(19,21,25,0.60), rgba(19,21,25,0.60)),
+				radial-gradient(ellipse 80% 50% at 20% 110%, rgba(56,189,248,0.07), transparent),
+    			linear-gradient(to top, rgba(14,16,20,0.72), rgba(19,21,25,0.62)),
 				url("../../images/overlay.png");
 			background-size: auto, 256px 256px;
 			background-position: center, center;
@@ -1245,12 +1251,14 @@ input, select, textarea {
 		#header .logo {
 			width: 5.5rem;
 			height: 5.5rem;
-			border: solid 1px #ffffff;
 			border-radius: 100%;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			overflow: hidden;
+			background: linear-gradient(135deg, rgba(56,189,248,0.5), rgba(255,255,255,0.12));
+			padding: 2px;
+			box-shadow: 0 0 18px rgba(56,189,248,0.15);
 			}
 
 			#header .logo img {
@@ -1303,13 +1311,15 @@ input, select, textarea {
 			margin-bottom: 0;
 			list-style: none;
 			padding-left: 0;
-			border: solid 1px #ffffff;
-			border-radius: 4px;
+			border: solid 1px rgba(255,255,255,0.2);
+			border-radius: 8px;
+			backdrop-filter: blur(8px);
+			-webkit-backdrop-filter: blur(8px);
 		}
 
 			#header nav ul li {
 				padding-left: 0;
-				border-left: solid 1px #ffffff;
+				border-left: solid 1px rgba(255,255,255,0.15);
 			}
 
 				#header nav ul li:first-child {
@@ -1344,7 +1354,7 @@ input, select, textarea {
 			left: calc(50% - 1px);
 			width: 1px;
 			height: 100%;
-			background: #ffffff;
+			background: rgba(255,255,255,0.2);
 		}
 
 		#header nav.use-middle ul li.is-middle {
@@ -1506,8 +1516,12 @@ input, select, textarea {
 			position: relative;
 			width: 50rem;
 			max-width: 100%;
-			background-color: rgba(27, 31, 34, 0.5);
-			border-radius: 4px;
+			background: var(--glass-bg);
+			backdrop-filter: blur(24px) saturate(160%);
+			-webkit-backdrop-filter: blur(24px) saturate(160%);
+			border: 1px solid var(--glass-border);
+			border-radius: 16px;
+			box-shadow: 0 32px 64px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06);
 			opacity: 0;
 		}
 
@@ -1599,8 +1613,26 @@ input, select, textarea {
 	color: rgba(255,255,255,.9);
 	}
 
-	#header nav ul li a:hover {
-	background-color: rgba(255,255,255,0.06);
+	#header nav ul li a {
+	position: relative;
+}
+#header nav ul li a::after {
+	content: '';
+	position: absolute;
+	bottom: 0.4rem;
+	left: 50%;
+	transform: translateX(-50%) scaleX(0);
+	width: 55%;
+	height: 1px;
+	background: var(--accent);
+	transition: transform 0.22s ease;
+	border-radius: 1px;
+}
+#header nav ul li a:hover::after {
+	transform: translateX(-50%) scaleX(1);
+}
+#header nav ul li a:hover {
+	background-color: rgba(56,189,248,0.06);
 	color: #fff;
 	}
 
@@ -1901,3 +1933,415 @@ input, select, textarea {
 			font-size: 15px; /* slightly smaller icon size on mobile */
 		}
 	}
+
+
+/* ============================================================
+   v4 COMPONENT STYLES
+   Skills chips, Achievements timeline, Project/Writing card upgrades
+   ============================================================ */
+
+/* ------ Skills Grid ------ */
+.skills-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.4rem 2rem;
+	margin-top: 1.2rem;
+}
+
+@media screen and (max-width: 600px) {
+	.skills-grid { grid-template-columns: 1fr; }
+}
+
+.skill-category h4 {
+	font-size: 0.78rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: rgba(255,255,255,0.5);
+	margin: 0 0 0.55rem 0;
+}
+
+.skill-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+}
+
+.skill-tag {
+	display: inline-block;
+	padding: 0.22rem 0.65rem;
+	border-radius: 999px;
+	border: 1px solid rgba(56,189,248,0.32);
+	background: rgba(56,189,248,0.07);
+	color: var(--accent);
+	font-size: 0.78rem;
+	font-weight: 500;
+	letter-spacing: 0.01em;
+	transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.skill-tag:hover {
+	background: rgba(56,189,248,0.14);
+	border-color: rgba(56,189,248,0.55);
+}
+
+
+/* ------ Achievements Timeline ------ */
+ul.timeline {
+	list-style: none;
+	padding-left: 0;
+	margin-top: 1.2rem;
+	position: relative;
+}
+
+ul.timeline::before {
+	content: '';
+	position: absolute;
+	left: 2.4rem;
+	top: 0.6rem;
+	bottom: 0.6rem;
+	width: 1px;
+	background: linear-gradient(to bottom, transparent, rgba(56,189,248,0.35) 10%, rgba(56,189,248,0.35) 90%, transparent);
+}
+
+.timeline-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 1rem;
+	margin-bottom: 1.1rem;
+	position: relative;
+}
+
+.timeline-item::before {
+	content: '';
+	position: absolute;
+	left: 2.4rem;
+	top: 0.55rem;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: var(--accent);
+	transform: translateX(-2px);
+	box-shadow: 0 0 8px rgba(56,189,248,0.5);
+}
+
+.year-badge {
+	flex: 0 0 4.8rem;
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	color: var(--accent);
+	padding: 0.18rem 0.5rem;
+	border: 1px solid rgba(56,189,248,0.3);
+	border-radius: 4px;
+	background: rgba(56,189,248,0.07);
+	text-align: center;
+	margin-top: 0.2rem;
+	white-space: nowrap;
+}
+
+.timeline-text {
+	flex: 1;
+	font-size: 0.88rem;
+	line-height: 1.55;
+	color: rgba(255,255,255,0.82);
+}
+
+
+/* ------ Project card enhancements ------ */
+.project-row:hover {
+	border-top: 1px solid rgba(56,189,248,0.35);
+	box-shadow: 0 6px 28px rgba(0,0,0,0.35);
+}
+
+.project-cta {
+	display: flex;
+	align-items: center;
+	opacity: 0.5;
+	transition: opacity 0.2s ease, transform 0.2s ease;
+	color: var(--accent);
+}
+
+.project-link:hover .project-cta {
+	opacity: 1;
+	transform: translateX(4px);
+}
+
+
+/* ------ Writing card enhancements ------ */
+.post-row:hover {
+	box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+
+/* Writing thumbnail gradient placeholder */
+.post-thumb.is-default {
+	background: linear-gradient(135deg, rgba(56,189,248,0.12), rgba(14,16,20,0.4));
+}
+
+
+
+/* ============================================================
+   v4 ANIMATIONS
+   ============================================================ */
+
+@keyframes fadeSlideIn {
+	from { opacity: 0; transform: translateY(6px); }
+	to   { opacity: 1; transform: translateY(0); }
+}
+
+body:not(.is-preload) .tl-word {
+	animation: fadeSlideIn 0.5s ease both;
+}
+
+body.is-preload .tl-word {
+	opacity: 0;
+}
+
+.tl-sep {
+	color: rgba(255,255,255,0.3);
+	font-weight: 200;
+}
+
+.hero-title {
+	font-size: 2.80rem !important;
+}
+
+@media screen and (max-width: 736px) {
+	.hero-title { font-size: 2.1rem !important; }
+}
+
+.footer-icons i {
+	color: rgba(255,255,255,0.45);
+}
+
+.footer-icons i:hover {
+	color: var(--accent) !important;
+}
+
+#back-to-top {
+	background: var(--glass-bg) !important;
+	border: 1px solid var(--glass-border) !important;
+	backdrop-filter: blur(12px) !important;
+	-webkit-backdrop-filter: blur(12px) !important;
+}
+
+
+
+/* ============================================================
+   v4 FOCUS & KEYBOARD ACCESSIBILITY
+   ============================================================ */
+
+/* Visible focus ring for keyboard nav */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 3px;
+	border-radius: 3px;
+}
+
+/* Article close button focus */
+#main article .close:focus-visible::before {
+	background-color: rgba(56,189,248,0.15);
+	box-shadow: 0 0 0 2px var(--accent);
+}
+
+/* Nav link focus */
+#header nav ul li a:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: -2px;
+	border-radius: 2px;
+}
+
+
+
+/* ============================================================
+   v4.1 WORK EXPERIENCE CARDS  (21st.dev-inspired)
+   ============================================================ */
+
+/* Container — remove old h3/h4/h5 rhythm overrides for work cards */
+.work-card {
+	position: relative;
+	margin-bottom: 1.4rem;
+	padding: 1.2rem 1.4rem 1.1rem 1.6rem;
+	border-radius: 10px;
+	border: 1px solid rgba(255,255,255,0.07);
+	background: rgba(255,255,255,0.03);
+	transition: border-color 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+}
+
+/* Left accent stripe */
+.work-card::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 1rem;
+	bottom: 1rem;
+	width: 2px;
+	border-radius: 2px;
+	background: rgba(255,255,255,0.12);
+	transition: background 0.22s ease;
+}
+
+.work-card:hover {
+	border-color: rgba(56,189,248,0.2);
+	background: rgba(56,189,248,0.04);
+	box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+
+.work-card:hover::before {
+	background: var(--accent);
+}
+
+/* Current role gets a persistent accent stripe */
+.work-card--current {
+	border-color: rgba(56,189,248,0.22);
+	background: rgba(56,189,248,0.05);
+}
+
+.work-card--current::before {
+	background: var(--accent);
+	box-shadow: 0 0 12px rgba(56,189,248,0.4);
+}
+
+/* Company name */
+.work-card-top {
+	display: flex;
+	align-items: center;
+	gap: 0.65rem;
+	margin-bottom: 0.2rem;
+}
+
+.work-company {
+	font-size: 1.0rem;
+	font-weight: 700;
+	color: #ffffff;
+	letter-spacing: 0.01em;
+}
+
+/* Role title */
+.work-role {
+	font-size: 0.88rem;
+	font-weight: 500;
+	color: var(--accent);
+	margin-bottom: 0.3rem;
+	letter-spacing: 0.01em;
+}
+
+/* Meta row: period · type · location */
+.work-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.3rem;
+	font-size: 0.76rem;
+	color: rgba(255,255,255,0.45);
+	margin-bottom: 0.75rem;
+}
+
+.work-period {
+	font-weight: 600;
+	color: rgba(255,255,255,0.6);
+}
+
+.work-meta-dot {
+	opacity: 0.35;
+}
+
+.work-client {
+	font-style: italic;
+	color: rgba(255,255,255,0.38);
+}
+
+/* "Current" badge */
+.work-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.25rem;
+	padding: 0.12rem 0.55rem;
+	border-radius: 999px;
+	font-size: 0.68rem;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+.work-badge--active {
+	border: 1px solid rgba(56,189,248,0.45);
+	background: rgba(56,189,248,0.12);
+	color: var(--accent);
+	animation: badgePulse 2.5s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+	0%, 100% { box-shadow: 0 0 0 0 rgba(56,189,248,0); }
+	50%       { box-shadow: 0 0 0 4px rgba(56,189,248,0.12); }
+}
+
+/* Key numbers / stats in accent color */
+.stat {
+	color: var(--accent);
+	font-weight: 700;
+}
+
+/* Bullet list inside work card */
+.work-card .compact-list {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* Remove old hr-fade dividers inside work (cards replace them) */
+#work .hr-fade { display: none; }
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+	.work-card {
+		padding: 1rem 1rem 0.9rem 1.3rem;
+	}
+	.work-meta {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.1rem;
+	}
+	.work-meta-dot { display: none; }
+}
+
+
+/* Highlighted skill category (current/new) */
+.skill-category--highlight .skill-category h4,
+.skill-category--highlight h4 {
+	color: var(--accent) !important;
+	opacity: 1 !important;
+}
+
+/* New skill tag variant - brighter */
+.skill-tag--new {
+	border-color: rgba(56,189,248,0.55) !important;
+	background: rgba(56,189,248,0.14) !important;
+	font-weight: 600 !important;
+}
+
+/* "Currently at" location line under name (landing) */
+.location-line {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.4rem;
+	font-size: 0.72rem;
+	font-weight: 400;
+	color: rgba(255,255,255,0.5);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	margin-top: 0.5rem;
+}
+
+.location-line .loc-dot {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: var(--accent);
+	display: inline-block;
+	box-shadow: 0 0 6px rgba(56,189,248,0.7);
+	flex-shrink: 0;
+}
