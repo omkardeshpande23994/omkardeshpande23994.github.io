@@ -21,7 +21,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Restore default cursor on touch devices — cursor.js also checks this */
+/* Restore default cursor on touch devices */
 @media (pointer: coarse) {
   body { cursor: auto; }
 }
@@ -44,7 +44,7 @@ body {
   border-top: 1px solid var(--color-border);
 }
 
-/* ——— Eyebrow / section label ——— */
+/* ——— Section label (eyebrow) ——— */
 .section-label {
   display: block;
   font-family: var(--font-body);
@@ -52,6 +52,7 @@ body {
   font-weight: var(--fw-medium);
   letter-spacing: 0.15em;
   text-transform: uppercase;
+  /* Crimson — prominent marker */
   color: var(--color-accent);
   margin-bottom: var(--space-4);
 }
@@ -91,8 +92,9 @@ p + p {
   white-space: nowrap;
 }
 
+/* Accent tags use crimson border — they are key/prominent */
 .tag--accent {
-  border-color: rgba(87, 203, 202, 0.4);
+  border-color: rgba(192, 57, 43, 0.4);
   color: var(--color-accent);
 }
 
@@ -111,24 +113,26 @@ p + p {
   cursor: none;
 }
 
+/* Primary button — crimson fill, prominent CTA */
 .btn--primary {
   background-color: var(--color-accent);
-  color: #0d0d0d;
+  color: #ffffff;
 }
 
 .btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(87, 203, 202, 0.25);
+  box-shadow: 0 8px 24px rgba(192, 57, 43, 0.28);
 }
 
+/* Ghost button — grey-toned, not crimson */
 .btn--ghost {
   border: 1px solid var(--color-border);
   color: var(--color-text-muted);
 }
 
 .btn--ghost:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: var(--color-text);
   transform: translateY(-2px);
 }
 
@@ -136,35 +140,38 @@ p + p {
 #cursor {
   display: none;
   position: fixed;
-  width: 6px;
-  height: 6px;
-  background: var(--color-accent);
+  width: 5px;
+  height: 5px;
+  background: var(--color-text);
   border-radius: 50%;
   pointer-events: none;
   z-index: var(--z-cursor);
-  margin: -3px 0 0 -3px;
+  margin: -2.5px 0 0 -2.5px;
   transition: opacity var(--transition-fast);
 }
 
 #cursor-follower {
   display: none;
   position: fixed;
-  width: 30px;
-  height: 30px;
-  border: 1px solid rgba(87, 203, 202, 0.45);
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   pointer-events: none;
   z-index: var(--z-cursor);
-  margin: -15px 0 0 -15px;
-  transition: width 200ms ease, height 200ms ease, margin 200ms ease, border-color 200ms ease, background-color 200ms ease, opacity var(--transition-fast);
+  margin: -14px 0 0 -14px;
+  /* Fast expand — 120ms */
+  transition: width 120ms ease, height 120ms ease, margin 120ms ease,
+              border-color 120ms ease, background-color 120ms ease,
+              opacity var(--transition-fast);
 }
 
 #cursor-follower.cursor-follower--hover {
-  width: 50px;
-  height: 50px;
-  margin: -25px 0 0 -25px;
-  border-color: var(--color-accent);
-  background-color: var(--color-accent-dim);
+  width: 46px;
+  height: 46px;
+  margin: -23px 0 0 -23px;
+  border-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.04);
 }
 
 /* ——— Scroll-to-top ——— */
@@ -184,7 +191,8 @@ p + p {
   font-size: var(--fs-sm);
   opacity: 0;
   pointer-events: none;
-  transition: opacity var(--transition-base), transform var(--transition-base), border-color var(--transition-fast), color var(--transition-fast);
+  transition: opacity var(--transition-base), transform var(--transition-base),
+              border-color var(--transition-fast), color var(--transition-fast);
   z-index: var(--z-above);
   cursor: none;
 }
@@ -195,7 +203,7 @@ p + p {
 }
 
 #scroll-top:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--color-text);
   transform: translateY(-2px);
 }

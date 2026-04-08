@@ -5,15 +5,18 @@
 :root {
   /* ——— Colors ——— */
   --color-bg:           #0d0d0d;
-  --color-bg-surface:   #141414;
-  --color-bg-elevated:  #1a1a1a;
+  --color-bg-surface:   #131313;
+  --color-bg-elevated:  #1c1c1c;
   --color-border:       #242424;
-  --color-text:         #f0ede8;
-  --color-text-muted:   #8a8a8a;
-  --color-text-faint:   #4a4a4a;
-  --color-accent:       #57cbca;
-  --color-accent-dim:   rgba(87, 203, 202, 0.12);
-  --color-accent-glow:  rgba(87, 203, 202, 0.06);
+  --color-border-hover: rgba(255, 255, 255, 0.1);
+  --color-text:         #ebebeb;
+  --color-text-muted:   #888888;
+  --color-text-faint:   #484848;
+
+  /* Crimson — used sparingly on key/prominent elements only */
+  --color-accent:       #c0392b;
+  --color-accent-dim:   rgba(192, 57, 43, 0.08);
+  --color-accent-glow:  rgba(192, 57, 43, 0.04);
 
   /* ——— Typography ——— */
   --font-head: 'Plus Jakarta Sans', system-ui, sans-serif;

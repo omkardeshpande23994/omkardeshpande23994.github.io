@@ -78,15 +78,19 @@
 
   // ——— Scroll-to-top button ———
   if (scrollTopBtn) {
-    scrollTopBtn.addEventListener('click', () => {
+    scrollTopBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
   // ——— Smooth scroll for all anchor links ———
+  // e.preventDefault() stops native hash-jump fighting with smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
-      const target = document.querySelector(link.getAttribute('href'));
+      const href = link.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth' });

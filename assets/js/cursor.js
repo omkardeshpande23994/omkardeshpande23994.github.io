@@ -29,9 +29,9 @@
     dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
   });
 
-  // Ring follows with lerp for smooth lag
+  // Ring follows with lerp — increased for snappier feel
   function animateRing() {
-    const lerp = isHovering ? 0.14 : 0.1;
+    const lerp = isHovering ? 0.38 : 0.28;
     ringX += (mouseX - ringX) * lerp;
     ringY += (mouseY - ringY) * lerp;
     ring.style.transform = `translate(${ringX}px, ${ringY}px)`;
@@ -41,7 +41,7 @@
   animateRing();
 
   // Expand ring on interactive elements
-  const interactiveSelectors = 'a, button, .project-card, .writing-card, .bento-card, .stat-card, .btn, [role="button"]';
+  const interactiveSelectors = 'a, button, .project-card, .writing-card, .writing-feature, .bento-card, .stat-card, .btn, [role="button"]';
 
   document.addEventListener('mouseover', (e) => {
     if (e.target.closest(interactiveSelectors)) {

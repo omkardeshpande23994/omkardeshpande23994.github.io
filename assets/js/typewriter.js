@@ -6,8 +6,8 @@
   'use strict';
 
   const roles = [
-    'Senior Analytics Consultant',
-    'Business Analyst',
+    'IAM Data Analyst',
+    'Analytics Consultant',
     'Data Storyteller',
     'BI Engineer',
     'ML Enthusiast',
