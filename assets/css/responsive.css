@@ -1,0 +1,192 @@
+/* ============================================================
+   RESPONSIVE — All media queries consolidated
+   ============================================================ */
+
+/* ——— Tablet (≤ 1024px) ——— */
+@media (max-width: 1024px) {
+  .container {
+    padding-inline: var(--space-6);
+  }
+
+  /* About: stack vertically */
+  .about__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  .about__stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Writing: 2 columns */
+  .writing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Bento: keep 4-col but reduce row height */
+  .skills-bento {
+    grid-auto-rows: 170px;
+  }
+}
+
+/* ——— Large Mobile (≤ 768px) ——— */
+@media (max-width: 768px) {
+  /* Nav */
+  .nav__links {
+    display: none;
+  }
+
+  .nav__hamburger {
+    display: flex;
+  }
+
+  .nav {
+    padding-inline: var(--space-6);
+  }
+
+  /* Hero */
+  .hero__inner {
+    padding-block: var(--space-20) var(--space-16);
+  }
+
+  .hero__scroll-hint {
+    display: none;
+  }
+
+  /* About stats: 2×2 */
+  .about__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Bento: 2 columns */
+  .skills-bento {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+  }
+
+  .bento-card--large {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .bento-card--medium {
+    grid-column: span 2;
+  }
+
+  .bento-card--small {
+    grid-column: span 1;
+  }
+
+  /* Projects: 1 column */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Writing: 1 column */
+  .writing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Timeline: tighter padding */
+  .timeline {
+    padding-left: var(--space-6);
+  }
+
+  .timeline__content {
+    padding: var(--space-5) var(--space-6);
+  }
+
+  .timeline__marker {
+    left: calc(-1 * var(--space-6) - 4px);
+  }
+
+  /* Contact headline */
+  .contact__headline {
+    font-size: var(--fs-4xl);
+  }
+
+  /* Section title */
+  .section-title {
+    margin-bottom: var(--space-8);
+  }
+}
+
+/* ——— Small Mobile (≤ 480px) ——— */
+@media (max-width: 480px) {
+  .section {
+    padding-block: var(--space-20);
+  }
+
+  .container {
+    padding-inline: var(--space-4);
+  }
+
+  /* Nav */
+  .nav {
+    padding-inline: var(--space-4);
+  }
+
+  /* Hero */
+  .hero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Bento: single column */
+  .skills-bento {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .bento-card {
+    min-height: 140px;
+  }
+
+  .bento-card--large,
+  .bento-card--medium,
+  .bento-card--small {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  /* About stats: 2×2 stays, just tighter */
+  .stat-card__number {
+    font-size: var(--fs-3xl);
+  }
+
+  /* Timeline: very tight */
+  .timeline {
+    padding-left: var(--space-5);
+  }
+
+  .timeline__header {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .timeline__marker {
+    left: calc(-1 * var(--space-5) - 4px);
+  }
+
+  /* Section */
+  .section-title {
+    font-size: var(--fs-3xl);
+    margin-bottom: var(--space-6);
+  }
+
+  /* Contact */
+  .contact__social {
+    gap: var(--space-4);
+  }
+
+  /* Scroll top button */
+  #scroll-top {
+    bottom: var(--space-4);
+    right: var(--space-4);
+  }
+}

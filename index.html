@@ -1,443 +1,686 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<!-- =======================
-			Meta / SEO / Social
-			======================= -->
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-		<meta name="description" content="Omkar Deshpande - Senior Data & Analytics Consultant with 8+ years of experience in data visualization, business intelligence, and analytics consulting. Portfolio and career profile.">
-		<meta name="keywords" content="Omkar Deshpande, Data Analytics Consultant, Business Analyst, Tableau Expert, SQL Specialist, Business Intelligence, Data Visualization, Amsterdam, Netherlands">
-		<meta name="author" content="Omkar Deshpande">
-		<title>Omkar Deshpande | Data & Analytics Consultant | Portfolio</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Omkar Deshpande — Senior Analytics Consultant with 8+ years turning complex data into leadership decisions across finance, pharma, and energy." />
+  <meta name="author" content="Omkar Deshpande" />
 
-		<!-- Open Graph -->
-		<meta property="og:title" content="Omkar Deshpande | Data & Analytics Consultant">
-		<meta property="og:description" content="Explore my portfolio showcasing dashboards, reporting, and data consulting projects.">
-		<meta property="og:image" content="https://omkardeshpande23994.github.io/images/preview-image.png">
-		<meta property="og:url" content="https://omkardeshpande23994.github.io">
-		<meta property="og:type" content="website">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Omkar Deshpande — Analytics Consultant" />
+  <meta property="og:description" content="Senior Analytics Consultant | Business Analyst | Data Storyteller. 8+ years across Wells Fargo, American Express, Bristol Myers Squibb." />
+  <meta property="og:image" content="images/preview-image.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-		<!-- Favicon -->
-		<link rel="icon" type="image/png" href="images/favicon.png">
+  <title>Omkar Deshpande — Analytics Consultant</title>
+  <link rel="icon" href="images/favicon.png" type="image/png" />
 
-		<!-- =======================
-			CSS (core first)
-			======================= -->
-		<link rel="stylesheet" href="assets/css/main.css?v=manrope-1" />
-		<link rel="stylesheet" href="assets/css/backToTop.css?v=1">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-		<link rel="stylesheet" href="css/fontawesome-all.min.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" />
 
-		<!-- =======================
-			Fonts (Manrope only)
-			NOTE: easy rollback = remove this <link> and set data-typography="legacy"
-			======================= -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link rel="stylesheet"
-				href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-	</head>
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/sections.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
 
+  <!-- Grain texture overlay -->
+  <div class="grain" aria-hidden="true"></div>
 
-	<body class="is-preload">
+  <!-- Custom cursor -->
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-follower" aria-hidden="true"></div>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <!-- ================================================================
+       NAVIGATION
+       ================================================================ -->
+  <nav id="site-nav" class="nav" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav__logo" aria-label="Back to top">
+      <img src="images/od-logo.png" alt="OD" width="36" height="36" />
+    </a>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo" style="width:5.5rem;height:5.5rem;border:1px solid #fff;border-radius:50%;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-							<img src="images/od-logo.png" alt="OD Logo" style="width:80%;height:80%;object-fit:contain;" />
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1 class="major hero-title">OMKAR DESHPANDE</h1>
-								<p class="tagline">Analytics Consultant | Business Analyst | Data Analyst | ML Enthusiast</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#work">Work</a></li>
-								<li><a href="#skills">Skills</a></li>
-								<li><a href="#achievements">Feats</a></li>
-								<li><a href="#projects">Projects</a></li>
-								<li><a href="#writing">Writing</a></li>
-								<!--<li><a href="#contact">Contact</a></li> -->
-							</ul>
-						</nav>
-					</header>
+    <ul class="nav__links" role="list">
+      <li><a href="#about"        class="nav__link">About</a></li>
+      <li><a href="#experience"   class="nav__link">Experience</a></li>
+      <li><a href="#skills"       class="nav__link">Skills</a></li>
+      <li><a href="#projects"     class="nav__link">Projects</a></li>
+      <li><a href="#achievements" class="nav__link">Achievements</a></li>
+      <li><a href="#writing"      class="nav__link">Writing</a></li>
+      <li><a href="#contact"      class="nav__link nav__link--cta">Contact</a></li>
+    </ul>
 
-				<!-- Main -->
-					<div id="main">
+    <button class="nav__hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
 
-						<!-- Intro Section -->
-							<article id="intro">
-								<h2 class="major">INTRODUCTION</h2>
-								<span class="image main"><img src="images/Hello.png" alt="" /></span>
-								<p><strong>Hello and Welcome!</strong></p>
-								<p>I'm Omkar Deshpande  -  a Senior Analytics Consultant with over 8 years of experience turning complex data into clear, actionable insights.</p>
+  <!-- Mobile drawer -->
+  <div class="nav__drawer" id="nav-drawer" aria-label="Mobile navigation">
+    <a href="#about"        class="nav__link">About</a>
+    <a href="#experience"   class="nav__link">Experience</a>
+    <a href="#skills"       class="nav__link">Skills</a>
+    <a href="#projects"     class="nav__link">Projects</a>
+    <a href="#achievements" class="nav__link">Achievements</a>
+    <a href="#writing"      class="nav__link">Writing</a>
+    <a href="#contact"      class="nav__link nav__link--cta">Contact</a>
+  </div>
 
-								<p>
-								My journey began in Pune, India, and has taken me through global firms such as American Express, Bristol Myers Squibb, Data Axle, ZS Associates, and Wells Fargo. Along the way, I’ve designed analytics and reporting solutions that empower leaders to make confident, data-driven decisions.
-								</p>
+  <main>
 
-								<p>
-								At Wells Fargo, I spearheaded initiatives like the Loudspeaker and Leadership dashboards  -  blending data storytelling, risk insights, and automation to deliver measurable business value. My expertise spans Tableau, Power BI, SQL, and Python, with a strong focus on automation and intuitive visualization.
-								</p>
+    <!-- ================================================================
+         HERO
+         ================================================================ -->
+    <section id="hero" class="section section--hero">
+      <div class="hero__bg-glow" aria-hidden="true"></div>
 
-								<p>
-								Today, I am based in the Netherlands and working in the energy sector, continuing my mission of using data as a driver of clarity, efficiency, and innovation. I’m passionate about simplifying the complex and helping organizations unlock the full potential of their data.
-								</p>
+      <div class="container hero__inner">
+        <p class="hero__eyebrow reveal">Based in Netherlands &nbsp;&middot;&nbsp; Open to opportunities</p>
 
-								<p>
-								I believe impactful analytics is part science, part storytelling. From engaging stakeholders to delivering dashboards, I bridge the gap between raw numbers and strategic outcomes.
-								</p>
+        <h1 class="hero__name reveal reveal--delay-1">
+          Omkar<br>Deshpande
+        </h1>
 
-								<p>
-								Thanks for visiting  -  feel free to connect and explore how thoughtful analytics can bring clarity to complex challenges.
-								</p>
-							</article>
+        <div class="hero__subtitle reveal reveal--delay-2" aria-live="polite">
+          <span class="hero__subtitle-prefix">I'm a </span><span id="typewriter"></span>
+        </div>
 
+        <p class="hero__bio reveal reveal--delay-3">
+          Senior Analytics Consultant with 8+ years turning complex data into confident
+          leadership decisions &mdash; across finance, pharma, and energy.
+        </p>
 
+        <div class="hero__actions reveal reveal--delay-4">
+          <a href="#experience" class="btn btn--primary">View my work</a>
+          <a href="#contact"    class="btn btn--ghost">Get in touch</a>
+        </div>
 
-						<!-- Work Section -->
-							<article id="work">
-								<h2 class="major">WORK EXPERIENCE</h2><br>
-								<h3>2024 – Present | Wells Fargo, India</h3>
-								<h4>Senior Analytics Consultant</h4>
-								<ul class="compact-list">
-									<li><strong>End-to-End Ownership – Loudspeaker Dashboards:</strong> Managed and delivered 10+ Tableau dashboards including Loudspeaker Weekly Pulse and Compliments, ensuring timely delivery, zero misses, and high LOB engagement. Took full responsibility for consistent weekly refreshes and communication with stakeholders.</li>
-									<li><strong>Legacy Dashboard Revamp:</strong> Revamped 4+ legacy dashboards (3+ years old), optimizing Teradata SQL queries and enhancing UI/UX. Reduced load time by 40%, improved interactivity, and scaled insights delivery across multiple LOBs.</li>
-									<li><strong>Leadership & JIRA Reporting Dashboards:</strong> Matured the JIRA Reporting dashboard from a proof-of-concept to a production-grade tool tracking Agile metrics like sprint velocity, ticket aging, and team performance. Took complete ownership of the Leadership dashboard, enhanced with Power BI and Python for better interactivity and automation.</li>
-									<li><strong>Reporting Automation & Standardization:</strong> Built reusable Python scripts, Power BI templates, and VBA automations to streamline BAU reporting, reduce manual effort by 60%, and ensure audit-readiness. Automated BAU/SPR dashboards and created scalable documentation templates.</li>
-									<li><strong>Risk Management Integration:</strong> Participated in Wells Fargo Risk Expo 2024 and completed advanced risk, allegations, and security trainings. Collaborated with SMEs (e.g., Jamie and Tim) to document internal risk patterns and implemented reporting improvements aligned with risk mitigation strategies.</li>
-									<li><strong>Domain Knowledge Expansion & SME Collaboration:</strong> Deepened expertise in Loudspeaker through SME engagement, field research insights, and repository creation. Contributed to Intake research and enhanced reporting coverage for underrepresented data segments.</li>
-									<li><strong>BAU Process Improvements & Analyst Training:</strong> Documented end-to-end workflows (BSDs/FSDs/SDHs), trained 2 analysts, and streamlined repetitive tasks using reusable logic - ensuring continuity and onboarding readiness.</li>
-									<li><strong>Tool Proficiency:</strong> Completed training in Advanced Excel, Python for Data Analytics, and Power BI with Advanced DAX - directly applying learning to ongoing project enhancements.</li>
-								</ul>
+        <div class="hero__scroll-hint" aria-hidden="true">
+          <span class="hero__scroll-line"></span>
+        </div>
+      </div>
+    </section>
 
-								<div class="hr-fade"></div>
-								<h3>2021 – 2024 | Data Axle, India</h3>
-								<h4>Senior Business Systems Analyst</h4>
-								<h5>Client: American Express</h5>
-								<ul class="compact-list">
-									<li><strong>Dashboard Development & QC Automation:</strong> Cut quality control time by 50% through development of 3+ dashboards (Excel, Tableau) and automation of discrepancy checks using Power Query and macros for AMEX and international clients.</li>
-									<li><strong>Operational Metrics & Compliance:</strong> Built 5+ QA and ops metrics to enhance data accuracy and compliance visibility across Canadian and global processes.</li>
-									<li><strong>Tableau & Python Integration:</strong> Automated Tableau refreshes and Salesforce API monitoring using Python, improving availability and minimizing downtime.</li>
-									<li><strong>Client Delivery & SLAs:</strong> Led BAU and monthly processing for A360 and Carrier ID systems, introduced automated alerts and robust issue resolution protocols for SLA adherence.</li>
-									<li><strong>End-User Enablement:</strong> Authored detailed FRDs, trained end users, and improved dashboard adoption across teams, aligning reporting with evolving business needs.</li>
-								</ul>
+    <!-- ================================================================
+         ABOUT
+         ================================================================ -->
+    <section id="about" class="section section--about">
+      <div class="container about__inner">
 
-								<div class="hr-fade"></div>
-								<h3>2020 – 2021 | ZS Associates, India</h3>
-								<h4>Business Technology Analyst</h4>
-								<h5>Client: Bristol Myers Squibb – Eliquis</h5>
-								<ul class="compact-list">
-									<li><strong>Marketing Insights Dashboard:</strong> Designed Tableau dashboards offering real-time visibility into $10M+ marketing spend and sales data for Eliquis, aiding senior leadership in strategic decisions.</li>
-									<li><strong>Compliance-Driven Data Handling:</strong> Analyzed high-volume PII datasets in Excel to reduce healthcare compliance issues by 40%.</li>
-									<li><strong>QA & Pipeline Optimization:</strong> Led monthly QA audits of raw data pipelines, improving data quality and report accuracy across 3 global regions.</li>
-								</ul>
+        <div class="about__text">
+          <span class="section-label reveal">About</span>
+          <h2 class="section-title reveal reveal--delay-1">
+            Data is the bridge between<br>complexity and clarity
+          </h2>
+          <p class="reveal reveal--delay-2">
+            My journey began in Pune, India, and has taken me through global firms &mdash;
+            American Express, Bristol Myers Squibb, Cisco &mdash; and now to the Netherlands
+            with Wells Fargo's energy sector practice.
+          </p>
+          <p class="reveal reveal--delay-3">
+            I specialize in Tableau, Power BI, SQL, and Python, with a strong emphasis on
+            automation, stakeholder storytelling, and delivering dashboards that leaders
+            actually use. My philosophy: impactful analytics is part science, part storytelling.
+          </p>
+          <a href="mailto:omkar.deshpande23994@gmail.com" class="about__cta reveal reveal--delay-4">
+            Reach out <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
 
-								<div class="hr-fade"></div>
-								<h3>2016 – 2019 | Zensar Technologies, India</h3>
-								<h4>Data Analyst</h4>
-								<h5>Clients: Cisco & Toshiba</h5>
-								<ul class="compact-list">
-									<li><strong>Client Engagement:</strong> Acted as a dedicated analytics partner for APJGC clients at Cisco, maintaining 95%+ satisfaction with timely and tailored data solutions.</li>
-									<li><strong>Automated Reporting & Tools:</strong> Used SQL, QlikView, and Tableau to create automated reports, cutting down manual effort by 60% and increasing data accessibility.</li>
-									<li><strong>Project & Change Management:</strong> Managed 20+ change requests across Oracle and SQL-driven systems, streamlining delivery and accelerating resolution cycles.</li>
-								</ul>
-							</article>
-							
+        <div class="about__stats reveal reveal--delay-2">
+          <div class="stat-card">
+            <span class="stat-card__number" data-target="8" data-suffix="+">8+</span>
+            <span class="stat-card__label">Years experience</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number" data-target="4">4</span>
+            <span class="stat-card__label">Global firms</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number" data-target="10" data-suffix="+">10+</span>
+            <span class="stat-card__label">Dashboards in prod</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number" data-target="60" data-suffix="%">60%</span>
+            <span class="stat-card__label">Avg effort reduction</span>
+          </div>
+        </div>
 
+      </div>
+    </section>
 
-						<!-- Skills Section -->
-							<article id="skills">
-								<h2 class="major">SKILLS</h2><br>
-								<div style="margin-bottom: 2em;">
-									<div style="margin-bottom: 1.5em;">
-										<strong>Data Visualization & Dashboarding</strong>
-										<p>Tableau (Server, Desktop), Power BI, Excel (Pivot Tables, Charts, Macros, Power Query)</p>
-									</div>
-									<div style="margin-bottom: 1.5em;">
-										<strong>Data Analysis & Automation</strong>
-										<p>SQL (Teradata, Oracle), Python for Data Analytics, Excel VBA, Automated ETL pipelines</p>
-									</div>
-									<div style="margin-bottom: 1.5em;">
-										<strong>Process Optimization & Reporting Automation</strong>
-										<p>Reusable Templates, Audit-Ready Reports, Documentation Standardization (BRD, FRD, SDH)</p>
-									</div>
-									<div style="margin-bottom: 1.5em;">
-										<strong>Project & Agile Management</strong>
-										<p>JIRA, Confluence, Agile, Scrum, Kanban, Sprint Metrics & Reporting</p>
-									</div>
-									<div style="margin-bottom: 1.5em;">
-										<strong>Stakeholder Engagement & Communication</strong>
-										<p>Client Delivery, Cross-functional Collaboration, SME Interaction</p>
-									</div>
-									<div style="margin-bottom: 1.5em;">
-										<strong>Version Control & Development Tools</strong>
-										<p>Git, Oracle SQL Developer, Salesforce API</p>
-									</div>
-								</div>
-							</article>
+    <!-- ================================================================
+         WORK EXPERIENCE
+         ================================================================ -->
+    <section id="experience" class="section section--experience">
+      <div class="container">
+        <span class="section-label reveal">Experience</span>
+        <h2 class="section-title reveal reveal--delay-1">Where I've done the work</h2>
 
+        <div class="timeline">
 
-						<!-- Achievements Section -->
-							<article id="achievements">
-								<h2 class="major">ACHIEVEMENTS</h2><br>
-								<ul>
-									<li><strong>2024:</strong>&nbsp;&nbsp;Launched production-grade JIRA Reporting Dashboard at Wells Fargo; integrated Agile metrics for improved visibility into sprint and team performance.</li>
-									<li><strong>2023:</strong>&nbsp;&nbsp;Delivered high-impact dashboards at Data Axle for AMEX, handling millions of records monthly and automating quality control checks - enhancing SLA compliance across global workflows.</li>
-									<li><strong>2021:</strong>&nbsp;&nbsp;Awarded internal recognition at Data Axle for leading automation projects that reduced QC hours by 50% for AMEX and Cox accounts.</li>
-									<li><strong>2019:</strong>&nbsp;&nbsp;Received 30% EOLAS Scholarship from Munster Technological University for MSc in Artificial Intelligence.</li>
-									<li><strong>2018:</strong>&nbsp;&nbsp;Winner of Rising Star Award at Zensar Technologies for exceeding delivery expectations and elevating client experience.</li>
-									<li><strong>2017:</strong>&nbsp;&nbsp;Nominated for Zensar’s Customer Centricity Award for enhancing cross-border collaboration and stakeholder satisfaction.</li>
-									<li><strong>2016:</strong>&nbsp;&nbsp;Published research paper titled "Vehicular Classification and Analysis" in IJCSIT (Pune University).</li>
-									<li><strong>2015:</strong>&nbsp;&nbsp;2nd place winner in "Codeless" competition for innovative non-code based data model design at inter-college tech fest.</li>
-									<li><strong>2014:</strong>&nbsp;&nbsp;Finalist in "Innovatus 2k14" inter-college competition for creative data interpretation techniques.</li>
-								</ul>
-							</article>
+          <!-- Wells Fargo -->
+          <div class="timeline__item reveal">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <div class="timeline__header">
+                <div>
+                  <h3 class="timeline__role">Senior Analytics Consultant</h3>
+                  <p class="timeline__company">
+                    Wells Fargo
+                    <span class="timeline__separator">&middot;</span>
+                    Netherlands, Energy Sector
+                  </p>
+                </div>
+                <time class="timeline__date" datetime="2024">2024 &ndash; Present</time>
+              </div>
+              <ul class="timeline__bullets">
+                <li>End-to-end ownership of 10+ Tableau dashboards with zero missed SLA across weekly refreshes</li>
+                <li>Revamped 4+ legacy dashboards, reducing load times by 40% via Teradata SQL query optimization</li>
+                <li>Matured JIRA Reporting dashboard from POC to production &mdash; tracks sprint velocity and team performance for leadership</li>
+                <li>Built Python + VBA automation suite reducing BAU reporting effort by 60%; trained 2 analysts</li>
+                <li>Risk Management Integration &mdash; presented insights at Wells Fargo Risk Expo 2024</li>
+              </ul>
+              <div class="timeline__tags">
+                <span class="tag tag--accent">Tableau</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">Python</span>
+                <span class="tag">Teradata SQL</span>
+                <span class="tag">JIRA</span>
+                <span class="tag">Excel VBA</span>
+              </div>
+            </div>
+          </div>
 
+          <!-- Data Axle / AMEX -->
+          <div class="timeline__item reveal reveal--delay-1">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <div class="timeline__header">
+                <div>
+                  <h3 class="timeline__role">Senior Business Systems Analyst</h3>
+                  <p class="timeline__company">
+                    Data Axle
+                    <span class="timeline__separator">&middot;</span>
+                    Client: American Express
+                  </p>
+                </div>
+                <time class="timeline__date" datetime="2021">2021 &ndash; 2024</time>
+              </div>
+              <ul class="timeline__bullets">
+                <li>Dashboard development and QC automation &mdash; reduced QC time by 50% through Python-driven test frameworks</li>
+                <li>Operational metrics and compliance tracking across 5+ QA and operations dimensions</li>
+                <li>Tableau + Python integration for Salesforce API monitoring and client SLA delivery</li>
+                <li>End-user enablement: authored FRDs, delivered training, drove adoption of A360 and Carrier ID systems</li>
+              </ul>
+              <div class="timeline__tags">
+                <span class="tag tag--accent">Tableau</span>
+                <span class="tag">Python</span>
+                <span class="tag">Salesforce API</span>
+                <span class="tag">Oracle SQL</span>
+                <span class="tag">Confluence</span>
+              </div>
+            </div>
+          </div>
 
+          <!-- ZS Associates -->
+          <div class="timeline__item reveal reveal--delay-2">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <div class="timeline__header">
+                <div>
+                  <h3 class="timeline__role">Business Technology Analyst</h3>
+                  <p class="timeline__company">
+                    ZS Associates
+                    <span class="timeline__separator">&middot;</span>
+                    Client: Bristol Myers Squibb &ndash; Eliquis
+                  </p>
+                </div>
+                <time class="timeline__date" datetime="2020">2020 &ndash; 2021</time>
+              </div>
+              <ul class="timeline__bullets">
+                <li>Built Marketing Insights Dashboard providing $10M+ marketing spend visibility for the Eliquis brand team</li>
+                <li>Reduced healthcare compliance issues by 40% through compliance-driven data handling protocols</li>
+                <li>Managed QA pipeline and monthly audits across 3 global regions</li>
+              </ul>
+              <div class="timeline__tags">
+                <span class="tag tag--accent">Tableau</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Healthcare Analytics</span>
+                <span class="tag">QA Automation</span>
+              </div>
+            </div>
+          </div>
 
-						<!-- Projects Section -->
-							<article id="projects">
-								<h2 class="major">PROJECTS</h2><br>
+          <!-- Zensar -->
+          <div class="timeline__item reveal reveal--delay-3">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <div class="timeline__header">
+                <div>
+                  <h3 class="timeline__role">Data Analyst</h3>
+                  <p class="timeline__company">
+                    Zensar Technologies
+                    <span class="timeline__separator">&middot;</span>
+                    Clients: Cisco &amp; Toshiba
+                  </p>
+                </div>
+                <time class="timeline__date" datetime="2016">2016 &ndash; 2019</time>
+              </div>
+              <ul class="timeline__bullets">
+                <li>Maintained 95%+ client satisfaction for APJGC region clients through reliable analytics delivery</li>
+                <li>Built automated reporting tools using SQL, QlikView, and Tableau &mdash; 60% manual effort reduction</li>
+                <li>Managed 20+ change requests; coordinated cross-functional project and change management cycles</li>
+              </ul>
+              <div class="timeline__tags">
+                <span class="tag tag--accent">Tableau</span>
+                <span class="tag">QlikView</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Excel</span>
+              </div>
+            </div>
+          </div>
 
-								<ul id="projects-list">
-									<li class="project-row">
-									<a class="project-link" href="https://public.tableau.com/app/profile/omkar.deshpande1132/viz/VideoGameSalesAnalysis_17387682360770/VGA" target="_blank" rel="noopener">
-										<div class="project-text">
-										<strong>Video Game Sales Analysis</strong>
-										<p>Designed an interactive Tableau dashboard to explore historical video game sales trends across decades. Analyzed genre popularity, regional performance, and major sales milestones.</p>
-										</div>
-										<span class="project-cta" aria-hidden="true"> > </span>
-									</a>
-									</li>
+        </div>
+      </div>
+    </section>
 
-									<li class="project-row">
-									<a class="project-link" href="https://public.tableau.com/app/profile/omkar.deshpande1132/viz/Covid-19Analysis_17321214779240/Summary" target="_blank" rel="noopener">
-										<div class="project-text">
-										<strong>COVID-19 Global Data Dashboard</strong>
-										<p>Created a comprehensive Tableau dashboard tracking global COVID-19 data. Delivered real-time updates on case counts, regional trends, and country comparisons to support data-driven insights.</p>
-										</div>
-										<span class="project-cta" aria-hidden="true"> > </span>
-									</a>
-									</li>
+    <!-- ================================================================
+         SKILLS
+         ================================================================ -->
+    <section id="skills" class="section section--skills">
+      <div class="container">
+        <span class="section-label reveal">Skills</span>
+        <h2 class="section-title reveal reveal--delay-1">Tools of the trade</h2>
 
-									<li class="project-row">
-									<a class="project-link" href="https://github.com/omkardeshpande23994/Adult-Census-Income" target="_blank" rel="noopener">
-										<div class="project-text">
-										<strong>Adult Census Income Prediction</strong>
-										<p>Developed and benchmarked classification models to predict whether an individual’s income exceeds $50,000. Applied data cleaning, feature engineering, and hyperparameter tuning to optimize performance.</p>
-										</div>
-										<span class="project-cta" aria-hidden="true"> > </span>
-									</a>
-									</li>
+        <div class="skills-bento">
 
-									<li class="project-row">
-									<a class="project-link" href="https://github.com/omkardeshpande23994/Job_Pipeline_UI" target="_blank" rel="noopener">
-										<div class="project-text">
-										<strong>Job Application Pipeline & Tracker (with Local UI)</strong>
-										<p>An end-to-end pipeline that automates my job search workflow—from scraping jobs (Apify, JobSpy) to cleaning, enriching, and scoring them against my résumé using AI. Exports to a styled Excel tracker with a minimal local web UI for runs, logs, and dashboards.</p>
-										</div>
-										<span class="project-cta" aria-hidden="true"> > </span>
-									</a>
-									</li>
-								</ul>
-							</article>
+          <div class="bento-card bento-card--large reveal">
+            <span class="bento-card__icon"><i class="fas fa-chart-bar" aria-hidden="true"></i></span>
+            <h3>Data Visualization &amp; Dashboarding</h3>
+            <p>Designing dashboards that actually get used &mdash; from executive overviews to granular operational metrics.</p>
+            <div class="bento-card__tags">
+              <span class="tag tag--accent">Tableau Server</span>
+              <span class="tag tag--accent">Tableau Desktop</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Excel PivotCharts</span>
+              <span class="tag">QlikView</span>
+            </div>
+          </div>
 
+          <div class="bento-card bento-card--medium reveal reveal--delay-1">
+            <span class="bento-card__icon"><i class="fas fa-database" aria-hidden="true"></i></span>
+            <h3>SQL &amp; Data Engineering</h3>
+            <p>Complex query optimization, ETL pipelines, and audit-ready data handling.</p>
+            <div class="bento-card__tags">
+              <span class="tag tag--accent">Teradata</span>
+              <span class="tag">Oracle SQL</span>
+              <span class="tag">SQL Developer</span>
+              <span class="tag">ETL Pipelines</span>
+            </div>
+          </div>
 
-							  
-						<!-- Writing Section -->
-							<article id="writing">
-								<h2 class="major">WRITING</h2>
-								<p class="section-subtle">&emsp; Short posts and notes on analytics, BI, automation, and career.</p>
+          <div class="bento-card bento-card--medium reveal reveal--delay-2">
+            <span class="bento-card__icon"><i class="fab fa-python" aria-hidden="true"></i></span>
+            <h3>Automation &amp; Scripting</h3>
+            <p>Python and VBA scripts that eliminate repetitive manual work and enforce consistency.</p>
+            <div class="bento-card__tags">
+              <span class="tag tag--accent">Python</span>
+              <span class="tag">Excel VBA</span>
+              <span class="tag">Power Query</span>
+              <span class="tag">Macros</span>
+            </div>
+          </div>
 
-								<ul id="writing-list">
-									<li class="post-row">
-									<a class="post-link" href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7371853403582267392" target="_blank" rel="noopener">
-										<div class="post-thumb is-default"></div>
-										<div class="post-body">
-										<h3 class="post-title">Waterfall, Agile, AI-build… and the trap of “vibe coding”</h3>
-										<div class="post-meta">
-											<time datetime="2025-09-11">Sep 11, 2025</time><span> · </span><span>Open on LinkedIn →</span>
-										</div>
-										<p class="post-excerpt">A quick take on how process choices shape outcomes—and how to avoid shipping by vibes.</p>
-										</div>
-									</a>
-									</li>
+          <div class="bento-card bento-card--small reveal reveal--delay-3">
+            <h3>Project &amp; Agile</h3>
+            <div class="bento-card__tags">
+              <span class="tag">JIRA</span>
+              <span class="tag">Confluence</span>
+              <span class="tag">Scrum</span>
+              <span class="tag">Kanban</span>
+              <span class="tag">Git</span>
+            </div>
+          </div>
 
-									<li class="post-row">
-									<a class="post-link" href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7368926512714113026" target="_blank" rel="noopener">
-										<div class="post-thumb is-default"></div>
-										<div class="post-body">
-										<h3 class="post-title">GenAI can write the code, but it cant tell the story.</h3>
-										<div class="post-meta">
-											<time datetime="2025-09-03">Sep 03, 2025</time><span> · </span><span>Open on LinkedIn →</span>
-										</div>
-										<p class="post-excerpt">On why tooling isn’t the same as narrative and how story still wins.</p>
-										</div>
-									</a>
-									</li>
+          <div class="bento-card bento-card--small reveal reveal--delay-4">
+            <h3>Delivery &amp; Docs</h3>
+            <div class="bento-card__tags">
+              <span class="tag">BRD</span>
+              <span class="tag">FRD</span>
+              <span class="tag">SDH</span>
+              <span class="tag">Salesforce API</span>
+            </div>
+          </div>
 
-									<li class="post-row">
-									<a class="post-link" href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7361039703191486466" target="_blank" rel="noopener">
-										<div class="post-thumb is-default"></div>
-										<div class="post-body">
-										<h3 class="post-title">Why GPT-4o felt like a friend… and GPT-5 feels like a colleague</h3>
-										<div class="post-meta">
-											<time datetime="2025-08-12">Aug 12, 2025</time><span> · </span><span>Open on LinkedIn →</span>
-										</div>
-										<p class="post-excerpt">Reflections on UX tone shifts and how they change our expectations from AI tools.</p>
-										</div>
-									</a>
-									</li>
+        </div>
+      </div>
+    </section>
 
-									<li class="post-row">
-									<a class="post-link" href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7350539448893194240" target="_blank" rel="noopener">
-										<div class="post-thumb is-default"></div>
-										<div class="post-body">
-										<h3 class="post-title">What does it really take to turn raw data into actionable business decisions?</h3>
-										<div class="post-meta">
-											<time datetime="2025-07-14">Jul 14, 2025</time><span> · </span><span>Open on LinkedIn →</span>
-										</div>
-										<p class="post-excerpt">Behind the scenes of cleaning, modeling, and storytelling for decision-makers.</p>
-										</div>
-									</a>
-									</li>
+    <!-- ================================================================
+         PROJECTS
+         ================================================================ -->
+    <section id="projects" class="section section--projects">
+      <div class="container">
+        <span class="section-label reveal">Projects</span>
+        <h2 class="section-title reveal reveal--delay-1">Selected work</h2>
 
-									<li class="post-row">
-									<a class="post-link" href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7343218824659267584" target="_blank" rel="noopener">
-										<div class="post-thumb is-default"></div>
-										<div class="post-body">
-										<h3 class="post-title">Behind the Dashboard: Lessons from Building Feedback &amp; JIRA Reporting Systems</h3>
-										<div class="post-meta">
-											<time datetime="2025-06-24">Jun 24, 2025</time><span> · </span><span>Open on LinkedIn →</span>
-										</div>
-										<p class="post-excerpt">Practical takeaways from designing reporting systems that leaders actually use.</p>
-										</div>
-									</a>
-									</li>
+        <div class="projects-grid">
 
-									<li class="post-row">
-									<a class="post-link" href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7325839209087287296" target="_blank" rel="noopener">
-										<div class="post-thumb is-default"></div>
-										<div class="post-body">
-										<h3 class="post-title">AI in 2025: The Hidden Risks We’re Not Talking About Enough</h3>
-										<div class="post-meta">
-											<time datetime="2025-05-07">May 07, 2025</time><span> · </span><span>Open on LinkedIn →</span>
-										</div>
-										<p class="post-excerpt">A short list of blind spots and how to surface them in review meetings.</p>
-										</div>
-									</a>
-									</li>
+          <a href="https://public.tableau.com/app/profile/omkar.deshpande1132/viz/VideoGameSalesAnalysis_17387682360770/VGA"
+             target="_blank" rel="noopener noreferrer"
+             class="project-card reveal">
+            <div class="project-card__header">
+              <span class="project-card__index" aria-hidden="true">01</span>
+              <i class="fas fa-arrow-up-right-from-square project-card__arrow" aria-hidden="true"></i>
+            </div>
+            <h3 class="project-card__title">Video Game Sales Analysis</h3>
+            <p class="project-card__desc">
+              Interactive Tableau dashboard exploring historical video game sales across decades &mdash;
+              genre popularity, regional performance, platform shifts, and major market milestones.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">Tableau</span>
+              <span class="tag">Data Visualization</span>
+              <span class="tag">Sales Analytics</span>
+            </div>
+          </a>
 
-									<li class="post-row">
-									<a class="post-link" href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7297592004811591680" target="_blank" rel="noopener">
-										<div class="post-thumb is-default"></div>
-										<div class="post-body">
-										<h3 class="post-title">The Great Data Visualization Debate: Tableau vs. Power BI</h3>
-										<div class="post-meta">
-											<time datetime="2025-02-18">Feb 18, 2025</time><span> · </span><span>Open on LinkedIn →</span>
-										</div>
-										<p class="post-excerpt">What actually matters when teams choose a BI stack (and what doesn’t).</p>
-										</div>
-									</a>
-									</li>
+          <a href="https://public.tableau.com/app/profile/omkar.deshpande1132/viz/Covid-19Analysis_17321214779240/Summary"
+             target="_blank" rel="noopener noreferrer"
+             class="project-card reveal reveal--delay-1">
+            <div class="project-card__header">
+              <span class="project-card__index" aria-hidden="true">02</span>
+              <i class="fas fa-arrow-up-right-from-square project-card__arrow" aria-hidden="true"></i>
+            </div>
+            <h3 class="project-card__title">COVID-19 Global Data Dashboard</h3>
+            <p class="project-card__desc">
+              Comprehensive Tableau dashboard tracking global COVID-19 data &mdash; case trends,
+              mortality rates, regional comparisons, and vaccination progress over time.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">Tableau</span>
+              <span class="tag">Public Health</span>
+              <span class="tag">Global Data</span>
+            </div>
+          </a>
 
-									<li class="post-row">
-									<a class="post-link" href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7287058223268859908" target="_blank" rel="noopener">
-										<div class="post-thumb is-default"></div>
-										<div class="post-body">
-										<h3 class="post-title">AI Agents: Shaping the Future of Work</h3>
-										<div class="post-meta">
-											<time datetime="2025-01-20">Jan 20, 2025</time><span> · </span><span>Open on LinkedIn →</span>
-										</div>
-										<p class="post-excerpt">Roles, workflows, and why orchestration will be the next advantage.</p>
-										</div>
-									</a>
-									</li>
+          <a href="https://github.com/omkardeshpande23994/Adult-Census-Income"
+             target="_blank" rel="noopener noreferrer"
+             class="project-card reveal reveal--delay-2">
+            <div class="project-card__header">
+              <span class="project-card__index" aria-hidden="true">03</span>
+              <i class="fas fa-arrow-up-right-from-square project-card__arrow" aria-hidden="true"></i>
+            </div>
+            <h3 class="project-card__title">Adult Census Income Prediction</h3>
+            <p class="project-card__desc">
+              Classification models predicting income above $50,000 using the UCI Adult Census dataset.
+              Includes data cleaning, feature engineering, and hyperparameter tuning across multiple algorithms.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">Python</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Classification</span>
+            </div>
+          </a>
 
-									<li class="post-row">
-									<a class="post-link" href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7259082511278821376" target="_blank" rel="noopener">
-										<div class="post-thumb is-default"></div>
-										<div class="post-body">
-										<h3 class="post-title">How Data Analytics Transforms Business Decisions: Insights from My Journey</h3>
-										<div class="post-meta">
-											<time datetime="2024-11-04">Nov 04, 2024</time><span> · </span><span>Open on LinkedIn →</span>
-										</div>
-										<p class="post-excerpt">From raw data to leadership action—notes from projects across teams and tools.</p>
-										</div>
-									</a>
-									</li>
-								</ul>
-							</article>
+          <a href="https://github.com/omkardeshpande23994/Job_Pipeline_UI"
+             target="_blank" rel="noopener noreferrer"
+             class="project-card reveal reveal--delay-3">
+            <div class="project-card__header">
+              <span class="project-card__index" aria-hidden="true">04</span>
+              <i class="fas fa-arrow-up-right-from-square project-card__arrow" aria-hidden="true"></i>
+            </div>
+            <h3 class="project-card__title">Job Application Pipeline &amp; Tracker</h3>
+            <p class="project-card__desc">
+              End-to-end pipeline automating job search via Apify and JobSpy, with AI-powered
+              r&eacute;sum&eacute; scoring, a styled Excel tracker, and a local web UI for managing applications.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">Python</span>
+              <span class="tag">AI / LLM</span>
+              <span class="tag">Automation</span>
+              <span class="tag">Web UI</span>
+            </div>
+          </a>
 
+        </div>
+      </div>
+    </section>
 
-						<!-- Contact Section -->
-						<!--
-			                <article id="contact">
-			                    <h2 class="major">Contact</h2>
-			                    <form method="post" action="mailto:omkar.deshpande23994@gmail.com">
-			                        <div class="fields">
-			                            <div class="field half">
-			                                <label for="name">Name</label>
-			                                <input type="text" name="name" id="name" required />
-			                            </div>
-			                            <div class="field half">
-			                                <label for="email">Email</label>
-			                                <input type="email" name="email" id="email" required />
-			                            </div>
-			                            <div class="field">
-			                                <label for="message">Message</label>
-			                                <textarea name="message" id="message" rows="4" required></textarea>
-			                            </div>
-			                        </div>
-			                        <ul class="actions">
-			                            <li><input type="submit" value="Send Message" class="primary" /></li>
-			                            <li><input type="reset" value="Reset" /></li>
-			                        </ul>
-			                    </form>
-			                </article>
-						-->
-            
+    <!-- ================================================================
+         ACHIEVEMENTS
+         ================================================================ -->
+    <section id="achievements" class="section section--achievements">
+      <div class="container">
+        <span class="section-label reveal">Achievements</span>
+        <h2 class="section-title reveal reveal--delay-1">Milestones that matter</h2>
 
-					</div>
+        <ol class="achievements-list" aria-label="Career achievements">
 
-				<!-- Footer -->
-					<footer id="footer">
-					    <div class="footer-content">
-					        <p class="copyright">&copy; Omkar Deshpande. All rights reserved.</p>
-					        <div class="footer-icons">
-					            <ul class="icon-list">
-					                <li><a href="mailto:omkar.deshpande23994@gmail.com"><i class="fas fa-paper-plane"></i></a></li>
-					                <li><a href="https://linkedin.com/in/omkardeshpande-23994"><i class="fab fa-linkedin"></i></a></li>
-					                <li><a href="https://github.com/omkardeshpande23994"><i class="fab fa-github"></i></a></li>
-					            </ul>
-					        </div>
-					    </div>
-					</footer>
+          <li class="achievement-item reveal">
+            <span class="achievement-item__year">2024</span>
+            <div class="achievement-item__body">
+              <p>Launched production-grade JIRA Reporting Dashboard at Wells Fargo &mdash; Agile sprint and team velocity metrics for leadership visibility.</p>
+            </div>
+          </li>
 
+          <li class="achievement-item reveal">
+            <span class="achievement-item__year">2023</span>
+            <div class="achievement-item__body">
+              <p>Delivered high-impact operational dashboards at Data Axle for American Express, achieving 50% reduction in QC hours.</p>
+            </div>
+          </li>
 
-			</div>
+          <li class="achievement-item reveal">
+            <span class="achievement-item__year">2021</span>
+            <div class="achievement-item__body">
+              <p>Awarded internal recognition at Data Axle for leading automation projects that reduced QC effort by 50% across delivery teams.</p>
+            </div>
+          </li>
 
-		<!-- BG -->
-			<div id="bg"></div>
+          <li class="achievement-item reveal">
+            <span class="achievement-item__year">2019</span>
+            <div class="achievement-item__body">
+              <p>Awarded 30% EOLAS Scholarship from Munster Technological University for MSc in Artificial Intelligence &mdash; merit-based award for academic excellence.</p>
+            </div>
+          </li>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/backToTop.js?v=3"></script>
-	
+          <li class="achievement-item reveal">
+            <span class="achievement-item__year">2018</span>
+            <div class="achievement-item__body">
+              <p>Awarded <em>Rising Star</em> at Zensar Technologies &mdash; recognition for exceptional client engagement and analytics delivery quality.</p>
+            </div>
+          </li>
 
-	</body>
+          <li class="achievement-item reveal">
+            <span class="achievement-item__year">2017</span>
+            <div class="achievement-item__body">
+              <p>Nominated for Zensar's <em>Customer Centricity Award</em> for outstanding service to APJGC region clients.</p>
+            </div>
+          </li>
+
+          <li class="achievement-item reveal">
+            <span class="achievement-item__year">2016</span>
+            <div class="achievement-item__body">
+              <p>Published research paper <em>"Vehicular Classification and Analysis"</em> in the International Journal of Computer Science &amp; Information Technologies (IJCSIT).</p>
+            </div>
+          </li>
+
+          <li class="achievement-item reveal">
+            <span class="achievement-item__year">2015</span>
+            <div class="achievement-item__body">
+              <p>2nd place winner in <em>"Codeless"</em> competition at inter-college tech fest &mdash; logic and problem-solving challenge.</p>
+            </div>
+          </li>
+
+          <li class="achievement-item reveal">
+            <span class="achievement-item__year">2014</span>
+            <div class="achievement-item__body">
+              <p>Finalist in <em>"Innovatus 2k14"</em> inter-college innovation competition.</p>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         WRITING
+         ================================================================ -->
+    <section id="writing" class="section section--writing">
+      <div class="container">
+        <span class="section-label reveal">Writing</span>
+        <h2 class="section-title reveal reveal--delay-1">Notes on analytics, AI, and craft</h2>
+
+        <div class="writing-grid">
+
+          <a href="https://www.linkedin.com/in/omkardeshpande-23994/"
+             target="_blank" rel="noopener noreferrer"
+             class="writing-card reveal">
+            <time class="writing-card__date" datetime="2025-09-11">Sep 11, 2025</time>
+            <h3 class="writing-card__title">Waterfall, Agile, AI-build&hellip; and the trap of &ldquo;vibe coding&rdquo;</h3>
+            <p class="writing-card__excerpt">A quick take on how process choices shape outcomes &mdash; and how to avoid shipping by vibes.</p>
+            <span class="writing-card__cta">Read on LinkedIn <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/omkardeshpande-23994/"
+             target="_blank" rel="noopener noreferrer"
+             class="writing-card reveal reveal--delay-1">
+            <time class="writing-card__date" datetime="2025-09-03">Sep 03, 2025</time>
+            <h3 class="writing-card__title">GenAI can write the code, but it can&rsquo;t tell the story</h3>
+            <p class="writing-card__excerpt">On the gap between generating outputs and communicating meaning &mdash; why human judgment still owns the last mile.</p>
+            <span class="writing-card__cta">Read on LinkedIn <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/omkardeshpande-23994/"
+             target="_blank" rel="noopener noreferrer"
+             class="writing-card reveal reveal--delay-2">
+            <time class="writing-card__date" datetime="2025-08-12">Aug 12, 2025</time>
+            <h3 class="writing-card__title">Why GPT-4o felt like a friend&hellip; and GPT-5 feels like a colleague</h3>
+            <p class="writing-card__excerpt">Exploring the shift in how AI models collaborate, reason, and change what it means to be the human in the room.</p>
+            <span class="writing-card__cta">Read on LinkedIn <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/omkardeshpande-23994/"
+             target="_blank" rel="noopener noreferrer"
+             class="writing-card reveal">
+            <time class="writing-card__date" datetime="2025-07-14">Jul 14, 2025</time>
+            <h3 class="writing-card__title">What does it really take to turn raw data into actionable decisions?</h3>
+            <p class="writing-card__excerpt">Moving beyond dashboards into the mindset and methodology behind data-driven leadership.</p>
+            <span class="writing-card__cta">Read on LinkedIn <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/omkardeshpande-23994/"
+             target="_blank" rel="noopener noreferrer"
+             class="writing-card reveal reveal--delay-1">
+            <time class="writing-card__date" datetime="2025-06-24">Jun 24, 2025</time>
+            <h3 class="writing-card__title">Behind the Dashboard: Lessons from Building Feedback &amp; JIRA Reporting Systems</h3>
+            <p class="writing-card__excerpt">What building production analytics infrastructure teaches you about stakeholder trust, data quality, and delivery.</p>
+            <span class="writing-card__cta">Read on LinkedIn <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/omkardeshpande-23994/"
+             target="_blank" rel="noopener noreferrer"
+             class="writing-card reveal reveal--delay-2">
+            <time class="writing-card__date" datetime="2025-05-07">May 07, 2025</time>
+            <h3 class="writing-card__title">AI in 2025: The Hidden Risks We&rsquo;re Not Talking About Enough</h3>
+            <p class="writing-card__excerpt">Beyond the hype &mdash; a practitioner's view of the blind spots that come with rapid AI adoption in enterprise analytics.</p>
+            <span class="writing-card__cta">Read on LinkedIn <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/omkardeshpande-23994/"
+             target="_blank" rel="noopener noreferrer"
+             class="writing-card reveal">
+            <time class="writing-card__date" datetime="2025-02-18">Feb 18, 2025</time>
+            <h3 class="writing-card__title">The Great Data Visualization Debate: Tableau vs. Power BI</h3>
+            <p class="writing-card__excerpt">A practitioner's honest comparison &mdash; when to use each tool, and where the real trade-offs live after years with both.</p>
+            <span class="writing-card__cta">Read on LinkedIn <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/omkardeshpande-23994/"
+             target="_blank" rel="noopener noreferrer"
+             class="writing-card reveal reveal--delay-1">
+            <time class="writing-card__date" datetime="2025-01-20">Jan 20, 2025</time>
+            <h3 class="writing-card__title">AI Agents: Shaping the Future of Work</h3>
+            <p class="writing-card__excerpt">How autonomous AI agents are beginning to reshape workflows, decision-making, and what analytical roles look like going forward.</p>
+            <span class="writing-card__cta">Read on LinkedIn <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/omkardeshpande-23994/"
+             target="_blank" rel="noopener noreferrer"
+             class="writing-card reveal reveal--delay-2">
+            <time class="writing-card__date" datetime="2024-11-04">Nov 04, 2024</time>
+            <h3 class="writing-card__title">How Data Analytics Transforms Business Decisions: Insights from My Journey</h3>
+            <p class="writing-card__excerpt">Eight years of patterns, pivots, and lessons from the front lines of enterprise analytics &mdash; what actually moves the needle.</p>
+            <span class="writing-card__cta">Read on LinkedIn <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         CONTACT
+         ================================================================ -->
+    <section id="contact" class="section section--contact">
+      <div class="container contact__inner">
+        <span class="section-label reveal">Contact</span>
+        <h2 class="contact__headline reveal reveal--delay-1">
+          Let&rsquo;s build something<br>worth the data.
+        </h2>
+        <a href="mailto:omkar.deshpande23994@gmail.com"
+           class="contact__email reveal reveal--delay-2"
+           aria-label="Send email to Omkar Deshpande">
+          omkar.deshpande23994@gmail.com
+        </a>
+        <div class="contact__social reveal reveal--delay-3">
+          <a href="https://linkedin.com/in/omkardeshpande-23994"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="LinkedIn profile">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com/omkardeshpande23994"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="GitHub profile">
+            <i class="fab fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:omkar.deshpande23994@gmail.com"
+             aria-label="Send an email">
+            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p class="footer__copy">&copy; 2025 Omkar Deshpande &nbsp;&middot;&nbsp; Built with care, deployed on GitHub Pages</p>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- Scroll-to-top button -->
+  <button id="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="assets/js/cursor.js"     defer></script>
+  <script src="assets/js/typewriter.js" defer></script>
+  <script src="assets/js/reveal.js"     defer></script>
+  <script src="assets/js/nav.js"        defer></script>
+
+</body>
 </html>
