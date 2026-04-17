@@ -3,17 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Omkar Deshpande - Senior Analytics Consultant with 9+ years building dashboards and data solutions that drive leadership decisions across finance, pharma, and energy." />
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Omkar Deshpande — Senior Analytics Consultant with 9+ years building Tableau, Power BI, and SQL dashboards for Alliander, Wells Fargo, American Express, and Bristol Myers Squibb. Based in Amsterdam." />
+  <meta name="keywords" content="Senior Analytics Consultant, Tableau Developer, Power BI, Data Analyst Amsterdam, BI Consultant Netherlands, SQL Analytics, IAM Analytics, Omkar Deshpande" />
   <meta name="author" content="Omkar Deshpande" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://omkardeshpande23994.github.io/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Omkar Deshpande - Senior Analytics Consultant" />
-  <meta property="og:description" content="Senior Analytics Consultant with 9+ years across Alliander, Wells Fargo, American Express, Bristol Myers Squibb." />
-  <meta property="og:image" content="images/preview-image.png" />
+  <meta property="og:title" content="Omkar Deshpande — Senior Analytics Consultant" />
+  <meta property="og:description" content="9+ years turning complex data into confident leadership decisions — Tableau, Power BI, SQL, Python. Based in Amsterdam." />
+  <meta property="og:image" content="https://omkardeshpande23994.github.io/images/preview-image.png" />
+  <meta property="og:url" content="https://omkardeshpande23994.github.io/" />
   <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Omkar Deshpande Portfolio" />
 
-  <title>Omkar Deshpande - Senior Analytics Consultant</title>
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Omkar Deshpande — Senior Analytics Consultant" />
+  <meta name="twitter:description" content="9+ years turning complex data into confident leadership decisions. Tableau, Power BI, SQL, Python. Based in Amsterdam." />
+  <meta name="twitter:image" content="https://omkardeshpande23994.github.io/images/preview-image.png" />
+
+  <title>Omkar Deshpande — Senior Analytics Consultant | Amsterdam</title>
   <link rel="icon" href="images/favicon.png" type="image/png" />
 
   <!-- Fonts -->
@@ -32,8 +45,38 @@
   <link rel="stylesheet" href="assets/css/sections.css" />
   <link rel="stylesheet" href="assets/css/animations.css" />
   <link rel="stylesheet" href="assets/css/responsive.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Omkar Deshpande",
+    "jobTitle": "Senior Analytics Consultant",
+    "description": "Senior Analytics Consultant with 9+ years building dashboards and data solutions across finance, pharma, and energy sectors.",
+    "url": "https://omkardeshpande23994.github.io/",
+    "image": "https://omkardeshpande23994.github.io/images/preview-image.png",
+    "email": "omkar.deshpande23994@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Amsterdam Area",
+      "addressCountry": "NL"
+    },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Munster Technological University" },
+      { "@type": "CollegeOrUniversity", "name": "Savitribai Phule Pune University" }
+    ],
+    "worksFor": { "@type": "Organization", "name": "Alliander" },
+    "knowsAbout": ["Tableau","Power BI","SQL","Python","Data Analytics","Business Intelligence","Dashboard Design","Identity and Access Management Analytics"],
+    "sameAs": [
+      "https://www.linkedin.com/in/omkardeshpande-23994/",
+      "https://github.com/omkardeshpande23994"
+    ]
+  }
+  </script>
+
 </head>
-<body>
+
+<body itemscope itemtype="https://schema.org/WebPage">
 
   <!-- Grain texture overlay -->
   <div class="grain" aria-hidden="true"></div>
@@ -80,7 +123,7 @@
     <a href="#contact"      class="nav__link nav__link--cta">Contact</a>
   </div>
 
-  <main>
+  <main role="main" aria-label="Omkar Deshpande - Senior Analytics Consultant Portfolio">
 
     <!-- ================================================================
          HERO
@@ -89,22 +132,27 @@
       <div class="hero__bg-glow" aria-hidden="true"></div>
 
       <div class="container hero__inner">
-        <p class="hero__eyebrow reveal">Based in Amsterdam Area, Netherlands &nbsp;&middot;&nbsp; Open to opportunities</p>
+        <p class="hero__eyebrow" data-hero-anim="eyebrow">Based in Amsterdam Area, Netherlands &nbsp;&middot;&nbsp; Open to opportunities</p>
 
-        <h1 class="hero__name reveal reveal--delay-1">
+        <!-- <h1 class="hero__name reveal reveal--delay-1">
           Omkar<br>Deshpande
-        </h1>
+        </h1> -->
 
-        <div class="hero__subtitle reveal reveal--delay-2" aria-live="polite">
+        <h1 class="hero__name" data-hero-anim="name">
+          <span class="hero__name-line">Omkar</span><br aria-hidden="true">
+          <span class="hero__name-line">Deshpande</span>
+        </h1>
+        
+        <div class="hero__subtitle" data-hero-anim="subtitle" aria-live="polite">
           <span class="hero__subtitle-prefix">I'm a </span><span id="typewriter"></span>
         </div>
 
-        <p class="hero__bio reveal reveal--delay-3">
+        <p class="hero__bio" data-hero-anim="bio">
           Senior Analytics Consultant with 9+ years turning complex data into
           confident leadership decisions - across finance, pharma, energy, and enterprise operations.
         </p>
 
-        <div class="hero__actions reveal reveal--delay-4">
+        <div class="hero__actions" data-hero-anim="actions">
           <a href="#experience" class="btn btn--primary">View my work</a>
           <a href="#contact"    class="btn btn--ghost">Get in touch</a>
         </div>
@@ -701,9 +749,22 @@
   </button>
 
   <!-- Scripts -->
+  
+  <!-- CDN Libraries — load synchronously before your JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js"></script>
+
+  <!-- Your scripts — defer is safe since CDN libs loaded sync above -->
+  <script src="assets/js/lenis.js" defer></script>
   <script src="assets/js/cursor.js" defer></script>
   <script src="assets/js/typewriter.js" defer></script>
+  <script src="assets/js/hero-anim.js" defer></script>
   <script src="assets/js/reveal.js" defer></script>
+  <script src="assets/js/counter.js" defer></script>
+  <script src="assets/js/skills-anim.js" defer></script>
+  <script src="assets/js/magnetic.js" defer></script>
   <script src="assets/js/nav.js" defer></script>
 
 </body>
