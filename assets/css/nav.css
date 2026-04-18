@@ -24,7 +24,6 @@
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--color-border);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.35); /* ← add this line only */
 }
 
 /* ——— Initials logo ——— */
